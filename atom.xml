@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Codeflyer Hzy]]></title>
+  <subtitle><![CDATA[扛着键盘，走在码农的路上]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2016-03-26T11:02:27.483Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[Hzy]]></name>
+    <email><![CDATA[hzy_1212@foxmail.com]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Java核心技术学习笔记之二]]></title>
+    <link href="http://yoursite.com/2016/03/26/CoreJava2/"/>
+    <id>http://yoursite.com/2016/03/26/CoreJava2/</id>
+    <published>2016-03-26T11:01:52.000Z</published>
+    <updated>2016-03-26T11:02:27.483Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Java核心技术" scheme="http://yoursite.com/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[TextView之跑马灯]]></title>
+    <link href="http://yoursite.com/2016/03/07/TextView%E4%B9%8B%E8%B7%91%E9%A9%AC%E7%81%AF/"/>
+    <id>http://yoursite.com/2016/03/07/TextView之跑马灯/</id>
+    <published>2016-03-07T13:48:28.000Z</published>
+    <updated>2016-03-07T15:05:50.032Z</updated>
+    <content type="html"><![CDATA[<p>　　学习了TextView之后，感觉得来点好玩的。正好在imooc.com上学到一个关于TextView跑马灯（理解为现在大街上经常看到的那种横向滚动的LED灯便是）效果的小知识点。特记录如下：<br>　　首先上效果图：<img src="/img/marquee.gif" alt="效果图"><br>　　<br>　　在网上发现一篇总结得不错的文章：<a href="http://www.cnblogs.com/Gaojiecai/p/3142783.html" target="_blank" rel="external">http://www.cnblogs.com/Gaojiecai/p/3142783.html</a><br>　　<br>　　但需要实现多个TextView同时有跑马灯效果时，稍微复杂一点：<br>　　新建一个继承自TextView的类，这里命名为MarqueeTextViewDemo，关键是重写View中的isFocus方法（即默认获得focus）<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">boolean</span> <span class="title">isFocused</span><span class="params">()</span> </span>&#123; </span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后在xml中创建这个类的TextView（注意包名要写完整）：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;com<span class="class">.example</span><span class="class">.marqueetextviewdemo</span><span class="class">.MarqueeTextViewDemo</span></span><br><span class="line">    android:id=<span class="string">"@+id/textview1"</span></span><br><span class="line">    android:layout_width=<span class="string">"wrap_content"</span></span><br><span class="line">    android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">    android:ellipsize=<span class="string">"marquee"</span></span><br><span class="line">    android:singleLine=<span class="string">"true"</span></span><br><span class="line">    android:text=<span class="string">"@string/hello_world"</span> /&gt;</span><br><span class="line"></span><br><span class="line">&lt;com<span class="class">.example</span><span class="class">.marqueetextviewdemo</span><span class="class">.MarqueeTextViewDemo</span></span><br><span class="line">    android:layout_width=<span class="string">"wrap_content"</span></span><br><span class="line">    android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">    android:layout_below=<span class="string">"@id/textview1"</span></span><br><span class="line">    android:layout_marginTop=<span class="string">"10dp"</span></span><br><span class="line">    android:ellipsize=<span class="string">"marquee"</span></span><br><span class="line">    android:singleLine=<span class="string">"true"</span></span><br><span class="line">    android:text=<span class="string">"@string/hello_world"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>　　学习了TextView之后，感觉得来点好玩的。正好在imooc.com上学到一个关于TextView跑马灯（理解为现在大街上经常看到的那种横向滚动的LED灯便是）效果的小知识点。特记录如下：<br>　　首先上效果图：<img src="/img/marquee.gif"]]>
+    </summary>
+    
+      <category term="TextView" scheme="http://yoursite.com/tags/TextView/"/>
+    
+      <category term="安卓" scheme="http://yoursite.com/tags/%E5%AE%89%E5%8D%93/"/>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[安卓初探]]></title>
+    <link href="http://yoursite.com/2016/02/28/%E5%AE%89%E5%8D%93%E5%88%9D%E6%8E%A2/"/>
+    <id>http://yoursite.com/2016/02/28/安卓初探/</id>
+    <published>2016-02-28T14:04:08.000Z</published>
+    <updated>2016-03-07T14:23:50.179Z</updated>
+    <content type="html"><![CDATA[<h1 id="简单的安卓程序构成">简单的安卓程序构成</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">目录名称</th>
+<th style="text-align:center">组成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">src</td>
+<td style="text-align:center">存放所有Java代码</td>
+</tr>
+<tr>
+<td style="text-align:center">gen</td>
+<td style="text-align:center">主要有R.java文件，在项目中添加的任何资源都会自动生成一个相应的id。不要手动修改。</td>
+</tr>
+<tr>
+<td style="text-align:center">assets</td>
+<td style="text-align:center">存放一些随程序打包的文件</td>
+</tr>
+<tr>
+<td style="text-align:center">bin</td>
+<td style="text-align:center">存放一些编译时自动产生的文件（如.apk文件）</td>
+</tr>
+<tr>
+<td style="text-align:center">libs</td>
+<td style="text-align:center">第三方Jar包</td>
+</tr>
+<tr>
+<td style="text-align:center">res</td>
+<td style="text-align:center">存放所有资源</td>
+</tr>
+<tr>
+<td style="text-align:center">AndroidManifest.xml</td>
+<td style="text-align:center">整个程序的配置文件</td>
+</tr>
+<tr>
+<td style="text-align:center">project.properties</td>
+<td style="text-align:center">指定SDK版本</td>
+</tr>
+</tbody>
+</table>
+<h1 id="活动">活动</h1><blockquote>
+<p>活动是一种可包含用户界面的组件，主要用于和用户进行交互。<br>活动都应该在AndroidManifest.xml文件中注册，否则无法使用该活动。</p>
+</blockquote>
+<h2 id="在AndroidManifest文件中注册活动">在AndroidManifest文件中注册活动</h2><p><strong>注意下面的注释非标准语法注释</strong><br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">manifest</span> <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    <span class="attribute">package</span>=<span class="value">"com.example.activitytest"</span></span><br><span class="line">    <span class="attribute">android:versionCode</span>=<span class="value">"1"</span></span><br><span class="line">    <span class="attribute">android:versionName</span>=<span class="value">"1.0"</span> &gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">uses-sdk</span></span><br><span class="line">        <span class="attribute">android:minSdkVersion</span>=<span class="value">"14"</span></span><br><span class="line">        <span class="attribute">android:targetSdkVersion</span>=<span class="value">"19"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">application</span></span><br><span class="line">        <span class="attribute">android:allowBackup</span>=<span class="value">"true"</span></span><br><span class="line">        <span class="attribute">android:icon</span>=<span class="value">"@drawable/ic_launcher"</span></span><br><span class="line">        <span class="attribute">android:label</span>=<span class="value">"@string/app_name"</span></span><br><span class="line">        <span class="attribute">android:theme</span>=<span class="value">"@style/AppTheme"</span> &gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="title">activity</span></span><br><span class="line">        </span><br><span class="line">        // 在最外层的&lt;<span class="attribute">manifest</span>&gt;</span>标签中已通过package制定了程序的包名，所以可以简写为“.FirstActivity”</span><br><span class="line">        android:name=".FirstActivity" </span><br><span class="line">        android:launchMode="singleTop"</span><br><span class="line">        android:label="This is FirstActivity" &gt;</span><br><span class="line">        </span><br><span class="line">        // <span class="tag">&lt;<span class="title">intent-filter</span>&gt;</span>和<span class="tag">&lt;/<span class="title">intent-filter</span>&gt;</span>之间为主活动</span><br><span class="line">        <span class="tag">&lt;<span class="title">intent-filter</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="title">action</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.action.MAIN"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">category</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.category.LAUNCHER"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">activity</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="title">activity</span></span><br><span class="line">        	<span class="attribute">android:name</span>=<span class="value">".SecondActivity"</span> &gt;</span></span><br><span class="line">        	</span><br><span class="line">        	// 指定当前活动能够相应的action和category,当它们能同时匹配上Intent中指定的action和category时，这个活动才能响应该Intent</span><br><span class="line">        	<span class="tag">&lt;<span class="title">intent-filter</span>&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">action</span> <span class="attribute">android:name</span>=<span class="value">"com.example.activitytest.ACTION_START"</span> /&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">category</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.category.DEFAULT"</span> /&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">category</span> <span class="attribute">android:name</span>=<span class="value">"com.example.activitytest.MY_CATEGORY"</span> /&gt;</span></span><br><span class="line">        	<span class="tag">&lt;/<span class="title">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">activity</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="title">activity</span> <span class="attribute">android:name</span>=<span class="value">".ThirdActivity"</span> &gt;</span></span><br><span class="line">        	<span class="tag">&lt;<span class="title">intent-filter</span>&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">action</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.action.VIEW"</span> /&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">category</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.category.DEFAULT"</span> /&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">data</span> <span class="attribute">android:scheme</span>=<span class="value">"tel"</span> /&gt;</span></span><br><span class="line">        	<span class="tag">&lt;/<span class="title">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">activity</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">application</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">manifest</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<h2 id="使用活动">使用活动</h2><blockquote>
+<p>任何活动都应该重写Activity的onCreate方法：<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">FirstActivity</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">BaseActivity</span> &#123;</span></span><br><span class="line">	<span class="annotation">@Override</span></span><br><span class="line">	<span class="keyword">protected</span> void onCreate(<span class="type">Bundle</span> savedInstanceState) &#123;</span><br><span class="line">		<span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="布局">布局</h3><blockquote>
+<p>Android程序的设计讲究逻辑和视图分离，最好每一个活动都能对应一个布局（在res/layout中创建Android XML文件）</p>
+</blockquote>
+<h4 id="在布局中添加按钮">在布局中添加按钮</h4><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Button</span><br><span class="line">    android:id=<span class="string">"@+id/button_1"</span>             <span class="comment"> // 当前元素唯一标识符，注意@后面有个+号为定义</span></span><br><span class="line">    android:layout_width=<span class="string">"match_parent"</span>    <span class="comment"> // 当前元素和父元素一样宽</span></span><br><span class="line">    android:layout_height=<span class="string">"wrap_content"</span>   <span class="comment"> // 当前元素的高度只要能刚好包含里面的内容即可</span></span><br><span class="line">    android:<span class="keyword">text</span>=<span class="string">"Button 1"</span> /&gt;             <span class="comment"> // 该按钮显示的文本内容</span></span><br></pre></td></tr></table></figure>
+<h3 id="隐藏标题栏">隐藏标题栏</h3><h2 id="引用资源">引用资源</h2><blockquote>
+<p>在代码中可以通过R.string.hello_world获得字符串的引用<br>在XML中可通过@string/hello_world获得字符串的引用</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="简单的安卓程序构成">简单的安卓程序构成</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">目录名称</th>
+<th style="text-align:center">组成</th>
+</tr>
+</]]>
+    </summary>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="安卓" scheme="http://yoursite.com/tags/%E5%AE%89%E5%8D%93/"/>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Java核心技术学习笔记之一]]></title>
+    <link href="http://yoursite.com/2016/01/27/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%B8%80/"/>
+    <id>http://yoursite.com/2016/01/27/Java核心技术学习笔记之一/</id>
+    <published>2016-01-27T14:05:33.000Z</published>
+    <updated>2016-03-27T06:35:31.130Z</updated>
+    <content type="html"><![CDATA[<h1 id="一、Java程序设计环境">一、Java程序设计环境</h1><h2 id="Java术语_p13">Java术语 p13</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">术语名</th>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Java Development Kit</td>
+<td style="text-align:center">JDK</td>
+<td style="text-align:center">Java开发工具</td>
+</tr>
+<tr>
+<td style="text-align:center">Java Runtime Environment</td>
+<td style="text-align:center">JRE</td>
+<td style="text-align:center">Java运行时环境，用户使用的软件</td>
+</tr>
+<tr>
+<td style="text-align:center">Standard Edition</td>
+<td style="text-align:center">SE</td>
+<td style="text-align:center">用于桌面或简单的服务器应用的Java平台</td>
+</tr>
+<tr>
+<td style="text-align:center">Enterprise Edition</td>
+<td style="text-align:center">EE</td>
+<td style="text-align:center">用于复杂的服务器应用的Java平台</td>
+</tr>
+<tr>
+<td style="text-align:center">Micro Edition</td>
+<td style="text-align:center">ME</td>
+<td style="text-align:center">用于手机和其他小型设备的Java平台</td>
+</tr>
+<tr>
+<td style="text-align:center">Java2</td>
+<td style="text-align:center">J2</td>
+<td style="text-align:center">过时术语，用于描述1998-2006年之间的Java版本</td>
+</tr>
+<tr>
+<td style="text-align:center">Software Development Kit</td>
+<td style="text-align:center">SDK</td>
+<td style="text-align:center">过时术语，用于描述1998-2006年之间的JDK</td>
+</tr>
+<tr>
+<td style="text-align:center">Update</td>
+<td style="text-align:center">u</td>
+<td style="text-align:center">Oracle的术语，用于发布修改的bug</td>
+</tr>
+<tr>
+<td style="text-align:center">NetBeans</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">Oracle的集成开发环境</td>
+</tr>
+</tbody>
+</table>
+<h1 id="二、Java的基本程序设计结构">二、Java的基本程序设计结构</h1><h2 id="注释">注释</h2><blockquote>
+<ol>
+<li>eclipse中输入/**并回车可自动生成文档注释。</li>
+<li>/**/注释不能嵌套。即如果代码本身包含了一个 */，就不能用/*和*/将注释括起来。p33</li>
+</ol>
+</blockquote>
+<h2 id="数据类型">数据类型</h2><h3 id="基本类型：能够直接用二进制表示的类型">基本类型：能够直接用二进制表示的类型</h3><h4 id="整数类型">整数类型</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">存储需求</th>
+<th style="text-align:center">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">byte  字节型</td>
+<td style="text-align:center">8bit</td>
+<td style="text-align:center">-128~127</td>
+</tr>
+<tr>
+<td style="text-align:center">short 短整型</td>
+<td style="text-align:center">16bit</td>
+<td style="text-align:center">-32768~32767</td>
+</tr>
+<tr>
+<td style="text-align:center">int 整型</td>
+<td style="text-align:center">32bit</td>
+<td style="text-align:center">-21亿~21亿</td>
+</tr>
+<tr>
+<td style="text-align:center">long  长整型</td>
+<td style="text-align:center">64bit</td>
+<td style="text-align:center">-800亿亿~800亿亿</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong></p>
+<blockquote>
+<ol>
+<li>长整形数值后面有L，如7000000000L</li>
+<li>十六进制有前缀0x，如0xCAFE</li>
+<li>八进制有前缀0，如010</li>
+<li>二进制有前缀0b，如0b1001（从Java 7开始）</li>
+<li>Java没有无符号类型</li>
+</ol>
+</blockquote>
+<h4 id="浮点数类型[小数]">浮点数类型[小数]</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">存储需求</th>
+<th style="text-align:center">精确度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">float 单精度</td>
+<td style="text-align:center">32bit</td>
+<td style="text-align:center">有效位数6-7位</td>
+</tr>
+<tr>
+<td style="text-align:center">double 双精度</td>
+<td style="text-align:center">64bit</td>
+<td style="text-align:center">有效位数15-16位</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong> float类型必须以F结尾，如3.14F，否则会被认为是double类型</p>
+<h4 id="字符类型">字符类型</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">存储需求</th>
+<th style="text-align:center">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">char 字符型</td>
+<td style="text-align:center">16bit</td>
+<td style="text-align:center">0~65535</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong> 如’a’ ‘A’ ‘0’ ‘中’，每个字符都对应一个数字，Unicode码</p>
+<h4 id="逻辑类型">逻辑类型</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">存储需求</th>
+<th style="text-align:center">取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">boolean 布尔型</td>
+<td style="text-align:center">8bit</td>
+<td style="text-align:center">true/false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong> 0和1并不代表false和true</p>
+<h3 id="引用类型">引用类型</h3><blockquote>
+<ol>
+<li>数组类型</li>
+<li>类类型[类似于结构体类型]</li>
+</ol>
+</blockquote>
+<h2 id="运算符">运算符</h2><h3 id="位运算">位运算</h3><p>可参考:<br><a href="http://www.matrix67.com/blog/archives/263" target="_blank" rel="external">位运算简介及实用技巧（一）：基础篇</a><br><a href="http://www.matrix67.com/blog/archives/264" target="_blank" rel="external">位运算简介及实用技巧（二）：进阶篇(1)</a></p>
+<h3 id="数值之间的转换">数值之间的转换</h3><blockquote>
+<ul>
+<li>如果两个操作数之一为double，那么另一个会转化为double</li>
+<li>否则，如果其一是float，那么另一个会转化为float</li>
+<li>否则，如果其一是long，那么另一个会转化为long</li>
+<li>否则，两个都会转化为int</li>
+</ul>
+</blockquote>
+<h3 id="强制类型转换">强制类型转换</h3><p>强制类型转换不能超过转换类型的取值范围，如(byte)300实际值为44（value = 数值 - n<em>2^(类型所占位数-1), n=1, 2, 3…直到value符合类型的取值范围<br>如：(byte)300 == 300 - 2*</em>2^(8-1) == 44 &lt; 127。更简洁的算式为：44 = 300 % 128</p>
+<h3 id="枚举类型">枚举类型</h3><p>当变量的取值在有限的集合内时，可使用枚举类型<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Size &#123; SMALL, MEDIUM, LARGE, EXTRA, EXTRA_LARGE &#125;;</span><br><span class="line">Size s = Size.MEDIUM;</span><br></pre></td></tr></table></figure></p>
+<h2 id="字符串">字符串</h2><h3 id="比较字符串">比较字符串</h3><blockquote>
+<p>如果想要比较两个字符串内容是否相同，绝对不能用”==”(作用为比较两个字符串的地址)，而应该用str1.equals(str2);</p>
+<h3 id="构建字符串">构建字符串</h3><p>StringBuilder是一种比较高效的方法<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder builder = <span class="keyword">new</span> StringBuilder(); <span class="comment">// 构建一个空的字符串构建器</span></span><br><span class="line">builder.<span class="built_in">append</span>(ch); <span class="comment">// 尾部添加一个字符</span></span><br><span class="line">builder.<span class="built_in">append</span>(<span class="built_in">str</span>); <span class="comment">// 尾部添加一个字符串</span></span><br><span class="line"><span class="keyword">String</span> completedString = builder.toString(); <span class="comment">// 使构建器中的字符串序列转化成为String对象</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="输入输出">输入输出</h2><h3 id="格式化输出">格式化输出</h3><blockquote>
+<p>使用静态的String.format方法创建一个格式化的字符串<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">String</span> name = <span class="string">"someone"</span>;</span><br><span class="line"><span class="keyword">String</span> <span class="keyword">message</span> = <span class="keyword">String</span>.format(<span class="string">"Hey, %s, I love you"</span>, name);</span><br><span class="line">System.out.println(<span class="keyword">message</span>);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="文件输入与输出">文件输入与输出</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Scanner sc = <span class="keyword">new</span> Scanner(Paths.get(<span class="string">"d:\\a.txt"</span>)); <span class="comment">// 读取</span></span><br><span class="line"><span class="keyword">while</span>(sc.hasNext()) &#123;</span><br><span class="line">    System.out.println(sc.nextLine());</span><br><span class="line">&#125;</span><br><span class="line">PrintWriter pw = <span class="keyword">new</span> PrintWriter(<span class="string">"d:\\b.txt"</span>); <span class="comment">// 写入</span></span><br><span class="line">pw.println(<span class="string">"Hey, I love you"</span>);</span><br><span class="line">pw.flush(); <span class="comment">// 清空缓存区</span></span><br><span class="line">pw.close(); <span class="comment">// 关闭文件</span></span><br></pre></td></tr></table></figure>
+<h2 id="流程控制">流程控制</h2><h3 id="带标签的break">带标签的break</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">stop: <span class="comment">// 该标签可自定义</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">    System.out.print(i + <span class="string">" "</span> + j + <span class="string">"|"</span>);</span><br><span class="line">    <span class="keyword">if</span> (j == <span class="number">7</span>)</span><br><span class="line">      <span class="keyword">break</span> stop; <span class="comment">// 跳到stop标记的循环之外</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>输出为：0 0|0 1|0 2|0 3|0 4|0 5|0 6|0 7|</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 还有以下用法</span></span><br><span class="line"><span class="tag">label</span>:</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="tag">if</span>(condition) <span class="tag">break</span> <span class="tag">label</span>; <span class="comment">// exits block</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// jumps here when break statement executes</span></span><br></pre></td></tr></table></figure>
+<h2 id="大数值">大数值</h2><h3 id="BigInteger（整数）_和_BigDecimal（浮点数）">BigInteger（整数） 和 BigDecimal（浮点数）</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">BigInteger </span>a = <span class="keyword">BigInteger.valueOf(77); </span>// 将int <span class="number">77</span> 转换为<span class="keyword">BigInteger</span></span><br></pre></td></tr></table></figure>
+<p><strong>大数值不能使用+-*/等符号进行运算，而要使用相应的方法(详见API)：</strong><br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BigInteger c = <span class="operator">a</span>.<span class="built_in">add</span>(b);<span class="comment"> // c = a + b;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="数组">数组</h2><blockquote>
+<p><strong>数组是引用型数据类型</strong></p>
+<h3 id="for_each循环">for each循环</h3><p>for(variable : collection) statement</p>
+</blockquote>
+<p>如：<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> element : a) <span class="comment">// a为数组，理解为 for each element in a</span></span><br><span class="line">    System.<span class="keyword">out</span>.println(element);</span><br></pre></td></tr></table></figure></p>
+<h3 id="快速打印数组">快速打印数组</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.<span class="keyword">out</span>.println(Arrays.<span class="keyword">toString</span>(a)); <span class="comment">// 一维数组</span></span><br><span class="line">System.<span class="keyword">out</span>.println(Arrays.deepToString(b)); <span class="comment">// 二维数组</span></span><br></pre></td></tr></table></figure>
+<h1 id="三、类与对象">三、类与对象</h1><h2 id="隐式参数和显式参数">隐式参数和显式参数</h2><blockquote>
+<p>a.b(c);<br>则a为隐式参数（因为没有出现在方法声明中），c为显式参数<br>this即代表隐式参数</p>
+</blockquote>
+<h2 id="编写返回引用可变对象的引用方法">编写返回引用可变对象的引用方法</h2><blockquote>
+<p>下面的代码会破坏封装性<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Employee &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">Date</span> hireDay;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">Date</span> getHireDay() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Date</span> hireDay;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Employee harry = <span class="attribute">...</span>;</span><br><span class="line"><span class="built_in">Date</span> d = harry<span class="built_in">.</span>getHireDay();</span><br><span class="line">d<span class="built_in">.</span>setTime(<span class="attribute">...</span>); <span class="comment">// 假设Date中有这个set方法</span></span><br><span class="line"><span class="comment">// 这段代码中，d和harry.hireDay具有相同的引用，因此对d调用set方法就能改变这个雇员的私有状态，也即破坏了封装性。</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>那么，正确的方法应该先对其克隆（clone）：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Date hireDay;</span><br><span class="line">    <span class="keyword">public</span> <span class="function">Date <span class="title">getHireDay</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">return</span> hireDay.<span class="title">clone</span><span class="params">()</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="方法参数">方法参数</h2><blockquote>
+<p>方法参数共两种类型：<br>1.基本数据类型（数字、布尔值）<br>2.对象引用</p>
+<p>一个方法不可能修改一个基本数据类型的参数。而当参数为引用时，形参便拷贝了实参的引用。</p>
+</blockquote>
+<p>因此下面的代码是无效的：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(Person a, Person b)</span> </span>&#123;</span><br><span class="line">    Person t = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>交换前，a、b和实参确实具有相同的引用，a,b的引用也确实交换了，但a、b仅仅是两个实参的引用的拷贝，实参并没有交换。<strong>对象引用进行的是值传递：</strong></p>
+<blockquote>
+<ol>
+<li>一个方法不能修改一个基本数据类型的参数（即数值型和布尔型）</li>
+<li>一个方法可以改变一个对象参数的状态</li>
+<li>一个方法不能让对象参数引用一个新的对象</li>
+</ol>
+</blockquote>
+<h2 id="构造器">构造器</h2><blockquote>
+<ol>
+<li>系统提供的默认构造器会将实例域中的数值型数据设置为0、布尔型数据设置为false、所有对象变量将设置为null。</li>
+<li>类中提供了有参构造器时，系统默认的无参构造器便会被隐藏，如果需要构造无参对象，这时必须显式地把无参构造器写出来。</li>
+</ol>
+</blockquote>
+<h3 id="this的另一个用法">this的另一个用法</h3><p> 若构造器的第一个语句形如this(…)，这个构造器将调用同一个类的另一个构造器：<br> <figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(<span class="keyword">double</span> s)</span></span>&#123;</span><br><span class="line">   <span class="keyword">this</span>(<span class="string">"Employee #"</span> + nextId, s); <span class="comment">// 调用Employee(String, double)构造器</span></span><br><span class="line">   nextId++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="静态初始化块和对象初始化块">静态初始化块和对象初始化块</h2><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Employee &#123;</span><br><span class="line">  <span class="keyword"> private</span><span class="keyword"> static</span><span class="instruction"> int </span>nextId;</span><br><span class="line"></span><br><span class="line">  <span class="keyword"> private</span><span class="instruction"> int </span>id;</span><br><span class="line">  <span class="keyword"> private</span> String name = <span class="string">""</span>; //<span class="instruction"> instance </span>field initialization</span><br><span class="line">  <span class="keyword"> private</span><span class="instruction"> double </span>salary;</span><br><span class="line">  </span><br><span class="line">   // 静态初始化块（类第一次加载的时候就会执行）</span><br><span class="line">  <span class="keyword"> static</span> &#123;</span><br><span class="line">      Random generator =<span class="instruction"> new </span>Random(<span class="function">)</span>;</span><br><span class="line">      // set nextId to a random number between 0<span class="instruction"> and </span>9999</span><br><span class="line">      nextId =<span class="function"> generator.nextInt(</span>10000<span class="function">)</span>;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   // 对象初始化块</span><br><span class="line">   &#123;</span><br><span class="line">      id = nextId;</span><br><span class="line">      nextId++;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="方法注释">方法注释</h2><blockquote>
+<p>@param 变量描述<br>  @return 返回值描述<br>  @throws 抛出异常描述 等等</p>
+</blockquote>
+<h2 id="类设计技巧">类设计技巧</h2><blockquote>
+<ul>
+<li>一定要保证数据私有（封装）</li>
+<li>一定要对数据初始化</li>
+<li>不要在类中使用过多的基本类型（例如许多实例域有共同性质，那么可以把它们放到一个类中）</li>
+<li>不是所有的域都需要独立的域访问器和域更改器</li>
+<li>将职责过多的类进行分解</li>
+<li>类名和方法名要能够体现它们的职责</li>
+</ul>
+</blockquote>
+<h1 id="继承">继承</h1><blockquote>
+<p>子类不能直接使用父类的私有域（尽管继承了），若需要使用父类的私有变量，应该使用（super.）get方法（有的话）</p>
+</blockquote>
+<h2 id="置换法则">置换法则</h2><blockquote>
+<p>“is-a”的另一种表述法就是置换法则。它表明超类对象都可以用子类对象置换：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Mnager boss = <span class="keyword">new</span> Manager(...);</span><br><span class="line">Employee[] staff = <span class="keyword">new</span> Employee[<span class="number">3</span>];</span><br><span class="line">staff[<span class="number">0</span>] = boss;</span><br></pre></td></tr></table></figure></p>
+<p>这个例子中，staff[0]和boss引用同一个对象，但staff[0]仍然是Employee对象，即意味着boss可以调用Manager特有的方法而staff[0]不行</p>
+</blockquote>
+<h2 id="强制类型转换-1">强制类型转换</h2><blockquote>
+<p>只能在继承层次内进行类型转换<br>在将超类转换成子类之前，应使用instanceof进行检查：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(staff[<span class="number">1</span>] instanceof Manager) &#123; <span class="comment">// 只有需要使用Manager中特有的方法时才进行转换</span></span><br><span class="line">    boss = (Manager) staff[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="抽象类">抽象类</h2><blockquote>
+<p>抽象类不能被实例化，但可以引用非抽象子类：如Person p = new Student(…); (Person为抽象类)</p>
+<p>抽象类（接口也是）里面的方法不能设置为static属性。因为static方法可以直接被类调用，但该方法又没有具体实现，会产生错误</p>
+</blockquote>
+<h2 id="Object类">Object类</h2><h3 id="final">final</h3><blockquote>
+<p>final方法无法被子类覆盖（将一个类设置为final属性后，其中的方法自动变为final方法，但其中的域不会成为final域）</p>
+</blockquote>
+<h3 id="equals方法">equals方法</h3><blockquote>
+<p>比较好的编写equals函数的方法：</p>
+<ol>
+<li>显示参数命名为otherObject，稍后会将它转换成另一个叫做other的变量</li>
+<li><p>检测this与otherObject是否引用同一个对象：<br> if(this == otherObject) return ture;</p>
+</li>
+<li><p>检测otherObject是否为null：<br> if(otherObject == null) return false;</p>
+</li>
+<li><p>比较this与otherObjec是否属于同一个类。<br>如果equals的语义在每个子类中有所改变，就使用getClass检测：<br> if(getClass() != otherObject.getClass()) reutrn false;<br>如果所有子类都有统一的语义，就使用instanceof检测：<br> if(!(otherObject instanceof ClassName)) return false;</p>
+</li>
+<li><p>将otherObject转换为相应的类类型变量：<br> className other = (ClassName) otherObject;</p>
+</li>
+<li><p>对所有需要比较的域进行比较。使用“==”比较基本类型域，使用equals比较对象域：<br> return field1 == other.field &amp;&amp; Object.equals(field2, other.field2)&amp;&amp; …;<br> // 使用Ojects.equals()方法是因为field有可能为null，当为null时不能调用equals方法<br> <strong>如果在子类中重新定义equals，就要在其中包含调用super.equals(other)</strong></p>
+</li>
+</ol>
+<p>对于数组类型的域，可使用静态的Arrays.equals方法检测相应的数组元素是否相等</p>
+</blockquote>
+<h2 id="参数数量可变的方法">参数数量可变的方法</h2><p>典型：printf方法（任意个参数）<br>例子：计算若干个数值的最大值：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">double</span> <span class="title">max</span><span class="params">(<span class="keyword">double</span>... values)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">double</span> largest = Doule.MIN_VALUE;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">double</span> v: values) <span class="keyword">if</span>(v &gt; largest) largest = v;</span><br><span class="line">    <span class="keyword">return</span> largest;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="一、Java程序设计环境">一、Java程序设计环境</h1><h2 id="Java术语_p13">Java术语 p13</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">术语名</th>
+<th st]]>
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Java核心技术" scheme="http://yoursite.com/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[hexo静态博客搭建资料导航]]></title>
+    <link href="http://yoursite.com/2016/01/22/hexo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B5%84%E6%96%99%E5%AF%BC%E8%88%AA/"/>
+    <id>http://yoursite.com/2016/01/22/hexo静态博客搭建资料导航/</id>
+    <published>2016-01-22T11:48:41.000Z</published>
+    <updated>2016-01-22T16:19:46.115Z</updated>
+    <content type="html"><![CDATA[<h1 id="一、前言">一、前言</h1><p>　　<br>　　咳咳，在建自己的博客过程中参考了很多资料，帮助我解决了大量的问题。考完之后也有点时间，便准备把自己建博客的整个流程中参考的一些资料整理下供大家参考。<br> 　　至于为什么自己搭博客嘛，一个是因为自己搭博客可以做到没有任何烦人的广告，另一个是可以根据自己的喜欢定制博客，相对普通的博客自由度更大。最重要的当然是<strong>bigger than bigger</strong>呀2333。<br><strong> 　　注意，所收集的教程有些已经好几年了，所以在某些小步骤上可能会不同（例如软件升级了，指令不一样了）。如果遇到了困难，请百度/google或者留言。 </strong></p>
+<h1 id="二、初级">二、初级</h1><h2 id="搭建博客">搭建博客</h2><p>谢谢 <a href="http://zipperary.com" title="Zipperta&#39;s blog" target="_blank" rel="external">Zipperta’s blog</a><br><a href="http://zipperary.com/2013/05/28/hexo-guide-1/" title="hexo系列教程：（一）hexo介绍" target="_blank" rel="external">hexo系列教程：（一）hexo介绍</a><br><a href="http://zipperary.com/2013/05/28/hexo-guide-2/" title="hexo系列教程：（二）搭建hexo博客" target="_blank" rel="external">hexo系列教程：（二）搭建hexo博客</a><br><a href="http://zipperary.com/2013/05/29/hexo-guide-3/" title="hexo系列教程：（三）hexo博客的配置、使用" target="_blank" rel="external">hexo系列教程：（三）hexo博客的配置、使用</a></p>
+<p><strong> 如果你已经顺利进行到这里，那么恭喜你，你可以进阶了。</strong><br>现在的博客也许看起来太过于简洁、难看了，甚至连评论都没有。<br>那么请往下看。你也可以选择你自己喜欢的主题。例如我选用的是<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT主题</a>。</p>
+<h1 id="三、中高级">三、中高级</h1><h2 id="评论、页面导航等">评论、页面导航等</h2><p><a href="http://zipperary.com/2013/05/30/hexo-guide-4/" title="hexo系列教程：（四）hexo博客的优化技巧" target="_blank" rel="external">hexo系列教程：（四）hexo博客的优化技巧</a></p>
+<h2 id="添加RSS、购买域名、设置DNS等">添加RSS、购买域名、设置DNS等</h2><p><a href="http://zipperary.com/2013/06/02/hexo-guide-5/" title="hexo系列教程：（五）hexo博客的优化技巧续" target="_blank" rel="external">hexo系列教程：（五）hexo博客的优化技巧续</a></p>
+<p>谢谢另外一位我参考过的博主：<a href="http://iread.io/tags/Hexo/" title="叶阳栩宁&#39;s blog" target="_blank" rel="external">叶阳栩宁’s blog</a><br><img src="/img/叶阳栩宁.png" alt="叶阳栩宁&#39;s blog"></p>
+<h1 id="四、其他参考资料">四、其他参考资料</h1><p>　　<br><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">1.NexT主题使用文档</a><br><img src="/img/NexT文档.png" alt="NexT文档"></p>
+<p><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">2.hexo官网</a><br><img src="/img/hexo官网.jpg" alt="hexo官网"></p>
+<p><a href="https://www.zybuluo.com/mdeditor#" target="_blank" rel="external">3.在线Markdown编辑器</a><br><img src="/img/Markdowm.png" alt="在线Markdown编辑器"></p>
+<p><a href="http://codeflyer-zy.com/2015/11/20/%E7%BB%99%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0%E8%AE%BF%E5%AE%A2%E8%AE%B0%E5%BD%95/" target="_blank" rel="external">4.给网站添加访客记录</a><br><img src="/img/访客记录.png" alt="访客记录"></p>
+<h1 id="五、Q&amp;A">五、Q&amp;A</h1><p>　　<br>Q1：自己搭建博客要钱吗？<br>A：如果不打算购买域名的话是完全免费的。域名也不是很贵，.com的大概五六十块一年，这样会显得更加个(you)性(B)化(ge)</p>
+<p>Q2：有很多问题不会，想找人解答？ <strong>// 请先尝试自行解决！</strong><br>A：hexo交流QQ群：287306637</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="一、前言">一、前言</h1><p>　　<br>　　咳咳，在建自己的博客过程中参考了很多资料，帮助我解决了大量的问题。考完之后也有点时间，便准备把自己建博客的整个流程中参考的一些资料整理下供大家参考。<br> 　　至于为什么自己搭博客嘛，一个是因为自己搭博客可以做]]>
+    </summary>
+    
+      <category term="教程" scheme="http://yoursite.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="资料" scheme="http://yoursite.com/tags/%E8%B5%84%E6%96%99/"/>
+    
+      <category term="博客建站资料" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E8%B5%84%E6%96%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[hexo静态博客搭建资料导航]]></title>
+    <link href="http://yoursite.com/2016/01/22/buildblogbyhexo/"/>
+    <id>http://yoursite.com/2016/01/22/buildblogbyhexo/</id>
+    <published>2016-01-22T11:48:41.000Z</published>
+    <updated>2016-01-22T16:48:05.692Z</updated>
+    <content type="html"><![CDATA[<h1 id="一、前言">一、前言</h1><p>　　<br>　　咳咳，在建自己的博客过程中参考了很多资料，帮助我解决了大量的问题。考完之后也有点时间，便准备把自己建博客的整个流程中参考的一些资料整理下供大家参考。<br> 　　至于为什么自己搭博客嘛，一个是因为自己搭博客可以做到没有任何烦人的广告，另一个是可以根据自己的喜欢定制博客，相对普通的博客自由度更大。最重要的当然是<strong>bigger than bigger</strong>呀2333。<br><strong> 　　注意，所收集的教程有些已经好几年了，所以在某些小步骤上可能会不同（例如软件升级了，指令不一样了）。如果遇到了困难，请百度/google或者留言。 </strong></p>
+<h1 id="二、初级">二、初级</h1><h2 id="搭建博客">搭建博客</h2><p>谢谢 <a href="http://zipperary.com" title="Zipperta&#39;s blog" target="_blank" rel="external">Zipperta’s blog</a><br><a href="http://zipperary.com/2013/05/28/hexo-guide-1/" title="hexo系列教程：（一）hexo介绍" target="_blank" rel="external">hexo系列教程：（一）hexo介绍</a><br><a href="http://zipperary.com/2013/05/28/hexo-guide-2/" title="hexo系列教程：（二）搭建hexo博客" target="_blank" rel="external">hexo系列教程：（二）搭建hexo博客</a><br><a href="http://zipperary.com/2013/05/29/hexo-guide-3/" title="hexo系列教程：（三）hexo博客的配置、使用" target="_blank" rel="external">hexo系列教程：（三）hexo博客的配置、使用</a></p>
+<p><strong> 如果你已经顺利进行到这里，那么恭喜你，你可以进阶了。</strong><br>现在的博客也许看起来太过于简洁、难看了，甚至连评论都没有。<br>那么请往下看。你也可以选择你自己喜欢的主题。例如我选用的是<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT主题</a>。</p>
+<h1 id="三、中高级">三、中高级</h1><h2 id="评论、页面导航等">评论、页面导航等</h2><p><a href="http://zipperary.com/2013/05/30/hexo-guide-4/" title="hexo系列教程：（四）hexo博客的优化技巧" target="_blank" rel="external">hexo系列教程：（四）hexo博客的优化技巧</a></p>
+<h2 id="添加RSS、购买域名、设置DNS等">添加RSS、购买域名、设置DNS等</h2><p><a href="http://zipperary.com/2013/06/02/hexo-guide-5/" title="hexo系列教程：（五）hexo博客的优化技巧续" target="_blank" rel="external">hexo系列教程：（五）hexo博客的优化技巧续</a></p>
+<p>谢谢另外一位我参考过的博主：<a href="http://iread.io/tags/Hexo/" title="叶阳栩宁&#39;s blog" target="_blank" rel="external">叶阳栩宁’s blog</a><br><img src="/img/叶阳栩宁.png" alt="叶阳栩宁&#39;s blog"></p>
+<h1 id="四、其他参考资料">四、其他参考资料</h1><p>　　<br><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">1.NexT主题使用文档</a><br><img src="/img/NexT文档.png" alt="NexT文档"></p>
+<p><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">2.hexo官网</a><br><img src="/img/hexo官网.jpg" alt="hexo官网"></p>
+<p><a href="http://codeflyer-zy.com/2015/11/03/Cmd%20Markdown%E7%BC%96%E8%BE%91%E9%98%85%E8%AF%BB%E5%99%A8%E7%AE%80%E4%BB%8B/" target="_blank" rel="external">3.Markdown编辑器</a><br><img src="/img/Markdowm.png" alt="在线Markdown编辑器"></p>
+<p><a href="http://codeflyer-zy.com/2015/11/20/%E7%BB%99%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0%E8%AE%BF%E5%AE%A2%E8%AE%B0%E5%BD%95/" target="_blank" rel="external">4.给网站添加访客记录</a><br><img src="/img/访客记录.png" alt="访客记录"></p>
+<h1 id="五、Q&amp;A">五、Q&amp;A</h1><p>　　<br>Q1：自己搭建博客要钱吗？<br>A：如果不打算购买域名的话是完全免费的。域名也不是很贵，.com的大概五六十块一年，这样会显得更加个(you)性(B)化(ge)</p>
+<p>Q2：有很多问题不会，想找人解答？ <strong>// 请先尝试自行解决！</strong><br>A：hexo交流QQ群：287306637</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="一、前言">一、前言</h1><p>　　<br>　　咳咳，在建自己的博客过程中参考了很多资料，帮助我解决了大量的问题。考完之后也有点时间，便准备把自己建博客的整个流程中参考的一些资料整理下供大家参考。<br> 　　至于为什么自己搭博客嘛，一个是因为自己搭博客可以做]]>
+    </summary>
+    
+      <category term="教程" scheme="http://yoursite.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="资料" scheme="http://yoursite.com/tags/%E8%B5%84%E6%96%99/"/>
+    
+      <category term="博客建站资料" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E8%B5%84%E6%96%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Java中测试算法时间性能]]></title>
+    <link href="http://yoursite.com/2016/01/15/Java%E4%B8%AD%E6%B5%8B%E8%AF%95%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E6%80%A7%E8%83%BD/"/>
+    <id>http://yoursite.com/2016/01/15/Java中测试算法时间性能/</id>
+    <published>2016-01-15T08:55:47.000Z</published>
+    <updated>2016-01-15T12:27:42.979Z</updated>
+    <content type="html"><![CDATA[<p>　　很多时候，我们想测试某一个算法/一段代码的性能，那么比较直观的方法便是测试这段代码运行的时间。在Java中，可用如下方法测试：<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> num = (<span class="keyword">int</span>) (Math.random() * <span class="number">1000</span>);</span><br><span class="line">            list.add(num);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获得系统当前时间，单位ms</span></span><br><span class="line">        <span class="keyword">long</span> time1 = System.currentTimeMillis();</span><br><span class="line">        <span class="comment">// 随机移除10000个</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> index = (<span class="keyword">int</span>) (Math.random() * list.size());</span><br><span class="line">            list.remove(index);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 获得系统当前时间，单位ms</span></span><br><span class="line">        <span class="keyword">long</span> time2 = System.currentTimeMillis();</span><br><span class="line">        System.out.println(<span class="string">"耗费时间:"</span> + (time2 - time1) + <span class="string">"ms"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>通过输出，可知在我的电脑上时间为：<br>耗费时间:1531ms</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>　　很多时候，我们想测试某一个算法/一段代码的性能，那么比较直观的方法便是测试这段代码运行的时间。在Java中，可用如下方法测试：<br>]]>
+    
+    </summary>
+    
+      <category term="Java小技巧" scheme="http://yoursite.com/tags/Java%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[bug以及公告]]></title>
+    <link href="http://yoursite.com/2016/01/03/bug%E4%BB%A5%E5%8F%8A%E5%85%AC%E5%91%8A/"/>
+    <id>http://yoursite.com/2016/01/03/bug以及公告/</id>
+    <published>2016-01-03T15:17:59.000Z</published>
+    <updated>2016-01-04T03:23:55.449Z</updated>
+    <content type="html"><![CDATA[<p>　　发现博客的分类数和标签数都显示不正确… 现在还不知道怎么解决。有时间再弄吧。<br>　　寒假会整理下我建博客用的一些资料，有兴趣的话你也可以自己建一个。</p>
+<h3 id="2016-1-4_更">2016-1-4 更</h3><p>　　已经解决了…在知乎上面提的问，别人很耐心地解答了问题，还进行了远程协助。自己计算机专业的却不能解决，汗颜。加油学习吧。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>　　发现博客的分类数和标签数都显示不正确… 现在还不知道怎么解决。有时间再弄吧。<br>　　寒假会整理下我建博客用的一些资料，有兴趣的话你也可以自己建一个。</p>
+<h3 id="2016-1-4_更">2016-1-4 更</h3><p>　　已经解决了…在知乎上面提的问]]>
+    </summary>
+    
+      <category term="公告" scheme="http://yoursite.com/tags/%E5%85%AC%E5%91%8A/"/>
+    
+      <category term="公告" scheme="http://yoursite.com/categories/%E5%85%AC%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[2016，希望]]></title>
+    <link href="http://yoursite.com/2016/01/01/2016%EF%BC%8C%E5%B8%8C%E6%9C%9B/"/>
+    <id>http://yoursite.com/2016/01/01/2016，希望/</id>
+    <published>2015-12-31T16:50:22.000Z</published>
+    <updated>2016-01-02T10:13:13.640Z</updated>
+    <content type="html"><![CDATA[<p>　　再过几十分钟2015年就结束了。<br>　　还记得一年前的元旦没有回去，在寝室里静静等待着跨年，等待着给一些人发送祝福，等待着零点看大家的刷屏，同时也期待着谁谁谁的祝福。而今年在家，自己的房间，温暖而安静。等到2016，写日期的时候也许会不小心写成2015吧。是啊，有些习惯了一年的事，怎么会说改就能改呢。<br>　　前两天看到阳哥写了挺多的“年终总结”，不仅在2015找到了女票，专业上也颇有心得，不由得心生佩服。反观自己，却懵懵懂懂，在自己的路上跌跌撞撞，不知心之所向。心头不免生出一丝又一丝的忧虑。<br>　　这个学期总在考虑未来。或者说纠结未来。大二了还在迷茫，是不是很可笑。<br>　　其实我已经明显地感觉到，大学已经快要过了一半了吧。我走到哪了？<br>　　大三下学期找实习，然后，找工作。考研？不考了？曾今想过要考，现在来看，可能真的永远是“想过”了吧。<br>　　高三的时候莫名其妙觉得自己想学计算机，然而自己什么都不懂。前段时间我突然想起自己小学还是初中的时候竟然接触过一门计算机编程语言，叫易语言，还是中文的。非常清楚地记得那时候跟着教程做了一个可以放音乐的小程序，还兴奋地告诉妈妈。可那时候沉迷网游，不知道怎么就忘了这事儿。也许那时候的我，觉得网游更好玩吧。呵呵，图样啊。<br>　　高三总在安慰自己，如果人品爆发，还是可以考上好学校的。然而，高考分数差了我念了一年的华科八九十分。在林科大，我自认学渣，过着连自己都鄙视的生活。我容易被环境影响，那时候我和高中同学抱怨，她却说我不能怪环境，自己必须努力。我一直记着她的话，同时也自己打了自己的脸。<br>　　现在啊，我发现自己早就没资格抱怨学校，抱怨环境了。自己上课不也玩手机，不也打瞌睡吗。大一的绩点不也被学习委员甩了很多吗。突然觉得，总在抱怨的人，首先应该审视自己。<br>　　好在，我也没完全迷失。我总在探索。<br>　　大一傻乎乎地报了“梦之队”。记得那个寒冷的冬天，整个冬天都是5点多爬起来，和晓龙、校长（同学绰号）顶着刺骨寒风去读英语。不过，也就坚持了那一个冬天。哦，还报了ACM。梦想着能成为一名编程算法大神，又是图样。题目一稍难，就没了耐心。没了耐心，就更做不下题了。有时候一下午都搞不懂便觉得自己的智商是硬伤。咔，死循环。哎，放弃了吧。现在？想学Android。不再纠结，再纠结就没时间了。<br>　　每个人都有着自己的选择。<br>　　记得大一刷空间时惊异地发现小学同学晒出正在工作的照片，也记得打暑假工时看到穿着西装提着电脑颇有商务范的初中同学，也有着正在不懈努力为了保研甚至出国深造的高中同学。这些都让我清醒地知道，我必须做出自己的选择。尽管生活是瞬息万变的，就像高考目标一样，选了目标大学也不一定能实现。但这样至少有了个方向，心里总会装着一个东西，肩上总会觉得有副担子吧。想起高中听过的一句话，没有方向的速度不叫速度(物理中速度是矢量)。是吧，哪怕速度再快，没有方向也是白搭。</p>
+<p>　　2016年的1月，希望走好新年的前奏，二十岁快乐<br>　　2016年的2月，希望看到我的CET-6成绩通过<br>　　2016年的3月，希望开学的第一个月能改掉上课打瞌睡的坏毛病<br>　　2016年的4-6月，希望安卓之路已经走上正轨<br>　　2016年的7-8月，希望…。但不管怎样，假期学得开心，玩得开心<br>　　2016年的9月，希望能评到奖学金<br>　　2016年的10月，希望自己能坚持跑步<br>　　2016年的11月，希望自己胖点<br>　　2016年的12月，希望以上自己吹的牛逼都能实现<br>　　<br>　　2016，我会重新出发。既然选择了远方，就只顾风雨“编”程。<br>　　<strong>2016，看我的。</strong></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>　　再过几十分钟2015年就结束了。<br>　　还记得一年前的元旦没有回去，在寝室里静静等待着跨年，等待着给一些人发送祝福，等待着零点看大家的刷屏，同时也期待着谁谁谁的祝福。而今年在家，自己的房间，温暖而安静。等到2016，写日期的时候也许会不小心写成2015吧。是啊，有些]]>
+    </summary>
+    
+      <category term="扯淡" scheme="http://yoursite.com/tags/%E6%89%AF%E6%B7%A1/"/>
+    
+      <category term="日记" scheme="http://yoursite.com/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="日记" scheme="http://yoursite.com/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[给网站添加访客记录]]></title>
+    <link href="http://yoursite.com/2015/11/20/%E7%BB%99%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0%E8%AE%BF%E5%AE%A2%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2015/11/20/给网站添加访客记录/</id>
+    <published>2015-11-20T03:41:33.000Z</published>
+    <updated>2016-01-02T14:37:03.000Z</updated>
+    <content type="html"><![CDATA[<p>感谢不蒜子~~<br>贴上链接：<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">http://ibruce.info/2015/04/04/busuanzi/</a></p>
+<p>静态网站建站现在有很多快速的技术和平台，但静态是优点也有缺点，由于是静态的，一些动态的内容如评论、计数等等模块就需要借助外来平台，评论有“多说”，计数有“不蒜”！</p>
+<p>“不蒜子”与百度统计谷歌分析等有区别：“不蒜子”可直接将访问次数显示在您在网页上（也可不显示）；对于已经上线一段时间的网站，“不蒜子”允许您初始化首次数据。。</p>
+<p>普通用户只需两步走：一行脚本+一行标签，搞定一切。追求极致的用户可以进行任意DIY。</p>
+<h2 id="安装脚本（必选）">安装脚本（必选）</h2><p>要使用不蒜子必须在页面中引入busuanzi.js，目前最新版如下。</p>
+<p><code>&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;
+&lt;/script&gt;</code><br>不蒜子可以给任何类型的个人站点使用，如果你是用的hexo，打开themes/你的主题/layout/_partial/footer.ejs添加上述脚本即可，当然你也可以添加到 header 中。</p>
+<h2 id="安装标签（可选）">安装标签（可选）</h2><p>只需要复制相应的html标签到你的网站要显示访问量的位置即可。您可以随意更改不蒜子标签为自己喜欢的显示效果，内容参考第三部分扩展开发。根据你要显示内容的不同，这分几种情况。</p>
+<h3 id="显示站点总访问量">显示站点总访问量</h3><p>要显示站点总访问量，复制以下代码添加到你需要显示的位置。有两种算法可选：</p>
+<p>算法a：pv的方式，单个用户连续点击n篇文章，记录n次访问量。</p>
+<p><code>&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;
+    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次
+&lt;/span&gt;</code><br>算法b：uv的方式，单个用户连续点击n篇文章，只记录1次访客数。</p>
+<p><code>&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;
+  本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次
+&lt;/span&gt;</code><br>如果你是用的hexo，打开themes/你的主题/layout/_partial/footer.ejs添加即可。</p>
+<p>实例效果参考：</p>
+<p><a href="http://liam0205.me" target="_blank" rel="external">http://liam0205.me</a><br><a href="http://gameknife.github.io" target="_blank" rel="external">http://gameknife.github.io</a><br><a href="http://read.mobi" target="_blank" rel="external">http://read.mobi</a><br><a href="http://pgqlife.info" target="_blank" rel="external">http://pgqlife.info</a><br><a href="http://sdxy0506.github.io" target="_blank" rel="external">http://sdxy0506.github.io</a><br><a href="http://www.gcrimson.com" target="_blank" rel="external">http://www.gcrimson.com</a><br><a href="http://libk.net" target="_blank" rel="external">http://libk.net</a><br><a href="http://ztyoung.me" target="_blank" rel="external">http://ztyoung.me</a><br><a href="http://blog.itmyhome.com" target="_blank" rel="external">http://blog.itmyhome.com</a></p>
+<h3 id="显示单页面访问量">显示单页面访问量</h3><p>要显示每篇文章的访问量，复制以下代码添加到你需要显示的位置。</p>
+<p>算法：pv的方式，单个用户点击1篇文章，本篇文章记录1次阅读量。</p>
+<p><code>&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;
+  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次
+&lt;/span&gt;</code><br>代码中文字是可以修改的，只要保留id正确即可。</p>
+<p>实例效果参考：</p>
+<p><a href="http://dbarobin.com/2015/04/14/operation-and-maintenance-engineer-tips" target="_blank" rel="external">http://dbarobin.com/2015/04/14/operation-and-maintenance-engineer-tips</a><br><a href="http://blog.jamespan.me/2015/05/06/mvn-incremental-compilation" target="_blank" rel="external">http://blog.jamespan.me/2015/05/06/mvn-incremental-compilation</a><br><a href="http://cubernet.cn/blog/optimization-3" target="_blank" rel="external">http://cubernet.cn/blog/optimization-3</a><br>注意：不蒜子为保持极简，暂不支持在站点文章摘要列表中（如首页）逐个显示每篇文章的阅读次数，如果您非常需要这一功能，可以留言。根据需要程度再考虑开发相应的功能。</p>
+<h3 id="显示站点总访问量和单页面访问量">显示站点总访问量和单页面访问量</h3><p>你懂的吧，上面两种标签代码都安装。</p>
+<p>实例效果参考：</p>
+<p><a href="http://cubernet.cn/blog/swift-1" target="_blank" rel="external">http://cubernet.cn/blog/swift-1</a><br><a href="http://lvzejun.cn/2015/03/31/ubuntu-software" target="_blank" rel="external">http://lvzejun.cn/2015/03/31/ubuntu-software</a><br><a href="http://www.lvzejun.cn/2015/04/13/libvirt1md" target="_blank" rel="external">http://www.lvzejun.cn/2015/04/13/libvirt1md</a></p>
+<h3 id="只计数不显示">只计数不显示</h3><p>只安装脚本代码，不安装标签代码。</p>
+<p>至此，不蒜子已经可以正常运行，如果你还要自定义一些内容或有疑问，请继续阅读。</p>
+<p>附录：扩展开发（自定义）</p>
+<p>不蒜子之所以称为极客的算子，正是因为不蒜子自身只提供标签+数字，至于显示的style和css动画效果，任你发挥。</p>
+<p>busuanzi_value_site_pv 的作用是异步回填访问数，这个id一定要正确。<br>busuanzi_container_site_pv的作用是为防止计数服务访问出错或超时（3秒）的情况下，使整个标签自动隐藏显示，带来更好的体验。这个id可以省略。<br>因此，你也可以使用极简模式：</p>
+<p>本站总访问量<code>&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;</code>次<br>本站访客数<code>&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;</code>人次<br>本文总阅读量<code>&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;</code>次<br>或者个性化一下：</p>
+<p><code>Total &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt; views.
+您是xxx的第&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;个小伙伴
+&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt; Hits</code></p>
+<h3 id="问题">问题</h3><h4 id="我只要统计不显示？">我只要统计不显示？</h4><p>只引入busuanzi.js，不引入显示标签即可。</p>
+<h4 id="你的标签太丑了，我想美化一下可以么？">你的标签太丑了，我想美化一下可以么？</h4><p>可以的，您可以用自己站点的css进行控制，只要内层span的id正确以便回填访问次数即可，甚至标签都可以不是span。</p>
+<h4 id="中文字体太丑了，我的主题不适合？">中文字体太丑了，我的主题不适合？</h4><p>您可以将本站总访问量xxx次改成view xxx times等英文以获得更和谐的显示效果。</p>
+<h4 id="在访问量数据未取回来之前，我不想让页面显示为诸如“本站总访问量_次”，显得太low，怎么办？">在访问量数据未取回来之前，我不想让页面显示为诸如“本站总访问量 次”，显得太low，怎么办？</h4><p>只需要如下css，不蒜子执行完毕会自动将标签显示出来，其他以此类推：</p>
+<p><code>&lt;span id=&quot;busuanzi_container_site_pv&quot; style=&#39;display:none&#39;&gt;
+    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次
+&lt;/span&gt;</code><br>上面的做法还是很low？！欣赏一下这位小伙伴的做法，请戳看效果：<a href="http://blog.jamespan.me/2015/05/13/the-jump-guide" target="_blank" rel="external">http://blog.jamespan.me/2015/05/13/the-jump-guide</a><br>右键看下源码，没加载出来前就显示个菊花转转转:<br>首先，你要引入font-awesome字体：</p>
+<p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css&quot;&gt;</code><br>或<br><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css&quot;&gt;</code><br>其次，修改不蒜子标签：</p>
+<p><code>&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;i class=&quot;fa fa-spinner&quot;&gt;&lt;/i&gt;&lt;/span&gt; Hits</code><br>或（旋转效果）<br><code>&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;i class=&quot;fa fa-spinner fa-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt; Hits</code><br>和谐多了！</p>
+<h4 id="我的网站已经运行一段时间了，想初始化访问次数怎么办？">我的网站已经运行一段时间了，想初始化访问次数怎么办？</h4><p>请先注册登录，自行修改阅读次数。</p>
+<p>有任何其他问题或疑问可以留言。</p>
+<p>如果您愿意捐助不蒜子请戳 <a href="http://ibruce.info/about，扫描支付宝二维码输入任意金额打赏。" target="_blank" rel="external">http://ibruce.info/about，扫描支付宝二维码输入任意金额打赏。</a></p>
+<h2 id="更新日志：">更新日志：</h2><p>1). 2015-04-04：不蒜子1.0 正式发布，极简的网站计数器服务。<br>2). 2015-04-24：不蒜子2.0 正式发布，区分pv/uv的统计方式，统计更精准，满足更多需求。<br>3). 2015-05-18：不蒜子2.3 正式发布，去掉对jQuery的依赖，异步化执行，速度更快。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>感谢不蒜子~~<br>贴上链接：<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">http://ibruce.info/2015/04/04/busuanzi/<]]>
+    </summary>
+    
+      <category term="教程" scheme="http://yoursite.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="博客建站资料" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E8%B5%84%E6%96%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Cmd Markdown编辑阅读器简介]]></title>
+    <link href="http://yoursite.com/2015/11/03/Cmd%20Markdown%E7%BC%96%E8%BE%91%E9%98%85%E8%AF%BB%E5%99%A8%E7%AE%80%E4%BB%8B/"/>
+    <id>http://yoursite.com/2015/11/03/Cmd Markdown编辑阅读器简介/</id>
+    <published>2015-11-03T11:43:02.000Z</published>
+    <updated>2016-01-03T03:20:41.653Z</updated>
+    <content type="html"><![CDATA[<h1 id="欢迎使用_Cmd_Markdown_编辑阅读器">欢迎使用 Cmd Markdown 编辑阅读器</h1><hr>
+<p><strong>转自<a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown" target="_blank" rel="external">Cmd Markdown 编辑阅读器</a></strong></p>
+<p>我们理解您需要更便捷更高效的工具记录思想，整理笔记、知识，并将其中承载的价值传播给他人，<strong>Cmd Markdown</strong> 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。 您可以使用 Cmd Markdown：</p>
+<blockquote>
+<ul>
+<li>整理知识，学习笔记</li>
+<li>发布日记，杂文，所见所想</li>
+<li>撰写发布技术文稿（代码支持）</li>
+<li>撰写发布学术论文（LaTeX 公式支持）</li>
+</ul>
+</blockquote>
+<p><img src="https://www.zybuluo.com/static/img/logo.png" alt="cmd-markdown-logo"></p>
+<p>除了您现在看到的这个 Cmd Markdown 在线版本，您还可以前往以下网址下载：</p>
+<h3 id="Windows/Mac/Linux_全平台客户端"><a href="https://www.zybuluo.com/cmd/" target="_blank" rel="external">Windows/Mac/Linux 全平台客户端</a></h3><blockquote>
+<p>请保留此份 Cmd Markdown 的欢迎稿兼使用说明，如需撰写新稿件，点击顶部工具栏右侧的 <i class="icon-file"></i> <strong>新文稿</strong> 或者使用快捷键 <code>Ctrl+Alt+N</code>。</p>
+</blockquote>
+<hr>
+<h2 id="什么是_Markdown">什么是 Markdown</h2><p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字，更棒的是，它还可以</p>
+<h3 id="1-_制作一份待办事宜_Todo_列表">1. 制作一份待办事宜 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#13-待办事宜-todo-列表" target="_blank" rel="external">Todo 列表</a></h3><ul>
+<li>[ ] 支持以 PDF 格式导出文稿</li>
+<li>[ ] 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</li>
+<li>[x] 新增 Todo 列表功能</li>
+<li>[x] 修复 LaTex 公式渲染问题</li>
+<li>[x] 新增 LaTex 公式编号功能</li>
+</ul>
+<h3 id="2-_书写一个质能守恒公式[^LaTeX]">2. 书写一个质能守恒公式[^LaTeX]</h3><p>$$E=mc^2$$</p>
+<h3 id="3-_高亮一段代码[^code]">3. 高亮一段代码[^code]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="decorator">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'hello world'</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-_高效绘制_流程图">4. 高效绘制 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#7-流程图" target="_blank" rel="external">流程图</a></h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">st=&#62;start: Start&#10;op=&#62;operation: Your Operation&#10;cond=&#62;condition: Yes or No?&#10;e=&#62;end&#10;&#10;st-&#62;op-&#62;cond&#10;cond(yes)-&#62;e&#10;cond(no)-&#62;op</span><br></pre></td></tr></table></figure>
+<h3 id="5-_高效绘制_序列图">5. 高效绘制 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#8-序列图" target="_blank" rel="external">序列图</a></h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Alice-&#62;Bob: Hello Bob, how are you?&#10;Note right of Bob: Bob thinks&#10;Bob--&#62;Alice: I am good thanks!</span><br></pre></td></tr></table></figure>
+<h3 id="6-_绘制表格">6. 绘制表格</h3><table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align:right">价格</th>
+<th style="text-align:center">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算机</td>
+<td style="text-align:right">\$1600</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td>手机</td>
+<td style="text-align:right">\$12</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td>管线</td>
+<td style="text-align:right">\$1</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-_更详细语法说明">7. 更详细语法说明</h3><p>想要查看更详细的语法说明，可以参考我们准备的 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown" target="_blank" rel="external">Cmd Markdown 简明语法手册</a>，进阶用户可以参考 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#cmd-markdown-高阶语法手册" target="_blank" rel="external">Cmd Markdown 高阶语法手册</a> 了解更多高级功能。</p>
+<p>总而言之，不同于其它 <em>所见即所得</em> 的编辑器：你只需使用键盘专注于书写文本内容，就可以生成印刷级的排版格式，省却在键盘和工具栏之间来回切换，调整内容和格式的麻烦。<strong>Markdown 在流畅的书写和印刷级的阅读体验之间找到了平衡。</strong> 目前它已经成为世界上最大的技术分享网站 GitHub 和 技术问答网站 StackOverFlow 的御用书写格式。</p>
+<hr>
+<h2 id="什么是_Cmd_Markdown">什么是 Cmd Markdown</h2><p>您可以使用很多工具书写 Markdown，但是 Cmd Markdown 是这个星球上我们已知的、最好的 Markdown 工具——没有之一 ：）因为深信文字的力量，所以我们和你一样，对流畅书写，分享思想和知识，以及阅读体验有极致的追求，我们把对于这些诉求的回应整合在 Cmd Markdown，并且一次，两次，三次，乃至无数次地提升这个工具的体验，最终将它演化成一个 <strong>编辑/发布/阅读</strong> Markdown 的在线平台——您可以在任何地方，任何系统/设备上管理这里的文字。</p>
+<h3 id="1-_实时同步预览">1. 实时同步预览</h3><p>我们将 Cmd Markdown 的主界面一分为二，左边为<strong>编辑区</strong>，右边为<strong>预览区</strong>，在编辑区的操作会实时地渲染到预览区方便查看最终的版面效果，并且如果你在其中一个区拖动滚动条，我们有一个巧妙的算法把另一个区的滚动条同步到等价的位置，超酷！</p>
+<h3 id="2-_编辑工具栏">2. 编辑工具栏</h3><p>也许您还是一个 Markdown 语法的新手，在您完全熟悉它之前，我们在 <strong>编辑区</strong> 的顶部放置了一个如下图所示的工具栏，您可以使用鼠标在工具栏上调整格式，不过我们仍旧鼓励你使用键盘标记格式，提高书写的流畅度。</p>
+<p><img src="https://www.zybuluo.com/static/img/toolbar-editor.png" alt="tool-editor"></p>
+<h3 id="3-_编辑模式">3. 编辑模式</h3><p>完全心无旁骛的方式编辑文字：点击 <strong>编辑工具栏</strong> 最右测的拉伸按钮或者按下 <code>Ctrl + M</code>，将 Cmd Markdown 切换到独立的编辑模式，这是一个极度简洁的写作环境，所有可能会引起分心的元素都已经被挪除，超清爽！</p>
+<h3 id="4-_实时的云端文稿">4. 实时的云端文稿</h3><p>为了保障数据安全，Cmd Markdown 会将您每一次击键的内容保存至云端，同时在 <strong>编辑工具栏</strong> 的最右侧提示 <code>已保存</code> 的字样。无需担心浏览器崩溃，机器掉电或者地震，海啸——在编辑的过程中随时关闭浏览器或者机器，下一次回到 Cmd Markdown 的时候继续写作。</p>
+<h3 id="5-_离线模式">5. 离线模式</h3><p>在网络环境不稳定的情况下记录文字一样很安全！在您写作的时候，如果电脑突然失去网络连接，Cmd Markdown 会智能切换至离线模式，将您后续键入的文字保存在本地，直到网络恢复再将他们传送至云端，即使在网络恢复前关闭浏览器或者电脑，一样没有问题，等到下次开启 Cmd Markdown 的时候，她会提醒您将离线保存的文字传送至云端。简而言之，我们尽最大的努力保障您文字的安全。</p>
+<h3 id="6-_管理工具栏">6. 管理工具栏</h3><p>为了便于管理您的文稿，在 <strong>预览区</strong> 的顶部放置了如下所示的 <strong>管理工具栏</strong>：</p>
+<p><img src="https://www.zybuluo.com/static/img/toolbar-manager.jpg" alt="tool-manager"></p>
+<p>通过管理工具栏可以：</p>
+<p><i class="icon-share"></i> 发布：将当前的文稿生成固定链接，在网络上发布，分享<br><i class="icon-file"></i> 新建：开始撰写一篇新的文稿<br><i class="icon-trash"></i> 删除：删除当前的文稿<br><i class="icon-cloud"></i> 导出：将当前的文稿转化为 Markdown 文本或者 Html 格式，并导出到本地<br><i class="icon-reorder"></i> 列表：所有新增和过往的文稿都可以在这里查看、操作<br><i class="icon-pencil"></i> 模式：切换 普通/Vim/Emacs 编辑模式</p>
+<h3 id="7-_阅读工具栏">7. 阅读工具栏</h3><p><img src="https://www.zybuluo.com/static/img/toolbar-reader.jpg" alt="tool-manager"></p>
+<p>通过 <strong>预览区</strong> 右上角的 <strong>阅读工具栏</strong>，可以查看当前文稿的目录并增强阅读体验。</p>
+<p>工具栏上的五个图标依次为：</p>
+<p><i class="icon-list"></i> 目录：快速导航当前文稿的目录结构以跳转到感兴趣的段落<br><i class="icon-chevron-sign-left"></i> 视图：互换左边编辑区和右边预览区的位置<br><i class="icon-adjust"></i> 主题：内置了黑白两种模式的主题，试试 <strong>黑色主题</strong>，超炫！<br><i class="icon-desktop"></i> 阅读：心无旁骛的阅读模式提供超一流的阅读体验<br><i class="icon-fullscreen"></i> 全屏：简洁，简洁，再简洁，一个完全沉浸式的写作和阅读环境</p>
+<h3 id="8-_阅读模式">8. 阅读模式</h3><p>在 <strong>阅读工具栏</strong> 点击 <i class="icon-desktop"></i> 或者按下 <code>Ctrl+Alt+M</code> 随即进入独立的阅读模式界面，我们在版面渲染上的每一个细节：字体，字号，行间距，前背景色都倾注了大量的时间，努力提升阅读的体验和品质。</p>
+<h3 id="9-_标签、分类和搜索">9. 标签、分类和搜索</h3><p>在编辑区任意行首位置输入以下格式的文字可以标签当前文档：</p>
+<p>标签： 未分类</p>
+<p>标签以后的文稿在【文件列表】（Ctrl+Alt+F）里会按照标签分类，用户可以同时使用键盘或者鼠标浏览查看，或者在【文件列表】的搜索文本框内搜索标题关键字过滤文稿，如下图所示：</p>
+<p><img src="https://www.zybuluo.com/static/img/file-list.png" alt="file-list"></p>
+<h3 id="10-_文稿发布和分享">10. 文稿发布和分享</h3><p>在您使用 Cmd Markdown 记录，创作，整理，阅读文稿的同时，我们不仅希望它是一个有力的工具，更希望您的思想和知识通过这个平台，连同优质的阅读体验，将他们分享给有相同志趣的人，进而鼓励更多的人来到这里记录分享他们的思想和知识，尝试点击 <i class="icon-share"></i> (Ctrl+Alt+P) 发布这份文档给好友吧！</p>
+<hr>
+<p>再一次感谢您花费时间阅读这份欢迎稿，点击 <i class="icon-file"></i> (Ctrl+Alt+N) 开始撰写新的文稿吧！祝您在这里记录、阅读、分享愉快！</p>
+<p>作者 <a href="http://weibo.com/ghosert" target="_blank" rel="external">@ghosert</a><br>2015 年 06月 15日    </p>
+<p>[^LaTeX]: 支持 <strong>LaTeX</strong> 编辑显示支持，例如：$\sum_{i=1}^n a_i=0$， 访问 <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax</a> 参考更多使用方法。</p>
+<p>[^code]: 代码高亮功能支持包括 Java, Python, JavaScript 在内的，<strong>四十一</strong>种主流编程语言。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="欢迎使用_Cmd_Markdown_编辑阅读器">欢迎使用 Cmd Markdown 编辑阅读器</h1><hr>
+<p><strong>转自<a href="https://www.zybuluo.com/mdeditor?url=https://www.zyb]]>
+    </summary>
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+      <category term="教程" scheme="http://yoursite.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="博客建站资料" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E8%B5%84%E6%96%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[第一篇之markdown练手]]></title>
+    <link href="http://yoursite.com/2015/11/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E4%B9%8Bmarkdown%E7%BB%83%E6%89%8B/"/>
+    <id>http://yoursite.com/2015/11/02/第一篇之markdown练手/</id>
+    <published>2015-11-02T08:37:59.000Z</published>
+    <updated>2015-11-04T03:58:58.599Z</updated>
+    <content type="html"><![CDATA[<p>无意中突然想弄个自己的专属博客，有自己的域名，风格自己定。听说程序猿大牛都有自己的技术博客，虽然我只是个大二计科专业的渣渣，但总会成长的吧。加油。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>无意中突然想弄个自己的专属博客，有自己的域名，风格自己定。听说程序猿大牛都有自己的技术博客，虽然我只是个大二计科专业的渣渣，但总会成长的吧。加油。</p>
+]]>
+    </summary>
+    
+      <category term="扯淡" scheme="http://yoursite.com/tags/%E6%89%AF%E6%B7%A1/"/>
+    
+      <category term="日记" scheme="http://yoursite.com/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+</feed>

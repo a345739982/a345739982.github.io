@@ -1,0 +1,1098 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Java,Java核心技术,学习笔记," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Codeflyer Hzy" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="一、Java程序设计环境Java术语 p13
+
+
+术语名
+缩写
+解释
+
+
+
+
+Java Development Kit
+JDK
+Java开发工具
+
+
+Java Runtime Environment
+JRE
+Java运行时环境，用户使用的软件
+
+
+Standard Edition
+SE
+用于桌面或简单的服务器应用的Java平台
+
+
+Enterprise Edition
+EE
+用于复杂的服务器应用的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java核心技术学习笔记之一">
+<meta property="og:url" content="http://yoursite.com/2016/01/27/Java核心技术学习笔记之一/index.html">
+<meta property="og:site_name" content="Codeflyer Hzy">
+<meta property="og:description" content="一、Java程序设计环境Java术语 p13
+
+
+术语名
+缩写
+解释
+
+
+
+
+Java Development Kit
+JDK
+Java开发工具
+
+
+Java Runtime Environment
+JRE
+Java运行时环境，用户使用的软件
+
+
+Standard Edition
+SE
+用于桌面或简单的服务器应用的Java平台
+
+
+Enterprise Edition
+EE
+用于复杂的服务器应用的">
+<meta property="og:updated_time" content="2016-03-27T06:35:31.130Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java核心技术学习笔记之一">
+<meta name="twitter:description" content="一、Java程序设计环境Java术语 p13
+
+
+术语名
+缩写
+解释
+
+
+
+
+Java Development Kit
+JDK
+Java开发工具
+
+
+Java Runtime Environment
+JRE
+Java运行时环境，用户使用的软件
+
+
+Standard Edition
+SE
+用于桌面或简单的服务器应用的Java平台
+
+
+Enterprise Edition
+EE
+用于复杂的服务器应用的">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> Java核心技术学习笔记之一 | Codeflyer Hzy </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a99612187d37aaac0efbaecea0d4f709";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Codeflyer Hzy</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">扛着键盘，走在码农的路上</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-book fa-fw"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Java核心技术学习笔记之一
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-27T22:05:33+08:00" content="2016-01-27">
+              2016-01-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/27/Java核心技术学习笔记之一/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/27/Java核心技术学习笔记之一/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h1 id="一、Java程序设计环境">一、Java程序设计环境</h1><h2 id="Java术语_p13">Java术语 p13</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">术语名</th>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Java Development Kit</td>
+<td style="text-align:center">JDK</td>
+<td style="text-align:center">Java开发工具</td>
+</tr>
+<tr>
+<td style="text-align:center">Java Runtime Environment</td>
+<td style="text-align:center">JRE</td>
+<td style="text-align:center">Java运行时环境，用户使用的软件</td>
+</tr>
+<tr>
+<td style="text-align:center">Standard Edition</td>
+<td style="text-align:center">SE</td>
+<td style="text-align:center">用于桌面或简单的服务器应用的Java平台</td>
+</tr>
+<tr>
+<td style="text-align:center">Enterprise Edition</td>
+<td style="text-align:center">EE</td>
+<td style="text-align:center">用于复杂的服务器应用的Java平台</td>
+</tr>
+<tr>
+<td style="text-align:center">Micro Edition</td>
+<td style="text-align:center">ME</td>
+<td style="text-align:center">用于手机和其他小型设备的Java平台</td>
+</tr>
+<tr>
+<td style="text-align:center">Java2</td>
+<td style="text-align:center">J2</td>
+<td style="text-align:center">过时术语，用于描述1998-2006年之间的Java版本</td>
+</tr>
+<tr>
+<td style="text-align:center">Software Development Kit</td>
+<td style="text-align:center">SDK</td>
+<td style="text-align:center">过时术语，用于描述1998-2006年之间的JDK</td>
+</tr>
+<tr>
+<td style="text-align:center">Update</td>
+<td style="text-align:center">u</td>
+<td style="text-align:center">Oracle的术语，用于发布修改的bug</td>
+</tr>
+<tr>
+<td style="text-align:center">NetBeans</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">Oracle的集成开发环境</td>
+</tr>
+</tbody>
+</table>
+<h1 id="二、Java的基本程序设计结构">二、Java的基本程序设计结构</h1><h2 id="注释">注释</h2><blockquote>
+<ol>
+<li>eclipse中输入/**并回车可自动生成文档注释。</li>
+<li>/**/注释不能嵌套。即如果代码本身包含了一个 */，就不能用/*和*/将注释括起来。p33</li>
+</ol>
+</blockquote>
+<h2 id="数据类型">数据类型</h2><h3 id="基本类型：能够直接用二进制表示的类型">基本类型：能够直接用二进制表示的类型</h3><h4 id="整数类型">整数类型</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">存储需求</th>
+<th style="text-align:center">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">byte  字节型</td>
+<td style="text-align:center">8bit</td>
+<td style="text-align:center">-128~127</td>
+</tr>
+<tr>
+<td style="text-align:center">short 短整型</td>
+<td style="text-align:center">16bit</td>
+<td style="text-align:center">-32768~32767</td>
+</tr>
+<tr>
+<td style="text-align:center">int 整型</td>
+<td style="text-align:center">32bit</td>
+<td style="text-align:center">-21亿~21亿</td>
+</tr>
+<tr>
+<td style="text-align:center">long  长整型</td>
+<td style="text-align:center">64bit</td>
+<td style="text-align:center">-800亿亿~800亿亿</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong></p>
+<blockquote>
+<ol>
+<li>长整形数值后面有L，如7000000000L</li>
+<li>十六进制有前缀0x，如0xCAFE</li>
+<li>八进制有前缀0，如010</li>
+<li>二进制有前缀0b，如0b1001（从Java 7开始）</li>
+<li>Java没有无符号类型</li>
+</ol>
+</blockquote>
+<h4 id="浮点数类型[小数]">浮点数类型[小数]</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">存储需求</th>
+<th style="text-align:center">精确度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">float 单精度</td>
+<td style="text-align:center">32bit</td>
+<td style="text-align:center">有效位数6-7位</td>
+</tr>
+<tr>
+<td style="text-align:center">double 双精度</td>
+<td style="text-align:center">64bit</td>
+<td style="text-align:center">有效位数15-16位</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong> float类型必须以F结尾，如3.14F，否则会被认为是double类型</p>
+<h4 id="字符类型">字符类型</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">存储需求</th>
+<th style="text-align:center">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">char 字符型</td>
+<td style="text-align:center">16bit</td>
+<td style="text-align:center">0~65535</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong> 如’a’ ‘A’ ‘0’ ‘中’，每个字符都对应一个数字，Unicode码</p>
+<h4 id="逻辑类型">逻辑类型</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">存储需求</th>
+<th style="text-align:center">取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">boolean 布尔型</td>
+<td style="text-align:center">8bit</td>
+<td style="text-align:center">true/false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong> 0和1并不代表false和true</p>
+<h3 id="引用类型">引用类型</h3><blockquote>
+<ol>
+<li>数组类型</li>
+<li>类类型[类似于结构体类型]</li>
+</ol>
+</blockquote>
+<h2 id="运算符">运算符</h2><h3 id="位运算">位运算</h3><p>可参考:<br><a href="http://www.matrix67.com/blog/archives/263" target="_blank" rel="external">位运算简介及实用技巧（一）：基础篇</a><br><a href="http://www.matrix67.com/blog/archives/264" target="_blank" rel="external">位运算简介及实用技巧（二）：进阶篇(1)</a></p>
+<h3 id="数值之间的转换">数值之间的转换</h3><blockquote>
+<ul>
+<li>如果两个操作数之一为double，那么另一个会转化为double</li>
+<li>否则，如果其一是float，那么另一个会转化为float</li>
+<li>否则，如果其一是long，那么另一个会转化为long</li>
+<li>否则，两个都会转化为int</li>
+</ul>
+</blockquote>
+<h3 id="强制类型转换">强制类型转换</h3><p>强制类型转换不能超过转换类型的取值范围，如(byte)300实际值为44（value = 数值 - n<em>2^(类型所占位数-1), n=1, 2, 3…直到value符合类型的取值范围<br>如：(byte)300 == 300 - 2*</em>2^(8-1) == 44 &lt; 127。更简洁的算式为：44 = 300 % 128</p>
+<h3 id="枚举类型">枚举类型</h3><p>当变量的取值在有限的集合内时，可使用枚举类型<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Size &#123; SMALL, MEDIUM, LARGE, EXTRA, EXTRA_LARGE &#125;;</span><br><span class="line">Size s = Size.MEDIUM;</span><br></pre></td></tr></table></figure></p>
+<h2 id="字符串">字符串</h2><h3 id="比较字符串">比较字符串</h3><blockquote>
+<p>如果想要比较两个字符串内容是否相同，绝对不能用”==”(作用为比较两个字符串的地址)，而应该用str1.equals(str2);</p>
+<h3 id="构建字符串">构建字符串</h3><p>StringBuilder是一种比较高效的方法<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder builder = <span class="keyword">new</span> StringBuilder(); <span class="comment">// 构建一个空的字符串构建器</span></span><br><span class="line">builder.<span class="built_in">append</span>(ch); <span class="comment">// 尾部添加一个字符</span></span><br><span class="line">builder.<span class="built_in">append</span>(<span class="built_in">str</span>); <span class="comment">// 尾部添加一个字符串</span></span><br><span class="line"><span class="keyword">String</span> completedString = builder.toString(); <span class="comment">// 使构建器中的字符串序列转化成为String对象</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="输入输出">输入输出</h2><h3 id="格式化输出">格式化输出</h3><blockquote>
+<p>使用静态的String.format方法创建一个格式化的字符串<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">String</span> name = <span class="string">"someone"</span>;</span><br><span class="line"><span class="keyword">String</span> <span class="keyword">message</span> = <span class="keyword">String</span>.format(<span class="string">"Hey, %s, I love you"</span>, name);</span><br><span class="line">System.out.println(<span class="keyword">message</span>);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="文件输入与输出">文件输入与输出</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Scanner sc = <span class="keyword">new</span> Scanner(Paths.get(<span class="string">"d:\\a.txt"</span>)); <span class="comment">// 读取</span></span><br><span class="line"><span class="keyword">while</span>(sc.hasNext()) &#123;</span><br><span class="line">    System.out.println(sc.nextLine());</span><br><span class="line">&#125;</span><br><span class="line">PrintWriter pw = <span class="keyword">new</span> PrintWriter(<span class="string">"d:\\b.txt"</span>); <span class="comment">// 写入</span></span><br><span class="line">pw.println(<span class="string">"Hey, I love you"</span>);</span><br><span class="line">pw.flush(); <span class="comment">// 清空缓存区</span></span><br><span class="line">pw.close(); <span class="comment">// 关闭文件</span></span><br></pre></td></tr></table></figure>
+<h2 id="流程控制">流程控制</h2><h3 id="带标签的break">带标签的break</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">stop: <span class="comment">// 该标签可自定义</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">    System.out.print(i + <span class="string">" "</span> + j + <span class="string">"|"</span>);</span><br><span class="line">    <span class="keyword">if</span> (j == <span class="number">7</span>)</span><br><span class="line">      <span class="keyword">break</span> stop; <span class="comment">// 跳到stop标记的循环之外</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>输出为：0 0|0 1|0 2|0 3|0 4|0 5|0 6|0 7|</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 还有以下用法</span></span><br><span class="line"><span class="tag">label</span>:</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="tag">if</span>(condition) <span class="tag">break</span> <span class="tag">label</span>; <span class="comment">// exits block</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// jumps here when break statement executes</span></span><br></pre></td></tr></table></figure>
+<h2 id="大数值">大数值</h2><h3 id="BigInteger（整数）_和_BigDecimal（浮点数）">BigInteger（整数） 和 BigDecimal（浮点数）</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">BigInteger </span>a = <span class="keyword">BigInteger.valueOf(77); </span>// 将int <span class="number">77</span> 转换为<span class="keyword">BigInteger</span></span><br></pre></td></tr></table></figure>
+<p><strong>大数值不能使用+-*/等符号进行运算，而要使用相应的方法(详见API)：</strong><br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BigInteger c = <span class="operator">a</span>.<span class="built_in">add</span>(b);<span class="comment"> // c = a + b;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="数组">数组</h2><blockquote>
+<p><strong>数组是引用型数据类型</strong></p>
+<h3 id="for_each循环">for each循环</h3><p>for(variable : collection) statement</p>
+</blockquote>
+<p>如：<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> element : a) <span class="comment">// a为数组，理解为 for each element in a</span></span><br><span class="line">    System.<span class="keyword">out</span>.println(element);</span><br></pre></td></tr></table></figure></p>
+<h3 id="快速打印数组">快速打印数组</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.<span class="keyword">out</span>.println(Arrays.<span class="keyword">toString</span>(a)); <span class="comment">// 一维数组</span></span><br><span class="line">System.<span class="keyword">out</span>.println(Arrays.deepToString(b)); <span class="comment">// 二维数组</span></span><br></pre></td></tr></table></figure>
+<h1 id="三、类与对象">三、类与对象</h1><h2 id="隐式参数和显式参数">隐式参数和显式参数</h2><blockquote>
+<p>a.b(c);<br>则a为隐式参数（因为没有出现在方法声明中），c为显式参数<br>this即代表隐式参数</p>
+</blockquote>
+<h2 id="编写返回引用可变对象的引用方法">编写返回引用可变对象的引用方法</h2><blockquote>
+<p>下面的代码会破坏封装性<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Employee &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">Date</span> hireDay;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">Date</span> getHireDay() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Date</span> hireDay;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Employee harry = <span class="attribute">...</span>;</span><br><span class="line"><span class="built_in">Date</span> d = harry<span class="built_in">.</span>getHireDay();</span><br><span class="line">d<span class="built_in">.</span>setTime(<span class="attribute">...</span>); <span class="comment">// 假设Date中有这个set方法</span></span><br><span class="line"><span class="comment">// 这段代码中，d和harry.hireDay具有相同的引用，因此对d调用set方法就能改变这个雇员的私有状态，也即破坏了封装性。</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>那么，正确的方法应该先对其克隆（clone）：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Date hireDay;</span><br><span class="line">    <span class="keyword">public</span> <span class="function">Date <span class="title">getHireDay</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">return</span> hireDay.<span class="title">clone</span><span class="params">()</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="方法参数">方法参数</h2><blockquote>
+<p>方法参数共两种类型：<br>1.基本数据类型（数字、布尔值）<br>2.对象引用</p>
+<p>一个方法不可能修改一个基本数据类型的参数。而当参数为引用时，形参便拷贝了实参的引用。</p>
+</blockquote>
+<p>因此下面的代码是无效的：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(Person a, Person b)</span> </span>&#123;</span><br><span class="line">    Person t = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>交换前，a、b和实参确实具有相同的引用，a,b的引用也确实交换了，但a、b仅仅是两个实参的引用的拷贝，实参并没有交换。<strong>对象引用进行的是值传递：</strong></p>
+<blockquote>
+<ol>
+<li>一个方法不能修改一个基本数据类型的参数（即数值型和布尔型）</li>
+<li>一个方法可以改变一个对象参数的状态</li>
+<li>一个方法不能让对象参数引用一个新的对象</li>
+</ol>
+</blockquote>
+<h2 id="构造器">构造器</h2><blockquote>
+<ol>
+<li>系统提供的默认构造器会将实例域中的数值型数据设置为0、布尔型数据设置为false、所有对象变量将设置为null。</li>
+<li>类中提供了有参构造器时，系统默认的无参构造器便会被隐藏，如果需要构造无参对象，这时必须显式地把无参构造器写出来。</li>
+</ol>
+</blockquote>
+<h3 id="this的另一个用法">this的另一个用法</h3><p> 若构造器的第一个语句形如this(…)，这个构造器将调用同一个类的另一个构造器：<br> <figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(<span class="keyword">double</span> s)</span></span>&#123;</span><br><span class="line">   <span class="keyword">this</span>(<span class="string">"Employee #"</span> + nextId, s); <span class="comment">// 调用Employee(String, double)构造器</span></span><br><span class="line">   nextId++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="静态初始化块和对象初始化块">静态初始化块和对象初始化块</h2><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Employee &#123;</span><br><span class="line">  <span class="keyword"> private</span><span class="keyword"> static</span><span class="instruction"> int </span>nextId;</span><br><span class="line"></span><br><span class="line">  <span class="keyword"> private</span><span class="instruction"> int </span>id;</span><br><span class="line">  <span class="keyword"> private</span> String name = <span class="string">""</span>; //<span class="instruction"> instance </span>field initialization</span><br><span class="line">  <span class="keyword"> private</span><span class="instruction"> double </span>salary;</span><br><span class="line">  </span><br><span class="line">   // 静态初始化块（类第一次加载的时候就会执行）</span><br><span class="line">  <span class="keyword"> static</span> &#123;</span><br><span class="line">      Random generator =<span class="instruction"> new </span>Random(<span class="function">)</span>;</span><br><span class="line">      // set nextId to a random number between 0<span class="instruction"> and </span>9999</span><br><span class="line">      nextId =<span class="function"> generator.nextInt(</span>10000<span class="function">)</span>;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   // 对象初始化块</span><br><span class="line">   &#123;</span><br><span class="line">      id = nextId;</span><br><span class="line">      nextId++;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="方法注释">方法注释</h2><blockquote>
+<p>@param 变量描述<br>  @return 返回值描述<br>  @throws 抛出异常描述 等等</p>
+</blockquote>
+<h2 id="类设计技巧">类设计技巧</h2><blockquote>
+<ul>
+<li>一定要保证数据私有（封装）</li>
+<li>一定要对数据初始化</li>
+<li>不要在类中使用过多的基本类型（例如许多实例域有共同性质，那么可以把它们放到一个类中）</li>
+<li>不是所有的域都需要独立的域访问器和域更改器</li>
+<li>将职责过多的类进行分解</li>
+<li>类名和方法名要能够体现它们的职责</li>
+</ul>
+</blockquote>
+<h1 id="继承">继承</h1><blockquote>
+<p>子类不能直接使用父类的私有域（尽管继承了），若需要使用父类的私有变量，应该使用（super.）get方法（有的话）</p>
+</blockquote>
+<h2 id="置换法则">置换法则</h2><blockquote>
+<p>“is-a”的另一种表述法就是置换法则。它表明超类对象都可以用子类对象置换：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Mnager boss = <span class="keyword">new</span> Manager(...);</span><br><span class="line">Employee[] staff = <span class="keyword">new</span> Employee[<span class="number">3</span>];</span><br><span class="line">staff[<span class="number">0</span>] = boss;</span><br></pre></td></tr></table></figure></p>
+<p>这个例子中，staff[0]和boss引用同一个对象，但staff[0]仍然是Employee对象，即意味着boss可以调用Manager特有的方法而staff[0]不行</p>
+</blockquote>
+<h2 id="强制类型转换-1">强制类型转换</h2><blockquote>
+<p>只能在继承层次内进行类型转换<br>在将超类转换成子类之前，应使用instanceof进行检查：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(staff[<span class="number">1</span>] instanceof Manager) &#123; <span class="comment">// 只有需要使用Manager中特有的方法时才进行转换</span></span><br><span class="line">    boss = (Manager) staff[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="抽象类">抽象类</h2><blockquote>
+<p>抽象类不能被实例化，但可以引用非抽象子类：如Person p = new Student(…); (Person为抽象类)</p>
+<p>抽象类（接口也是）里面的方法不能设置为static属性。因为static方法可以直接被类调用，但该方法又没有具体实现，会产生错误</p>
+</blockquote>
+<h2 id="Object类">Object类</h2><h3 id="final">final</h3><blockquote>
+<p>final方法无法被子类覆盖（将一个类设置为final属性后，其中的方法自动变为final方法，但其中的域不会成为final域）</p>
+</blockquote>
+<h3 id="equals方法">equals方法</h3><blockquote>
+<p>比较好的编写equals函数的方法：</p>
+<ol>
+<li>显示参数命名为otherObject，稍后会将它转换成另一个叫做other的变量</li>
+<li><p>检测this与otherObject是否引用同一个对象：<br> if(this == otherObject) return ture;</p>
+</li>
+<li><p>检测otherObject是否为null：<br> if(otherObject == null) return false;</p>
+</li>
+<li><p>比较this与otherObjec是否属于同一个类。<br>如果equals的语义在每个子类中有所改变，就使用getClass检测：<br> if(getClass() != otherObject.getClass()) reutrn false;<br>如果所有子类都有统一的语义，就使用instanceof检测：<br> if(!(otherObject instanceof ClassName)) return false;</p>
+</li>
+<li><p>将otherObject转换为相应的类类型变量：<br> className other = (ClassName) otherObject;</p>
+</li>
+<li><p>对所有需要比较的域进行比较。使用“==”比较基本类型域，使用equals比较对象域：<br> return field1 == other.field &amp;&amp; Object.equals(field2, other.field2)&amp;&amp; …;<br> // 使用Ojects.equals()方法是因为field有可能为null，当为null时不能调用equals方法<br> <strong>如果在子类中重新定义equals，就要在其中包含调用super.equals(other)</strong></p>
+</li>
+</ol>
+<p>对于数组类型的域，可使用静态的Arrays.equals方法检测相应的数组元素是否相等</p>
+</blockquote>
+<h2 id="参数数量可变的方法">参数数量可变的方法</h2><p>典型：printf方法（任意个参数）<br>例子：计算若干个数值的最大值：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">double</span> <span class="title">max</span><span class="params">(<span class="keyword">double</span>... values)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">double</span> largest = Doule.MIN_VALUE;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">double</span> v: values) <span class="keyword">if</span>(v &gt; largest) largest = v;</span><br><span class="line">    <span class="keyword">return</span> largest;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
+          
+            <a href="/tags/Java核心技术/" rel="tag">#Java核心技术</a>
+          
+            <a href="/tags/学习笔记/" rel="tag">#学习笔记</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/22/hexo静态博客搭建资料导航/" rel="next" title="hexo静态博客搭建资料导航">
+                <i class="fa fa-chevron-left"></i> hexo静态博客搭建资料导航
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/28/安卓初探/" rel="prev" title="安卓初探">
+                安卓初探 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/01/27/Java核心技术学习笔记之一/"
+           data-title="Java核心技术学习笔记之一" data-url="http://yoursite.com/2016/01/27/Java核心技术学习笔记之一/">
+      </div>
+    
+  </div>
+  <center>
+  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </center>
+
+
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/uploads/picture.jpg" alt="Hzy" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Hzy</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">扛着键盘，走在码农的路上</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/1927132067/profile?topnav=1&wvr=6" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/hzy_1212" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> zhihu
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、Java程序设计环境"><span class="nav-number">1.</span> <span class="nav-text">一、Java程序设计环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java术语_p13"><span class="nav-number">1.1.</span> <span class="nav-text">Java术语 p13</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、Java的基本程序设计结构"><span class="nav-number">2.</span> <span class="nav-text">二、Java的基本程序设计结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">2.1.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">2.2.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本类型：能够直接用二进制表示的类型"><span class="nav-number">2.2.1.</span> <span class="nav-text">基本类型：能够直接用二进制表示的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#整数类型"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">整数类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浮点数类型[小数]"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">浮点数类型[小数]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符类型"><span class="nav-number">2.2.1.3.</span> <span class="nav-text">字符类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑类型"><span class="nav-number">2.2.1.4.</span> <span class="nav-text">逻辑类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用类型"><span class="nav-number">2.2.2.</span> <span class="nav-text">引用类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符"><span class="nav-number">2.3.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#位运算"><span class="nav-number">2.3.1.</span> <span class="nav-text">位运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数值之间的转换"><span class="nav-number">2.3.2.</span> <span class="nav-text">数值之间的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强制类型转换"><span class="nav-number">2.3.3.</span> <span class="nav-text">强制类型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举类型"><span class="nav-number">2.3.4.</span> <span class="nav-text">枚举类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串"><span class="nav-number">2.4.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#比较字符串"><span class="nav-number">2.4.1.</span> <span class="nav-text">比较字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建字符串"><span class="nav-number">2.4.2.</span> <span class="nav-text">构建字符串</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入输出"><span class="nav-number">2.5.</span> <span class="nav-text">输入输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化输出"><span class="nav-number">2.5.1.</span> <span class="nav-text">格式化输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件输入与输出"><span class="nav-number">2.5.2.</span> <span class="nav-text">文件输入与输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程控制"><span class="nav-number">2.6.</span> <span class="nav-text">流程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#带标签的break"><span class="nav-number">2.6.1.</span> <span class="nav-text">带标签的break</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大数值"><span class="nav-number">2.7.</span> <span class="nav-text">大数值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BigInteger（整数）_和_BigDecimal（浮点数）"><span class="nav-number">2.7.1.</span> <span class="nav-text">BigInteger（整数） 和 BigDecimal（浮点数）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">2.8.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#for_each循环"><span class="nav-number">2.8.1.</span> <span class="nav-text">for each循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速打印数组"><span class="nav-number">2.8.2.</span> <span class="nav-text">快速打印数组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、类与对象"><span class="nav-number">3.</span> <span class="nav-text">三、类与对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#隐式参数和显式参数"><span class="nav-number">3.1.</span> <span class="nav-text">隐式参数和显式参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写返回引用可变对象的引用方法"><span class="nav-number">3.2.</span> <span class="nav-text">编写返回引用可变对象的引用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法参数"><span class="nav-number">3.3.</span> <span class="nav-text">方法参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造器"><span class="nav-number">3.4.</span> <span class="nav-text">构造器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#this的另一个用法"><span class="nav-number">3.4.1.</span> <span class="nav-text">this的另一个用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态初始化块和对象初始化块"><span class="nav-number">3.5.</span> <span class="nav-text">静态初始化块和对象初始化块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法注释"><span class="nav-number">3.6.</span> <span class="nav-text">方法注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类设计技巧"><span class="nav-number">3.7.</span> <span class="nav-text">类设计技巧</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承"><span class="nav-number">4.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#置换法则"><span class="nav-number">4.1.</span> <span class="nav-text">置换法则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强制类型转换-1"><span class="nav-number">4.2.</span> <span class="nav-text">强制类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象类"><span class="nav-number">4.3.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object类"><span class="nav-number">4.4.</span> <span class="nav-text">Object类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#final"><span class="nav-number">4.4.1.</span> <span class="nav-text">final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#equals方法"><span class="nav-number">4.4.2.</span> <span class="nav-text">equals方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数数量可变的方法"><span class="nav-number">4.5.</span> <span class="nav-text">参数数量可变的方法</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hzy</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<div>
+总访问量：<span id="busuanzi_value_site_pv"></span>——访客数：<span id="busuanzi_value_site_uv"></span>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hzy1212"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

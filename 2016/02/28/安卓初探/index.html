@@ -1,0 +1,900 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="学习笔记,安卓," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Codeflyer Hzy" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="简单的安卓程序构成
+
+
+目录名称
+组成
+
+
+
+
+src
+存放所有Java代码
+
+
+gen
+主要有R.java文件，在项目中添加的任何资源都会自动生成一个相应的id。不要手动修改。
+
+
+assets
+存放一些随程序打包的文件
+
+
+bin
+存放一些编译时自动产生的文件（如.apk文件）
+
+
+libs
+第三方Jar包
+
+
+res
+存放所有资源
+
+
+AndroidManifest.xml
+整个程序的配置文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安卓初探">
+<meta property="og:url" content="http://yoursite.com/2016/02/28/安卓初探/index.html">
+<meta property="og:site_name" content="Codeflyer Hzy">
+<meta property="og:description" content="简单的安卓程序构成
+
+
+目录名称
+组成
+
+
+
+
+src
+存放所有Java代码
+
+
+gen
+主要有R.java文件，在项目中添加的任何资源都会自动生成一个相应的id。不要手动修改。
+
+
+assets
+存放一些随程序打包的文件
+
+
+bin
+存放一些编译时自动产生的文件（如.apk文件）
+
+
+libs
+第三方Jar包
+
+
+res
+存放所有资源
+
+
+AndroidManifest.xml
+整个程序的配置文">
+<meta property="og:updated_time" content="2016-03-07T14:23:50.179Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安卓初探">
+<meta name="twitter:description" content="简单的安卓程序构成
+
+
+目录名称
+组成
+
+
+
+
+src
+存放所有Java代码
+
+
+gen
+主要有R.java文件，在项目中添加的任何资源都会自动生成一个相应的id。不要手动修改。
+
+
+assets
+存放一些随程序打包的文件
+
+
+bin
+存放一些编译时自动产生的文件（如.apk文件）
+
+
+libs
+第三方Jar包
+
+
+res
+存放所有资源
+
+
+AndroidManifest.xml
+整个程序的配置文">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> 安卓初探 | Codeflyer Hzy </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a99612187d37aaac0efbaecea0d4f709";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Codeflyer Hzy</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">扛着键盘，走在码农的路上</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-book fa-fw"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                安卓初探
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-02-28T22:04:08+08:00" content="2016-02-28">
+              2016-02-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/28/安卓初探/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/28/安卓初探/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h1 id="简单的安卓程序构成">简单的安卓程序构成</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">目录名称</th>
+<th style="text-align:center">组成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">src</td>
+<td style="text-align:center">存放所有Java代码</td>
+</tr>
+<tr>
+<td style="text-align:center">gen</td>
+<td style="text-align:center">主要有R.java文件，在项目中添加的任何资源都会自动生成一个相应的id。不要手动修改。</td>
+</tr>
+<tr>
+<td style="text-align:center">assets</td>
+<td style="text-align:center">存放一些随程序打包的文件</td>
+</tr>
+<tr>
+<td style="text-align:center">bin</td>
+<td style="text-align:center">存放一些编译时自动产生的文件（如.apk文件）</td>
+</tr>
+<tr>
+<td style="text-align:center">libs</td>
+<td style="text-align:center">第三方Jar包</td>
+</tr>
+<tr>
+<td style="text-align:center">res</td>
+<td style="text-align:center">存放所有资源</td>
+</tr>
+<tr>
+<td style="text-align:center">AndroidManifest.xml</td>
+<td style="text-align:center">整个程序的配置文件</td>
+</tr>
+<tr>
+<td style="text-align:center">project.properties</td>
+<td style="text-align:center">指定SDK版本</td>
+</tr>
+</tbody>
+</table>
+<h1 id="活动">活动</h1><blockquote>
+<p>活动是一种可包含用户界面的组件，主要用于和用户进行交互。<br>活动都应该在AndroidManifest.xml文件中注册，否则无法使用该活动。</p>
+</blockquote>
+<h2 id="在AndroidManifest文件中注册活动">在AndroidManifest文件中注册活动</h2><p><strong>注意下面的注释非标准语法注释</strong><br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">manifest</span> <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    <span class="attribute">package</span>=<span class="value">"com.example.activitytest"</span></span><br><span class="line">    <span class="attribute">android:versionCode</span>=<span class="value">"1"</span></span><br><span class="line">    <span class="attribute">android:versionName</span>=<span class="value">"1.0"</span> &gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">uses-sdk</span></span><br><span class="line">        <span class="attribute">android:minSdkVersion</span>=<span class="value">"14"</span></span><br><span class="line">        <span class="attribute">android:targetSdkVersion</span>=<span class="value">"19"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">application</span></span><br><span class="line">        <span class="attribute">android:allowBackup</span>=<span class="value">"true"</span></span><br><span class="line">        <span class="attribute">android:icon</span>=<span class="value">"@drawable/ic_launcher"</span></span><br><span class="line">        <span class="attribute">android:label</span>=<span class="value">"@string/app_name"</span></span><br><span class="line">        <span class="attribute">android:theme</span>=<span class="value">"@style/AppTheme"</span> &gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="title">activity</span></span><br><span class="line">        </span><br><span class="line">        // 在最外层的&lt;<span class="attribute">manifest</span>&gt;</span>标签中已通过package制定了程序的包名，所以可以简写为“.FirstActivity”</span><br><span class="line">        android:name=".FirstActivity" </span><br><span class="line">        android:launchMode="singleTop"</span><br><span class="line">        android:label="This is FirstActivity" &gt;</span><br><span class="line">        </span><br><span class="line">        // <span class="tag">&lt;<span class="title">intent-filter</span>&gt;</span>和<span class="tag">&lt;/<span class="title">intent-filter</span>&gt;</span>之间为主活动</span><br><span class="line">        <span class="tag">&lt;<span class="title">intent-filter</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="title">action</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.action.MAIN"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">category</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.category.LAUNCHER"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">activity</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="title">activity</span></span><br><span class="line">        	<span class="attribute">android:name</span>=<span class="value">".SecondActivity"</span> &gt;</span></span><br><span class="line">        	</span><br><span class="line">        	// 指定当前活动能够相应的action和category,当它们能同时匹配上Intent中指定的action和category时，这个活动才能响应该Intent</span><br><span class="line">        	<span class="tag">&lt;<span class="title">intent-filter</span>&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">action</span> <span class="attribute">android:name</span>=<span class="value">"com.example.activitytest.ACTION_START"</span> /&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">category</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.category.DEFAULT"</span> /&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">category</span> <span class="attribute">android:name</span>=<span class="value">"com.example.activitytest.MY_CATEGORY"</span> /&gt;</span></span><br><span class="line">        	<span class="tag">&lt;/<span class="title">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">activity</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="title">activity</span> <span class="attribute">android:name</span>=<span class="value">".ThirdActivity"</span> &gt;</span></span><br><span class="line">        	<span class="tag">&lt;<span class="title">intent-filter</span>&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">action</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.action.VIEW"</span> /&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">category</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.category.DEFAULT"</span> /&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">data</span> <span class="attribute">android:scheme</span>=<span class="value">"tel"</span> /&gt;</span></span><br><span class="line">        	<span class="tag">&lt;/<span class="title">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">activity</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">application</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">manifest</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<h2 id="使用活动">使用活动</h2><blockquote>
+<p>任何活动都应该重写Activity的onCreate方法：<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">FirstActivity</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">BaseActivity</span> &#123;</span></span><br><span class="line">	<span class="annotation">@Override</span></span><br><span class="line">	<span class="keyword">protected</span> void onCreate(<span class="type">Bundle</span> savedInstanceState) &#123;</span><br><span class="line">		<span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="布局">布局</h3><blockquote>
+<p>Android程序的设计讲究逻辑和视图分离，最好每一个活动都能对应一个布局（在res/layout中创建Android XML文件）</p>
+</blockquote>
+<h4 id="在布局中添加按钮">在布局中添加按钮</h4><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Button</span><br><span class="line">    android:id=<span class="string">"@+id/button_1"</span>             <span class="comment"> // 当前元素唯一标识符，注意@后面有个+号为定义</span></span><br><span class="line">    android:layout_width=<span class="string">"match_parent"</span>    <span class="comment"> // 当前元素和父元素一样宽</span></span><br><span class="line">    android:layout_height=<span class="string">"wrap_content"</span>   <span class="comment"> // 当前元素的高度只要能刚好包含里面的内容即可</span></span><br><span class="line">    android:<span class="keyword">text</span>=<span class="string">"Button 1"</span> /&gt;             <span class="comment"> // 该按钮显示的文本内容</span></span><br></pre></td></tr></table></figure>
+<h3 id="隐藏标题栏">隐藏标题栏</h3><h2 id="引用资源">引用资源</h2><blockquote>
+<p>在代码中可以通过R.string.hello_world获得字符串的引用<br>在XML中可通过@string/hello_world获得字符串的引用</p>
+</blockquote>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag">#学习笔记</a>
+          
+            <a href="/tags/安卓/" rel="tag">#安卓</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/27/Java核心技术学习笔记之一/" rel="next" title="Java核心技术学习笔记之一">
+                <i class="fa fa-chevron-left"></i> Java核心技术学习笔记之一
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/07/TextView之跑马灯/" rel="prev" title="TextView之跑马灯">
+                TextView之跑马灯 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/02/28/安卓初探/"
+           data-title="安卓初探" data-url="http://yoursite.com/2016/02/28/安卓初探/">
+      </div>
+    
+  </div>
+  <center>
+  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </center>
+
+
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/uploads/picture.jpg" alt="Hzy" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Hzy</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">扛着键盘，走在码农的路上</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/1927132067/profile?topnav=1&wvr=6" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/hzy_1212" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> zhihu
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简单的安卓程序构成"><span class="nav-number">1.</span> <span class="nav-text">简单的安卓程序构成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#活动"><span class="nav-number">2.</span> <span class="nav-text">活动</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在AndroidManifest文件中注册活动"><span class="nav-number">2.1.</span> <span class="nav-text">在AndroidManifest文件中注册活动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用活动"><span class="nav-number">2.2.</span> <span class="nav-text">使用活动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#布局"><span class="nav-number">2.2.1.</span> <span class="nav-text">布局</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在布局中添加按钮"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">在布局中添加按钮</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏标题栏"><span class="nav-number">2.2.2.</span> <span class="nav-text">隐藏标题栏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用资源"><span class="nav-number">2.3.</span> <span class="nav-text">引用资源</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hzy</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<div>
+总访问量：<span id="busuanzi_value_site_pv"></span>——访客数：<span id="busuanzi_value_site_uv"></span>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hzy1212"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
