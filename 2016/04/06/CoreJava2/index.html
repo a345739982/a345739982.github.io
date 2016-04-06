@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="TextView,安卓," />
+  <meta name="keywords" content="Java,Java核心技术,学习笔记," />
 
 
 
@@ -55,17 +55,40 @@
 
 
 
-<meta name="description" content="学习了TextView之后，感觉得来点好玩的。正好在imooc.com上学到一个关于TextView跑马灯（理解为现在大街上经常看到的那种横向滚动的LED灯便是）效果的小知识点。特记录如下：　　首先上效果图：　　　　在网上发现一篇总结得不错的文章：http://www.cnblogs.com/Gaojiecai/p/3142783.html　　　　但需要实现多个TextView同时有跑马灯效果时，">
+<meta name="description" content="接口与内部类接口
+接口中的所有域被自动设置为public static final。所有方法自动属于public（可不写），但在实现接口时，必须把方法显式声明为public。否则，编译器将认为此方法为默认的包可见访问属性。
+
+接口无法用new构造对象，但可以声明接口的变量：
+
+Comparable x = new Employee(…); // 接口变量必须引用实现了接口的类对象
+
+
+可以用ins">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TextView之跑马灯">
-<meta property="og:url" content="http://yoursite.com/2016/03/07/TextView之跑马灯/index.html">
+<meta property="og:title" content="Java核心技术学习笔记之二">
+<meta property="og:url" content="http://yoursite.com/2016/04/06/CoreJava2/index.html">
 <meta property="og:site_name" content="Codeflyer Hzy">
-<meta property="og:description" content="学习了TextView之后，感觉得来点好玩的。正好在imooc.com上学到一个关于TextView跑马灯（理解为现在大街上经常看到的那种横向滚动的LED灯便是）效果的小知识点。特记录如下：　　首先上效果图：　　　　在网上发现一篇总结得不错的文章：http://www.cnblogs.com/Gaojiecai/p/3142783.html　　　　但需要实现多个TextView同时有跑马灯效果时，">
-<meta property="og:image" content="http://yoursite.com/img/marquee.gif">
-<meta property="og:updated_time" content="2016-03-07T15:05:50.032Z">
+<meta property="og:description" content="接口与内部类接口
+接口中的所有域被自动设置为public static final。所有方法自动属于public（可不写），但在实现接口时，必须把方法显式声明为public。否则，编译器将认为此方法为默认的包可见访问属性。
+
+接口无法用new构造对象，但可以声明接口的变量：
+
+Comparable x = new Employee(…); // 接口变量必须引用实现了接口的类对象
+
+
+可以用ins">
+<meta property="og:updated_time" content="2016-04-06T12:37:18.927Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TextView之跑马灯">
-<meta name="twitter:description" content="学习了TextView之后，感觉得来点好玩的。正好在imooc.com上学到一个关于TextView跑马灯（理解为现在大街上经常看到的那种横向滚动的LED灯便是）效果的小知识点。特记录如下：　　首先上效果图：　　　　在网上发现一篇总结得不错的文章：http://www.cnblogs.com/Gaojiecai/p/3142783.html　　　　但需要实现多个TextView同时有跑马灯效果时，">
+<meta name="twitter:title" content="Java核心技术学习笔记之二">
+<meta name="twitter:description" content="接口与内部类接口
+接口中的所有域被自动设置为public static final。所有方法自动属于public（可不写），但在实现接口时，必须把方法显式声明为public。否则，编译器将认为此方法为默认的包可见访问属性。
+
+接口无法用new构造对象，但可以声明接口的变量：
+
+Comparable x = new Employee(…); // 接口变量必须引用实现了接口的类对象
+
+
+可以用ins">
 
 
 
@@ -77,7 +100,7 @@
   };
 </script>
 
-  <title> TextView之跑马灯 | Codeflyer Hzy </title>
+  <title> Java核心技术学习笔记之二 | Codeflyer Hzy </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -237,7 +260,7 @@
             
             
               
-                TextView之跑马灯
+                Java核心技术学习笔记之二
               
             
           </h1>
@@ -246,8 +269,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-03-07T21:48:28+08:00" content="2016-03-07">
-              2016-03-07
+            <time itemprop="dateCreated" datetime="2016-04-06T20:37:17+08:00" content="2016-04-06">
+              2016-04-06
             </time>
           </span>
 
@@ -272,8 +295,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/07/TextView之跑马灯/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/TextView之跑马灯/" itemprop="commentsCount"></span>
+                <a href="/2016/04/06/CoreJava2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/06/CoreJava2/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -292,8 +315,38 @@
       
 
       
-        <span itemprop="articleBody"><p>　　学习了TextView之后，感觉得来点好玩的。正好在imooc.com上学到一个关于TextView跑马灯（理解为现在大街上经常看到的那种横向滚动的LED灯便是）效果的小知识点。特记录如下：<br>　　首先上效果图：<img src="/img/marquee.gif" alt="效果图"><br>　　<br>　　在网上发现一篇总结得不错的文章：<a href="http://www.cnblogs.com/Gaojiecai/p/3142783.html" target="_blank" rel="external">http://www.cnblogs.com/Gaojiecai/p/3142783.html</a><br>　　<br>　　但需要实现多个TextView同时有跑马灯效果时，稍微复杂一点：<br>　　新建一个继承自TextView的类，这里命名为MarqueeTextViewDemo，关键是重写View中的isFocus方法（即默认获得focus）<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">boolean</span> <span class="title">isFocused</span><span class="params">()</span> </span>&#123; </span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>然后在xml中创建这个类的TextView（注意包名要写完整）：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;com<span class="class">.example</span><span class="class">.marqueetextviewdemo</span><span class="class">.MarqueeTextViewDemo</span></span><br><span class="line">    android:id=<span class="string">"@+id/textview1"</span></span><br><span class="line">    android:layout_width=<span class="string">"wrap_content"</span></span><br><span class="line">    android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">    android:ellipsize=<span class="string">"marquee"</span></span><br><span class="line">    android:singleLine=<span class="string">"true"</span></span><br><span class="line">    android:text=<span class="string">"@string/hello_world"</span> /&gt;</span><br><span class="line"></span><br><span class="line">&lt;com<span class="class">.example</span><span class="class">.marqueetextviewdemo</span><span class="class">.MarqueeTextViewDemo</span></span><br><span class="line">    android:layout_width=<span class="string">"wrap_content"</span></span><br><span class="line">    android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">    android:layout_below=<span class="string">"@id/textview1"</span></span><br><span class="line">    android:layout_marginTop=<span class="string">"10dp"</span></span><br><span class="line">    android:ellipsize=<span class="string">"marquee"</span></span><br><span class="line">    android:singleLine=<span class="string">"true"</span></span><br><span class="line">    android:text=<span class="string">"@string/hello_world"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><h1 id="接口与内部类">接口与内部类</h1><h2 id="接口">接口</h2><ul>
+<li><p>接口中的所有域被自动设置为public static final。所有方法自动属于public（可不写），但在实现接口时，必须把方法显式声明为public。否则，编译器将认为此方法为默认的包可见访问属性。</p>
+</li>
+<li><p>接口无法用new构造对象，但可以声明接口的变量：</p>
+<blockquote>
+<p>Comparable x = new Employee(…); // <strong>接口变量必须引用实现了接口的类对象</strong></p>
+</blockquote>
+</li>
+<li><p>可以用instanceof检查一个对象是否实现了某个特定的接口：</p>
+<blockquote>
+<p>if(anObject instanceof Comparable) { … }</p>
+</blockquote>
+</li>
+<li><p>接口之间也可以继承</p>
+</li>
+<li><p>接口中不能包含实例域（为什么？）或静态方法（原因同抽象类），但可以包含常量</p>
+</li>
+</ul>
+<h2 id="对象克隆">对象克隆</h2><ul>
+<li><p>浅拷贝与深拷贝的区别：如果类中只有基本类型，那么无区别。一旦有某个对象的实例(即该变量是引用型的，如String对象)，那么浅拷贝出来的对象仅仅是拷贝了原对象中该实例的引用。而深拷贝则是新开辟了一段内存来拷贝。</p>
+</li>
+<li><p>值得学习的博文：<a href="http://blog.csdn.net/zhangjg_blog/article/details/18369201" target="_blank" rel="external">详解Java中的clone方法 – 原型模式</a> 唉，我什么时候能够写出这样的原创博文，而不是简简单单地做笔记呢？</p>
+</li>
+</ul>
+<h2 id="接口与回调">接口与回调</h2><h2 id="内部类">内部类</h2><ul>
+<li><p>内部类方法可以访问该类定义所在的作用域中的数据，包括私有的数据</p>
+</li>
+<li><p>内部类可以对同一个包中的其他类隐藏起来</p>
+</li>
+<li><p>当想要定义一个回调函数又不想编写大量代码时，使用匿名内部类比较便捷</p>
+</li>
+</ul>
 </span>
       
     </div>
@@ -302,9 +355,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/TextView/" rel="tag">#TextView</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
-            <a href="/tags/安卓/" rel="tag">#安卓</a>
+            <a href="/tags/Java核心技术/" rel="tag">#Java核心技术</a>
+          
+            <a href="/tags/学习笔记/" rel="tag">#学习笔记</a>
           
         </div>
       
@@ -313,17 +368,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/28/安卓初探/" rel="next" title="安卓初探">
-                <i class="fa fa-chevron-left"></i> 安卓初探
+              <a href="/2016/03/07/TextView之跑马灯/" rel="next" title="TextView之跑马灯">
+                <i class="fa fa-chevron-left"></i> TextView之跑马灯
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/06/CoreJava2/" rel="prev" title="Java核心技术学习笔记之二">
-                Java核心技术学习笔记之二 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -350,8 +401,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/07/TextView之跑马灯/"
-           data-title="TextView之跑马灯" data-url="http://yoursite.com/2016/03/07/TextView之跑马灯/">
+      <div class="ds-thread" data-thread-key="2016/04/06/CoreJava2/"
+           data-title="Java核心技术学习笔记之二" data-url="http://yoursite.com/2016/04/06/CoreJava2/">
       </div>
     
   </div>
@@ -471,7 +522,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#接口与内部类"><span class="nav-number">1.</span> <span class="nav-text">接口与内部类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#接口"><span class="nav-number">1.1.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象克隆"><span class="nav-number">1.2.</span> <span class="nav-text">对象克隆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口与回调"><span class="nav-number">1.3.</span> <span class="nav-text">接口与回调</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部类"><span class="nav-number">1.4.</span> <span class="nav-text">内部类</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -4,7 +4,7 @@
   <subtitle><![CDATA[扛着键盘，走在码农的路上]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-26T11:02:27.483Z</updated>
+  <updated>2016-04-06T12:37:18.927Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,13 +16,46 @@
   
   <entry>
     <title><![CDATA[Java核心技术学习笔记之二]]></title>
-    <link href="http://yoursite.com/2016/03/26/CoreJava2/"/>
-    <id>http://yoursite.com/2016/03/26/CoreJava2/</id>
-    <published>2016-03-26T11:01:52.000Z</published>
-    <updated>2016-03-26T11:02:27.483Z</updated>
-    <content type="html"></content>
+    <link href="http://yoursite.com/2016/04/06/CoreJava2/"/>
+    <id>http://yoursite.com/2016/04/06/CoreJava2/</id>
+    <published>2016-04-06T12:37:17.000Z</published>
+    <updated>2016-04-06T12:37:18.927Z</updated>
+    <content type="html"><![CDATA[<h1 id="接口与内部类">接口与内部类</h1><h2 id="接口">接口</h2><ul>
+<li><p>接口中的所有域被自动设置为public static final。所有方法自动属于public（可不写），但在实现接口时，必须把方法显式声明为public。否则，编译器将认为此方法为默认的包可见访问属性。</p>
+</li>
+<li><p>接口无法用new构造对象，但可以声明接口的变量：</p>
+<blockquote>
+<p>Comparable x = new Employee(…); // <strong>接口变量必须引用实现了接口的类对象</strong></p>
+</blockquote>
+</li>
+<li><p>可以用instanceof检查一个对象是否实现了某个特定的接口：</p>
+<blockquote>
+<p>if(anObject instanceof Comparable) { … }</p>
+</blockquote>
+</li>
+<li><p>接口之间也可以继承</p>
+</li>
+<li><p>接口中不能包含实例域（为什么？）或静态方法（原因同抽象类），但可以包含常量</p>
+</li>
+</ul>
+<h2 id="对象克隆">对象克隆</h2><ul>
+<li><p>浅拷贝与深拷贝的区别：如果类中只有基本类型，那么无区别。一旦有某个对象的实例(即该变量是引用型的，如String对象)，那么浅拷贝出来的对象仅仅是拷贝了原对象中该实例的引用。而深拷贝则是新开辟了一段内存来拷贝。</p>
+</li>
+<li><p>值得学习的博文：<a href="http://blog.csdn.net/zhangjg_blog/article/details/18369201" target="_blank" rel="external">详解Java中的clone方法 – 原型模式</a> 唉，我什么时候能够写出这样的原创博文，而不是简简单单地做笔记呢？</p>
+</li>
+</ul>
+<h2 id="接口与回调">接口与回调</h2><h2 id="内部类">内部类</h2><ul>
+<li><p>内部类方法可以访问该类定义所在的作用域中的数据，包括私有的数据</p>
+</li>
+<li><p>内部类可以对同一个包中的其他类隐藏起来</p>
+</li>
+<li><p>当想要定义一个回调函数又不想编写大量代码时，使用匿名内部类比较便捷</p>
+</li>
+</ul>
+]]></content>
     <summary type="html">
-    
+    <![CDATA[<h1 id="接口与内部类">接口与内部类</h1><h2 id="接口">接口</h2><ul>
+<li><p>接口中的所有域被自动设置为public static final。所有方法自动属于public（可不写），但在实现接口时，必须把方法显式声明为public。否则，编]]>
     </summary>
     
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
