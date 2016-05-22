@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/05/21/PermQuestion/</loc>
+    <lastmod>2016-05-22T07:26:05.931Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    <lastmod>2016-05-08T13:32:12.682Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/04/07/%E9%80%92%E5%BD%92%E5%88%86%E6%B2%BB%E6%B1%82%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%85%83%E7%B4%A0/</loc>
     <lastmod>2016-04-07T04:16:13.650Z</lastmod>
   </url>
@@ -9,11 +19,6 @@
   <url>
     <loc>http://yoursite.com/2016/04/06/CoreJava2/</loc>
     <lastmod>2016-04-06T12:37:18.927Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
-    <lastmod>2016-03-28T12:28:35.775Z</lastmod>
   </url>
   
   <url>
@@ -34,11 +39,6 @@
   <url>
     <loc>http://yoursite.com/2016/01/22/buildblogbyhexo/</loc>
     <lastmod>2016-01-22T16:48:05.692Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/01/22/hexo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B5%84%E6%96%99%E5%AF%BC%E8%88%AA/</loc>
-    <lastmod>2016-01-22T16:19:46.115Z</lastmod>
   </url>
   
   <url>

@@ -4,7 +4,7 @@
   <subtitle><![CDATA[扛着键盘，走在码农的路上]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-07T04:16:13.650Z</updated>
+  <updated>2016-05-22T07:26:05.931Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[排列问题]]></title>
+    <link href="http://yoursite.com/2016/05/21/PermQuestion/"/>
+    <id>http://yoursite.com/2016/05/21/PermQuestion/</id>
+    <published>2016-05-21T13:33:18.000Z</published>
+    <updated>2016-05-22T07:26:05.931Z</updated>
+    <content type="html"><![CDATA[<p>很久没写博客了，打撸太多，罪过罪过。<br>刚开始学算法分析与设计，简直爆炸。刚开始的递归就把我看得云里雾里，这智商感人……<br>教材《算法分析与设计》中p13的排列问题就把我看晕了，现记录如下：<br>　　<br>问题是有一组数R，需要输出它的全排列。R的递归可定义如下：<br>当个数n为1时，Perm(R) = (r)，其中r是集合R中唯一的元素<br>当个数n大于1时，Perm(R)由(r1)Perm(R1),(r2)Perm(R2),(r3)Perm(R3),…,(rn)Perm(Rn)构成<br>其中Ri = R - {ri} 即该集合中减去对应元素<br>其实说直白点，就是递归地把这组数规模一个一个地缩小，如1,2,3,4. 先把1固定，递归地求2,3,4的全排列，又把2固定，递归地求3,4的全排列……直到只剩一个数，输出这个排列。<br>当获取递归数组时，从该组数的第一个，依次和每一位交换（包括本身），得以产生一个新递归数组（如1,2,3,4，先是1和1交换，产生新的2,3,4）<br>当1和1交换产生的所有递归完成之后，实际上已经完成了1234，1243，1324，1342，1432，1423的输出，因为1和自己交换之后，产生了2,3,4<br>在这个过程中，当１,２,３固定时，只有４剩余，所以输出１,２,３,４.然后固定１,２，交换３,４的位置。输出１,２,４,３.此时１,２固定的已经全部输出，于是返回到只有１固定，那么此时２需要与３交换位置，再进行1,3固定的递归<br>其实说这么多，还不如一张图来得实在：<br><img src="/img/Perm.png" alt="Perm"><br>Java代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Perm</span><span class="params">(<span class="keyword">int</span> list[], <span class="keyword">int</span> k, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (k == m) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= m; i++)</span><br><span class="line">				System.out.print(list[i]);</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = k; i &lt;= m; i++) &#123;</span><br><span class="line">				<span class="comment">// 从固定的数后第一个依次交换</span></span><br><span class="line">				Swap(list, k, i);</span><br><span class="line">				Perm(list, k + <span class="number">1</span>, m);</span><br><span class="line">				<span class="comment">// 这组递归完成之后需要交换回来</span></span><br><span class="line">				Swap(list, k, i);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Swap</span><span class="params">(<span class="keyword">int</span>[] list, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> t = list[i];</span><br><span class="line">		list[i] = list[j];</span><br><span class="line">		list[j] = t;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Demo d = <span class="keyword">new</span> Demo();</span><br><span class="line">		<span class="keyword">int</span>[] arr = &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">		d.Perm(arr, <span class="number">0</span>, <span class="number">3</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>输出<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1234</span></span><br><span class="line"><span class="number">1243</span></span><br><span class="line"><span class="number">1324</span></span><br><span class="line"><span class="number">1342</span></span><br><span class="line"><span class="number">1432</span></span><br><span class="line"><span class="number">1423</span></span><br><span class="line"><span class="number">2134</span></span><br><span class="line"><span class="number">2143</span></span><br><span class="line"><span class="number">2314</span></span><br><span class="line"><span class="number">2341</span></span><br><span class="line"><span class="number">2431</span></span><br><span class="line"><span class="number">2413</span></span><br><span class="line"><span class="number">3214</span></span><br><span class="line"><span class="number">3241</span></span><br><span class="line"><span class="number">3124</span></span><br><span class="line"><span class="number">3142</span></span><br><span class="line"><span class="number">3412</span></span><br><span class="line"><span class="number">3421</span></span><br><span class="line"><span class="number">4231</span></span><br><span class="line"><span class="number">4213</span></span><br><span class="line"><span class="number">4321</span></span><br><span class="line"><span class="number">4312</span></span><br><span class="line"><span class="number">4132</span></span><br><span class="line"><span class="number">4123</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>很久没写博客了，打撸太多，罪过罪过。<br>刚开始学算法分析与设计，简直爆炸。刚开始的递归就把我看得云里雾里，这智商感人……<br>教材《算法分析与设计》中p13的排列问题就把我看晕了，现记录如下：<br>　　<br>问题是有一组数R，需要输出它的全排列。R的递归可定义如下]]>
+    </summary>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="算法设计与分析" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/"/>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[递归分治求数组最大最小元素]]></title>
@@ -486,37 +507,6 @@
       <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
       <category term="学习笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[hexo静态博客搭建资料导航]]></title>
-    <link href="http://yoursite.com/2016/01/22/hexo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B5%84%E6%96%99%E5%AF%BC%E8%88%AA/"/>
-    <id>http://yoursite.com/2016/01/22/hexo静态博客搭建资料导航/</id>
-    <published>2016-01-22T11:48:41.000Z</published>
-    <updated>2016-01-22T16:19:46.115Z</updated>
-    <content type="html"><![CDATA[<h1 id="一、前言">一、前言</h1><p>　　<br>　　咳咳，在建自己的博客过程中参考了很多资料，帮助我解决了大量的问题。考完之后也有点时间，便准备把自己建博客的整个流程中参考的一些资料整理下供大家参考。<br> 　　至于为什么自己搭博客嘛，一个是因为自己搭博客可以做到没有任何烦人的广告，另一个是可以根据自己的喜欢定制博客，相对普通的博客自由度更大。最重要的当然是<strong>bigger than bigger</strong>呀2333。<br><strong> 　　注意，所收集的教程有些已经好几年了，所以在某些小步骤上可能会不同（例如软件升级了，指令不一样了）。如果遇到了困难，请百度/google或者留言。 </strong></p>
-<h1 id="二、初级">二、初级</h1><h2 id="搭建博客">搭建博客</h2><p>谢谢 <a href="http://zipperary.com" title="Zipperta&#39;s blog" target="_blank" rel="external">Zipperta’s blog</a><br><a href="http://zipperary.com/2013/05/28/hexo-guide-1/" title="hexo系列教程：（一）hexo介绍" target="_blank" rel="external">hexo系列教程：（一）hexo介绍</a><br><a href="http://zipperary.com/2013/05/28/hexo-guide-2/" title="hexo系列教程：（二）搭建hexo博客" target="_blank" rel="external">hexo系列教程：（二）搭建hexo博客</a><br><a href="http://zipperary.com/2013/05/29/hexo-guide-3/" title="hexo系列教程：（三）hexo博客的配置、使用" target="_blank" rel="external">hexo系列教程：（三）hexo博客的配置、使用</a></p>
-<p><strong> 如果你已经顺利进行到这里，那么恭喜你，你可以进阶了。</strong><br>现在的博客也许看起来太过于简洁、难看了，甚至连评论都没有。<br>那么请往下看。你也可以选择你自己喜欢的主题。例如我选用的是<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT主题</a>。</p>
-<h1 id="三、中高级">三、中高级</h1><h2 id="评论、页面导航等">评论、页面导航等</h2><p><a href="http://zipperary.com/2013/05/30/hexo-guide-4/" title="hexo系列教程：（四）hexo博客的优化技巧" target="_blank" rel="external">hexo系列教程：（四）hexo博客的优化技巧</a></p>
-<h2 id="添加RSS、购买域名、设置DNS等">添加RSS、购买域名、设置DNS等</h2><p><a href="http://zipperary.com/2013/06/02/hexo-guide-5/" title="hexo系列教程：（五）hexo博客的优化技巧续" target="_blank" rel="external">hexo系列教程：（五）hexo博客的优化技巧续</a></p>
-<p>谢谢另外一位我参考过的博主：<a href="http://iread.io/tags/Hexo/" title="叶阳栩宁&#39;s blog" target="_blank" rel="external">叶阳栩宁’s blog</a><br><img src="/img/叶阳栩宁.png" alt="叶阳栩宁&#39;s blog"></p>
-<h1 id="四、其他参考资料">四、其他参考资料</h1><p>　　<br><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">1.NexT主题使用文档</a><br><img src="/img/NexT文档.png" alt="NexT文档"></p>
-<p><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">2.hexo官网</a><br><img src="/img/hexo官网.jpg" alt="hexo官网"></p>
-<p><a href="https://www.zybuluo.com/mdeditor#" target="_blank" rel="external">3.在线Markdown编辑器</a><br><img src="/img/Markdowm.png" alt="在线Markdown编辑器"></p>
-<p><a href="http://codeflyer-zy.com/2015/11/20/%E7%BB%99%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0%E8%AE%BF%E5%AE%A2%E8%AE%B0%E5%BD%95/" target="_blank" rel="external">4.给网站添加访客记录</a><br><img src="/img/访客记录.png" alt="访客记录"></p>
-<h1 id="五、Q&amp;A">五、Q&amp;A</h1><p>　　<br>Q1：自己搭建博客要钱吗？<br>A：如果不打算购买域名的话是完全免费的。域名也不是很贵，.com的大概五六十块一年，这样会显得更加个(you)性(B)化(ge)</p>
-<p>Q2：有很多问题不会，想找人解答？ <strong>// 请先尝试自行解决！</strong><br>A：hexo交流QQ群：287306637</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="一、前言">一、前言</h1><p>　　<br>　　咳咳，在建自己的博客过程中参考了很多资料，帮助我解决了大量的问题。考完之后也有点时间，便准备把自己建博客的整个流程中参考的一些资料整理下供大家参考。<br> 　　至于为什么自己搭博客嘛，一个是因为自己搭博客可以做]]>
-    </summary>
-    
-      <category term="教程" scheme="http://yoursite.com/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="资料" scheme="http://yoursite.com/tags/%E8%B5%84%E6%96%99/"/>
-    
-      <category term="博客建站资料" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E8%B5%84%E6%96%99/"/>
     
   </entry>
   
