@@ -4,7 +4,7 @@
   <subtitle><![CDATA[扛着键盘，走在码农的路上]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-22T07:26:05.931Z</updated>
+  <updated>2016-07-15T02:42:36.066Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[poj1837]]></title>
+    <link href="http://yoursite.com/2016/07/15/poj1837/"/>
+    <id>http://yoursite.com/2016/07/15/poj1837/</id>
+    <published>2016-07-15T01:20:36.000Z</published>
+    <updated>2016-07-15T02:42:36.066Z</updated>
+    <content type="html"><![CDATA[<p>参考：<a href="http://blog.csdn.net/lyy289065406/article/details/6648094/" target="_blank" rel="external">http://blog.csdn.net/lyy289065406/article/details/6648094/</a><br>题目大意：有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。</p>
+<p><strong>Sample Input</strong><br>2 4    // 2个挂钩c，4个砝码g<br>-2 3 // 2个挂钩距离天平平衡点位置（负数可表示左边）  c_length[21]<br>3 4 5 8 // 4个砝码的质量  g_weight[21]</p>
+<p><strong>Sample Output</strong><br>2 // 2种方法</p>
+<p>思路：<br>定义一个二维数组dp[i][j]，i为砝码的数量，而j为“平衡度”（即两边力矩矢量和），数组值表示在这个砝码数量和平衡度下的挂法数，当平衡度为0时天平平衡，但这样会出现平衡度为负数，导致数组下标出现负数，因此注意到挂钩范围是-15~15，砝码数最大20，质量最大25，因此平衡度极限值是±15<em>20</em>25=±7500，所以措施是让j为7500时表示天平平衡。<br>那么可知dp[i][j]的推导可由前一状态dp[i-1][j]得到。<br>假设dp[i-1][j] = n, 那么dp[i]<a href="即前i-1个不动，挂上第i个挂钩">j + c_length[c] * g_weight[g]</a>也为n，但要注意如果前i-1个移动了，则（可能）不为n。<br>考虑到这个情况，可知<br><strong>dp[i][j + c_length[c] * g_weight[g]] = ∑dp[i-1][j]</strong><br>(i-1是固定的，但j可由不同的砝码和位置组成，所以求和)</p>
+<p>代码如下：</p>
+<pre><code class="C"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span>
+<span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;memory.h&gt;</span></span>
+<span class="keyword">int</span> dp[<span class="number">21</span>][<span class="number">15001</span>]; <span class="comment">// dp[i][j]  i代表已挂挂钩数量，j代表平衡度</span>
+<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>
+</span>{
+    <span class="keyword">int</span> i, j, k;
+    <span class="keyword">int</span> c; <span class="comment">// 挂钩数</span>
+    <span class="keyword">int</span> g; <span class="comment">// 砝码数</span>
+    <span class="keyword">int</span> c_length[<span class="number">21</span>]; <span class="comment">// 挂钩距离原点的位置</span>
+    <span class="keyword">int</span> g_weight[<span class="number">21</span>]; <span class="comment">// 每个砝码的重量</span>
+    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;c,&amp;g);
+    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= c; i++)
+    {
+        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;c_length[i]);
+    }
+    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= g; i++)
+    {
+        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;g_weight[i]);
+    }
+    <span class="built_in">memset</span>(dp, <span class="number">0</span>, <span class="keyword">sizeof</span>(dp));
+    dp[<span class="number">0</span>][<span class="number">7500</span>] = <span class="number">1</span>; <span class="comment">// 什么都不挂也是一种方法</span>
+    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= g; i++)
+        <span class="keyword">for</span>(j = <span class="number">0</span>; j &lt;= <span class="number">15000</span>; j++)
+            <span class="keyword">for</span>(k = <span class="number">1</span>; k &lt;= c; k++)
+                dp[i][j + c_length[k] * g_weight[i]] += dp[i-<span class="number">1</span>][j];  
+    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, dp[g][<span class="number">7500</span>]);
+    <span class="keyword">return</span> <span class="number">0</span>;
+}
+</code></pre>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>参考：<a href="http://blog.csdn.net/lyy289065406/article/details/6648094/" target="_blank" rel="external">http://blog.csdn.net/lyy289065406/]]>
+    </summary>
+    
+      <category term="poj" scheme="http://yoursite.com/tags/poj/"/>
+    
+      <category term="动态规划" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[排列问题]]></title>
