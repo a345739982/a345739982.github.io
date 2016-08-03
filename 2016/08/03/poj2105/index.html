@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="扯淡," />
+  <meta name="keywords" content="poj,模拟题,算法," />
 
 
 
@@ -55,16 +55,28 @@
 
 
 
-<meta name="description" content="无意中突然想弄个自己的专属博客，有自己的域名，风格自己定。听说程序猿大牛都有自己的技术博客，虽然我只是个大二计科专业的渣渣，但总会成长的吧。加油。">
+<meta name="description" content="题目大意给出一串32位二进制，要求转换成十进制的IP地址
+Sample Input
+4 // 4个00000000000000000000000000000000000000111000000011111111111111111100101110000100111001011000000001010000000100000000000000000001 
+Sample Output
+0.0.0.0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇之markdown练手">
-<meta property="og:url" content="http://yoursite.com/2015/11/02/第一篇之markdown练手/index.html">
+<meta property="og:title" content="poj2105 IP Address">
+<meta property="og:url" content="http://yoursite.com/2016/08/03/poj2105/index.html">
 <meta property="og:site_name" content="Codeflyer Hzy">
-<meta property="og:description" content="无意中突然想弄个自己的专属博客，有自己的域名，风格自己定。听说程序猿大牛都有自己的技术博客，虽然我只是个大二计科专业的渣渣，但总会成长的吧。加油。">
-<meta property="og:updated_time" content="2015-11-04T03:58:58.599Z">
+<meta property="og:description" content="题目大意给出一串32位二进制，要求转换成十进制的IP地址
+Sample Input
+4 // 4个00000000000000000000000000000000000000111000000011111111111111111100101110000100111001011000000001010000000100000000000000000001 
+Sample Output
+0.0.0.0">
+<meta property="og:updated_time" content="2016-08-03T15:22:13.941Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一篇之markdown练手">
-<meta name="twitter:description" content="无意中突然想弄个自己的专属博客，有自己的域名，风格自己定。听说程序猿大牛都有自己的技术博客，虽然我只是个大二计科专业的渣渣，但总会成长的吧。加油。">
+<meta name="twitter:title" content="poj2105 IP Address">
+<meta name="twitter:description" content="题目大意给出一串32位二进制，要求转换成十进制的IP地址
+Sample Input
+4 // 4个00000000000000000000000000000000000000111000000011111111111111111100101110000100111001011000000001010000000100000000000000000001 
+Sample Output
+0.0.0.0">
 
 
 
@@ -76,7 +88,7 @@
   };
 </script>
 
-  <title> 第一篇之markdown练手 | Codeflyer Hzy </title>
+  <title> poj2105 IP Address | Codeflyer Hzy </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -236,7 +248,7 @@
             
             
               
-                第一篇之markdown练手
+                poj2105 IP Address
               
             
           </h1>
@@ -245,8 +257,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-11-02T16:37:59+08:00" content="2015-11-02">
-              2015-11-02
+            <time itemprop="dateCreated" datetime="2016-08-03T23:15:36+08:00" content="2016-08-03">
+              2016-08-03
             </time>
           </span>
 
@@ -255,8 +267,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/日记/" itemprop="url" rel="index">
-                    <span itemprop="name">日记</span>
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
                   </a>
                 </span>
 
@@ -271,8 +283,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/11/02/第一篇之markdown练手/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/02/第一篇之markdown练手/" itemprop="commentsCount"></span>
+                <a href="/2016/08/03/poj2105/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/03/poj2105/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -291,7 +303,13 @@
       
 
       
-        <span itemprop="articleBody"><p>无意中突然想弄个自己的专属博客，有自己的域名，风格自己定。听说程序猿大牛都有自己的技术博客，虽然我只是个大二计科专业的渣渣，但总会成长的吧。加油。</p>
+        <span itemprop="articleBody"><p><strong>题目大意</strong><br>给出一串32位二进制，要求转换成十进制的IP地址</p>
+<p><strong>Sample Input</strong></p>
+<p>4 // 4个<br>00000000000000000000000000000000<br>00000011100000001111111111111111<br>11001011100001001110010110000000<br>01010000000100000000000000000001 </p>
+<p><strong>Sample Output</strong></p>
+<p>0.0.0.0<br>3.128.255.255<br>203.132.229.128<br>80.16.0.1</p>
+<p><strong>思路</strong><br>关键是遍历这串数字的时候，怎么每8个数字变成一个十进制数。</p>
+<p><strong>Code</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span>  </span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="keyword">char</span> ip[<span class="number">33</span>];</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">while</span>(n--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> i, j;</span><br><span class="line">		gets(ip);</span><br><span class="line">		<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>((i+<span class="number">1</span>) % <span class="number">8</span> == <span class="number">0</span>) <span class="comment">// 每8个数转换一次</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">for</span>(j = i-<span class="number">7</span>; i-j &gt;= <span class="number">0</span>; j++)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="keyword">if</span>(ip[j]!=<span class="string">'0'</span>)  </span><br><span class="line">                        sum += <span class="built_in">pow</span>(<span class="number">2.0</span>,(i-j));  </span><br><span class="line">                &#125; </span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d"</span>, sum);</span><br><span class="line">				<span class="keyword">if</span>(i!=<span class="number">31</span>) <span class="built_in">printf</span>(<span class="string">"."</span>); <span class="comment">// 还未转换完成</span></span><br><span class="line">				<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -300,7 +318,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/扯淡/" rel="tag">#扯淡</a>
+            <a href="/tags/poj/" rel="tag">#poj</a>
+          
+            <a href="/tags/模拟题/" rel="tag">#模拟题</a>
+          
+            <a href="/tags/算法/" rel="tag">#算法</a>
           
         </div>
       
@@ -309,13 +331,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/08/03/poj2028/" rel="next" title="poj2028 When Can We Meet?">
+                <i class="fa fa-chevron-left"></i> poj2028 When Can We Meet?
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/03/Cmd Markdown编辑阅读器简介/" rel="prev" title="Cmd Markdown编辑阅读器简介">
-                Cmd Markdown编辑阅读器简介 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -342,8 +364,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/11/02/第一篇之markdown练手/"
-           data-title="第一篇之markdown练手" data-url="http://yoursite.com/2015/11/02/第一篇之markdown练手/">
+      <div class="ds-thread" data-thread-key="2016/08/03/poj2105/"
+           data-title="poj2105 IP Address" data-url="http://yoursite.com/2016/08/03/poj2105/">
       </div>
     
   </div>

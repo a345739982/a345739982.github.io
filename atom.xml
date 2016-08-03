@@ -4,7 +4,7 @@
   <subtitle><![CDATA[扛着键盘，走在码农的路上]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-15T02:42:36.066Z</updated>
+  <updated>2016-08-03T15:22:13.941Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[poj2105 IP Address]]></title>
+    <link href="http://yoursite.com/2016/08/03/poj2105/"/>
+    <id>http://yoursite.com/2016/08/03/poj2105/</id>
+    <published>2016-08-03T15:15:36.000Z</published>
+    <updated>2016-08-03T15:22:13.941Z</updated>
+    <content type="html"><![CDATA[<p><strong>题目大意</strong><br>给出一串32位二进制，要求转换成十进制的IP地址</p>
+<p><strong>Sample Input</strong></p>
+<p>4 // 4个<br>00000000000000000000000000000000<br>00000011100000001111111111111111<br>11001011100001001110010110000000<br>01010000000100000000000000000001 </p>
+<p><strong>Sample Output</strong></p>
+<p>0.0.0.0<br>3.128.255.255<br>203.132.229.128<br>80.16.0.1</p>
+<p><strong>思路</strong><br>关键是遍历这串数字的时候，怎么每8个数字变成一个十进制数。</p>
+<p><strong>Code</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span>  </span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="keyword">char</span> ip[<span class="number">33</span>];</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">while</span>(n--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> i, j;</span><br><span class="line">		gets(ip);</span><br><span class="line">		<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>((i+<span class="number">1</span>) % <span class="number">8</span> == <span class="number">0</span>) <span class="comment">// 每8个数转换一次</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">for</span>(j = i-<span class="number">7</span>; i-j &gt;= <span class="number">0</span>; j++)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="keyword">if</span>(ip[j]!=<span class="string">'0'</span>)  </span><br><span class="line">                        sum += <span class="built_in">pow</span>(<span class="number">2.0</span>,(i-j));  </span><br><span class="line">                &#125; </span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d"</span>, sum);</span><br><span class="line">				<span class="keyword">if</span>(i!=<span class="number">31</span>) <span class="built_in">printf</span>(<span class="string">"."</span>); <span class="comment">// 还未转换完成</span></span><br><span class="line">				<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>题目大意</strong><br>给出一串32位二进制，要求转换成十进制的IP地址</p>
+<p><strong>Sample Input</strong></p>
+<p>4 // 4个<br>00000000000000000000000000000000]]>
+    </summary>
+    
+      <category term="poj" scheme="http://yoursite.com/tags/poj/"/>
+    
+      <category term="模拟题" scheme="http://yoursite.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[poj2028 When Can We Meet?]]></title>
+    <link href="http://yoursite.com/2016/08/03/poj2028/"/>
+    <id>http://yoursite.com/2016/08/03/poj2028/</id>
+    <published>2016-08-03T14:37:03.000Z</published>
+    <updated>2016-08-03T15:16:36.438Z</updated>
+    <content type="html"><![CDATA[<p><strong>题目大意</strong><br>组委会的人需要参加会议，但是每个人的空闲时间不一样。现给出人数以及他们的空闲时间和最少参会人数。求出哪一天开会最佳（即人数优先，人数一样时间优先）</p>
+<p><strong>Sample Input</strong><br>3 2  // 3个人，至少需要2个人参会<br>2 1 4 // 2天的空闲时间，分别是第1天、第4天<br>0 // 无空闲时间<br>3 3 4 8 // 3天的空闲时间，分别是第3、4、8天<br>3 2<br>4 1 5 8 9<br>3 2 5 9<br>5 2 4 5 7 9<br>3 3<br>2 1 4<br>3 2 5 9<br>2 2 4<br>3 3<br>2 1 2<br>3 1 2 9<br>2 2 4<br>0 0</p>
+<p><strong>Sample Output</strong></p>
+<p>4 // 第4天<br>5 // 第5天<br>0 // 没有符合要求的<br>2 // 第2天</p>
+<p><strong>思路</strong><br>通过数组每输入一个空闲时间，就使以该天数为下标的数组加1。找出每个人空闲时间重合最多的一天，然后使其与最小要求天数q比较，如果符合则输出，否则为0。注意人数优先，人数一样则间优先。</p>
+<p><strong>Code</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n, q;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;q), n != <span class="number">0</span> || q != <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> i, j;</span><br><span class="line">		<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> freeDay, maxDay = <span class="number">0</span>; <span class="comment">// 空闲的时间，最大值</span></span><br><span class="line">		<span class="keyword">int</span> day[<span class="number">101</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">		<span class="keyword">bool</span> getAns = <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;freeDay);</span><br><span class="line">			<span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; freeDay; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> d;</span><br><span class="line">				<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;d);</span><br><span class="line">				<span class="keyword">if</span>(d &gt; maxDay) maxDay = d;</span><br><span class="line">				day[d]++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(j = n; j &gt;= q; j--) <span class="comment">// 因为是人数优先，所以从n开始，然后从最早时间遍历</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= maxDay; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span>(day[i] == j) &#123;ans = i; getAns = <span class="literal">true</span>; <span class="keyword">break</span>;&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(getAns) <span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>题目大意</strong><br>组委会的人需要参加会议，但是每个人的空闲时间不一样。现给出人数以及他们的空闲时间和最少参会人数。求出哪一天开会最佳（即人数优先，人数一样时间优先）</p>
+<p><strong>Sample Input</strong><b]]>
+    </summary>
+    
+      <category term="poj" scheme="http://yoursite.com/tags/poj/"/>
+    
+      <category term="模拟题" scheme="http://yoursite.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[poj1837]]></title>
