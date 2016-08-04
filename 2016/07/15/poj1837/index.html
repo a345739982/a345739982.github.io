@@ -55,18 +55,21 @@
 
 
 
-<meta name="description" content="参考：http://blog.csdn.net/lyy289065406/article/details/6648094/题目大意：有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。
+<meta name="description" content="参考：http://blog.csdn.net/lyy289065406/article/details/6648094/
+题目大意有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。
 Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平衡点位置（负数可表示左边）  c">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj1837">
+<meta property="og:title" content="poj1837 Balance">
 <meta property="og:url" content="http://yoursite.com/2016/07/15/poj1837/index.html">
 <meta property="og:site_name" content="Codeflyer Hzy">
-<meta property="og:description" content="参考：http://blog.csdn.net/lyy289065406/article/details/6648094/题目大意：有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。
+<meta property="og:description" content="参考：http://blog.csdn.net/lyy289065406/article/details/6648094/
+题目大意有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。
 Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平衡点位置（负数可表示左边）  c">
-<meta property="og:updated_time" content="2016-07-15T02:42:36.066Z">
+<meta property="og:updated_time" content="2016-08-04T00:58:51.917Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="poj1837">
-<meta name="twitter:description" content="参考：http://blog.csdn.net/lyy289065406/article/details/6648094/题目大意：有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。
+<meta name="twitter:title" content="poj1837 Balance">
+<meta name="twitter:description" content="参考：http://blog.csdn.net/lyy289065406/article/details/6648094/
+题目大意有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。
 Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平衡点位置（负数可表示左边）  c">
 
 
@@ -79,7 +82,7 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
   };
 </script>
 
-  <title> poj1837 | Codeflyer Hzy </title>
+  <title> poj1837 Balance | Codeflyer Hzy </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -239,7 +242,7 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
             
             
               
-                poj1837
+                poj1837 Balance
               
             
           </h1>
@@ -294,12 +297,12 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
       
 
       
-        <span itemprop="articleBody"><p>参考：<a href="http://blog.csdn.net/lyy289065406/article/details/6648094/" target="_blank" rel="external">http://blog.csdn.net/lyy289065406/article/details/6648094/</a><br>题目大意：有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。</p>
-<p><strong>Sample Input</strong><br>2 4    // 2个挂钩c，4个砝码g<br>-2 3 // 2个挂钩距离天平平衡点位置（负数可表示左边）  c_length[21]<br>3 4 5 8 // 4个砝码的质量  g_weight[21]</p>
-<p><strong>Sample Output</strong><br>2 // 2种方法</p>
-<p>思路：<br>定义一个二维数组dp[i][j]，i为砝码的数量，而j为“平衡度”（即两边力矩矢量和），数组值表示在这个砝码数量和平衡度下的挂法数，当平衡度为0时天平平衡，但这样会出现平衡度为负数，导致数组下标出现负数，因此注意到挂钩范围是-15~15，砝码数最大20，质量最大25，因此平衡度极限值是±15<em>20</em>25=±7500，所以措施是让j为7500时表示天平平衡。<br>那么可知dp[i][j]的推导可由前一状态dp[i-1][j]得到。<br>假设dp[i-1][j] = n, 那么dp[i]<a href="即前i-1个不动，挂上第i个挂钩">j + c_length[c] * g_weight[g]</a>也为n，但要注意如果前i-1个移动了，则（可能）不为n。<br>考虑到这个情况，可知<br><strong>dp[i][j + c_length[c] * g_weight[g]] = ∑dp[i-1][j]</strong><br>(i-1是固定的，但j可由不同的砝码和位置组成，所以求和)</p>
-<p>代码如下：</p>
-<pre><code class="C"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span>
+        <span itemprop="articleBody"><p>参考：<a href="http://blog.csdn.net/lyy289065406/article/details/6648094/" target="_blank" rel="external">http://blog.csdn.net/lyy289065406/article/details/6648094/</a></p>
+<h2 id="题目大意"><strong>题目大意</strong></h2><p>有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。</p>
+<h2 id="Sample_Input"><strong>Sample Input</strong></h2><p>2 4    // 2个挂钩c，4个砝码g<br>-2 3 // 2个挂钩距离天平平衡点位置（负数可表示左边）  c_length[21]<br>3 4 5 8 // 4个砝码的质量  g_weight[21]</p>
+<h2 id="Sample_Output"><strong>Sample Output</strong></h2><p>2 // 2种方法</p>
+<h2 id="思路"><strong>思路</strong></h2><p>定义一个二维数组dp[i][j]，i为砝码的数量，而j为“平衡度”（即两边力矩矢量和），数组值表示在这个砝码数量和平衡度下的挂法数，当平衡度为0时天平平衡，但这样会出现平衡度为负数，导致数组下标出现负数，因此注意到挂钩范围是-15~15，砝码数最大20，质量最大25，因此平衡度极限值是±15<em>20</em>25=±7500，所以措施是让j为7500时表示天平平衡。<br>那么可知dp[i][j]的推导可由前一状态dp[i-1][j]得到。<br>假设dp[i-1][j] = n, 那么dp[i]<a href="即前i-1个不动，挂上第i个挂钩">j + c_length[c] * g_weight[g]</a>也为n，但要注意如果前i-1个移动了，则（可能）不为n。<br>考虑到这个情况，可知<br><strong>dp[i][j + c_length[c] * g_weight[g]] = ∑dp[i-1][j]</strong><br>(i-1是固定的，但j可由不同的砝码和位置组成，所以求和)</p>
+<h2 id="Code"><strong>Code</strong></h2><pre><code class="C"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span>
 <span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;memory.h&gt;</span></span>
 <span class="keyword">int</span> dp[<span class="number">21</span>][<span class="number">15001</span>]; <span class="comment">// dp[i][j]  i代表已挂挂钩数量，j代表平衡度</span>
 <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>
@@ -387,7 +390,7 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/07/15/poj1837/"
-           data-title="poj1837" data-url="http://yoursite.com/2016/07/15/poj1837/">
+           data-title="poj1837 Balance" data-url="http://yoursite.com/2016/07/15/poj1837/">
       </div>
     
   </div>
@@ -436,7 +439,7 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -450,7 +453,7 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -507,7 +510,7 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目大意"><span class="nav-number">1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Input"><span class="nav-number">2.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Output"><span class="nav-number">3.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">4.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">5.</span> <span class="nav-text">Code</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -55,22 +55,25 @@
 
 
 
-<meta name="description" content="题目大意给出一串32位二进制，要求转换成十进制的IP地址
-Sample Input4 // 4个00000000000000000000000000000000000000111000000011111111111111111100101110000100111001011000000001010000000100000000000000000001 
-Sample Output0.0.0.03.">
+<meta name="description" content="题目大意题目有点长…参考http://blog.csdn.net/lyy289065406/article/details/6673675
+简而言之是说有一种数的性质叫 self-inventorying，定义为：
+
+对任意数字串进行压缩，压缩方法为将该数字串中出现的每个数字的次数和它本身串起来，并以数字本身为升序。如31123314，其中有3个1，1个2,3个3,1个4.所以压缩后为311233">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj2105 IP Address">
-<meta property="og:url" content="http://yoursite.com/2016/08/03/poj2105/index.html">
+<meta property="og:title" content="poj1016 Numbers That Count">
+<meta property="og:url" content="http://yoursite.com/2016/08/04/poj1016/index.html">
 <meta property="og:site_name" content="Codeflyer Hzy">
-<meta property="og:description" content="题目大意给出一串32位二进制，要求转换成十进制的IP地址
-Sample Input4 // 4个00000000000000000000000000000000000000111000000011111111111111111100101110000100111001011000000001010000000100000000000000000001 
-Sample Output0.0.0.03.">
-<meta property="og:updated_time" content="2016-08-04T00:58:14.865Z">
+<meta property="og:description" content="题目大意题目有点长…参考http://blog.csdn.net/lyy289065406/article/details/6673675
+简而言之是说有一种数的性质叫 self-inventorying，定义为：
+
+对任意数字串进行压缩，压缩方法为将该数字串中出现的每个数字的次数和它本身串起来，并以数字本身为升序。如31123314，其中有3个1，1个2,3个3,1个4.所以压缩后为311233">
+<meta property="og:updated_time" content="2016-08-04T02:08:39.035Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="poj2105 IP Address">
-<meta name="twitter:description" content="题目大意给出一串32位二进制，要求转换成十进制的IP地址
-Sample Input4 // 4个00000000000000000000000000000000000000111000000011111111111111111100101110000100111001011000000001010000000100000000000000000001 
-Sample Output0.0.0.03.">
+<meta name="twitter:title" content="poj1016 Numbers That Count">
+<meta name="twitter:description" content="题目大意题目有点长…参考http://blog.csdn.net/lyy289065406/article/details/6673675
+简而言之是说有一种数的性质叫 self-inventorying，定义为：
+
+对任意数字串进行压缩，压缩方法为将该数字串中出现的每个数字的次数和它本身串起来，并以数字本身为升序。如31123314，其中有3个1，1个2,3个3,1个4.所以压缩后为311233">
 
 
 
@@ -82,7 +85,7 @@ Sample Output0.0.0.03.">
   };
 </script>
 
-  <title> poj2105 IP Address | Codeflyer Hzy </title>
+  <title> poj1016 Numbers That Count | Codeflyer Hzy </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -242,7 +245,7 @@ Sample Output0.0.0.03.">
             
             
               
-                poj2105 IP Address
+                poj1016 Numbers That Count
               
             
           </h1>
@@ -251,8 +254,8 @@ Sample Output0.0.0.03.">
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-08-03T23:15:36+08:00" content="2016-08-03">
-              2016-08-03
+            <time itemprop="dateCreated" datetime="2016-08-04T09:40:42+08:00" content="2016-08-04">
+              2016-08-04
             </time>
           </span>
 
@@ -277,8 +280,8 @@ Sample Output0.0.0.03.">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/03/poj2105/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/03/poj2105/" itemprop="commentsCount"></span>
+                <a href="/2016/08/04/poj1016/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/04/poj1016/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -297,11 +300,24 @@ Sample Output0.0.0.03.">
       
 
       
-        <span itemprop="articleBody"><h2 id="题目大意"><strong>题目大意</strong></h2><p>给出一串32位二进制，要求转换成十进制的IP地址</p>
-<h2 id="Sample_Input"><strong>Sample Input</strong></h2><p>4 // 4个<br>00000000000000000000000000000000<br>00000011100000001111111111111111<br>11001011100001001110010110000000<br>01010000000100000000000000000001 </p>
-<h2 id="Sample_Output"><strong>Sample Output</strong></h2><p>0.0.0.0<br>3.128.255.255<br>203.132.229.128<br>80.16.0.1</p>
-<h2 id="思路"><strong>思路</strong></h2><p>关键是遍历这串数字的时候，怎么每8个数字变成一个十进制数。</p>
-<h2 id="Code"><strong>Code</strong></h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span>  </span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="keyword">char</span> ip[<span class="number">33</span>];</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">while</span>(n--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> i, j;</span><br><span class="line">		gets(ip);</span><br><span class="line">		<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>((i+<span class="number">1</span>) % <span class="number">8</span> == <span class="number">0</span>) <span class="comment">// 每8个数转换一次</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">for</span>(j = i-<span class="number">7</span>; i-j &gt;= <span class="number">0</span>; j++)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="keyword">if</span>(ip[j]!=<span class="string">'0'</span>)  </span><br><span class="line">                        sum += <span class="built_in">pow</span>(<span class="number">2.0</span>,(i-j));  </span><br><span class="line">                &#125; </span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d"</span>, sum);</span><br><span class="line">				<span class="keyword">if</span>(i!=<span class="number">31</span>) <span class="built_in">printf</span>(<span class="string">"."</span>); <span class="comment">// 还未转换完成</span></span><br><span class="line">				<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
+        <span itemprop="articleBody"><h2 id="题目大意"><strong>题目大意</strong></h2><p>题目有点长…参考<a href="http://blog.csdn.net/lyy289065406/article/details/6673675" target="_blank" rel="external">http://blog.csdn.net/lyy289065406/article/details/6673675</a></p>
+<p>简而言之是说有一种数的性质叫 self-inventorying，定义为：</p>
+<ol>
+<li><p>对任意数字串进行压缩，压缩方法为将该数字串中出现的每个数字的次数和它本身串起来，并以数字本身为升序。如31123314，其中有3个1，1个2,3个3,1个4.所以压缩后为31123314、可发现该压缩串与原串相同，那么说该数字串具有self-inventorying性质。</p>
+</li>
+<li><p>若压缩一次后与原串不同，那么可以继续对其压缩，若某一次（假设第i次）具有self-inventorying性质，那么说它具有self-inventorying after i steps性质。</p>
+</li>
+<li><p>若压缩i次后，每再压缩k次，都会出现self-inventorying性质，那么称其为n enters an inventory loop of length k </p>
+</li>
+<li><p>压缩次数必须小于等于15次，否则称其n can not be classified after 15 iterations </p>
+</li>
+<li><p>属性1 &gt; 属性2 &gt; 属性3</p>
+</li>
+</ol>
+<h2 id="Sample_Input"><strong>Sample Input</strong></h2><p>22<br>31123314<br>314213241519<br>21221314<br>111222234459<br>-1</p>
+<h2 id="Sample_Output"><strong>Sample Output</strong></h2><p>22 is self-inventorying<br>31123314 is self-inventorying<br>314213241519 enters an inventory loop of length 2<br>21221314 is self-inventorying after 2 steps<br>111222234459 enters an inventory loop of length 2</p>
+<h2 id="思路"><strong>思路</strong></h2><p>首先得写出压缩数字串的函数。需要注意的一个点是某个数字出现的次数可能为两位数，此时需要数组的两位来保存。<br>保存各次压缩后的数字串可用二维数组ans[16][85]来保存，第0串为原串。</p>
+<h2 id="Code"><strong>Code</strong></h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">// 压缩数字串a，由b来保存</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">char</span> *a, <span class="keyword">char</span> *b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="comment">// 记录次数</span></span><br><span class="line">	<span class="keyword">int</span> time[<span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>; a[i]; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		time[a[i] - <span class="string">'0'</span>]++;</span><br><span class="line">	&#125;	</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(time[i])</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(time[i] &lt; <span class="number">10</span>) </span><br><span class="line">			&#123;</span><br><span class="line">				b[j++] = time[i] + <span class="string">'0'</span>;</span><br><span class="line">				b[j++] = i + <span class="string">'0'</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 次数大于10，需要两位来保存</span></span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				b[j++] = time[i] / <span class="number">10</span> + <span class="string">'0'</span>;</span><br><span class="line">				b[j++] = time[i] % <span class="number">10</span> + <span class="string">'0'</span>;</span><br><span class="line">				b[j++] = i + <span class="string">'0'</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 表明数组结束</span></span><br><span class="line">	b[j] = <span class="string">'\0'</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ans[<span class="number">16</span>][<span class="number">85</span>];</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%s"</span>, ans[<span class="number">0</span>]), ans[<span class="number">0</span>][<span class="number">0</span>] != <span class="string">'-'</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> i, j;</span><br><span class="line">		<span class="comment">// 标志属性1</span></span><br><span class="line">		<span class="keyword">bool</span> flag1 = <span class="literal">false</span>;</span><br><span class="line">		<span class="comment">// 标志属性2，并且记录步数</span></span><br><span class="line">		<span class="keyword">int</span> flag2 = <span class="number">0</span>;</span><br><span class="line">		<span class="comment">// 标志属性3，并且记录循环数</span></span><br><span class="line">		<span class="keyword">int</span> flag3 = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 求出所有压缩后的数字串</span></span><br><span class="line">		<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; <span class="number">15</span>; i++)</span><br><span class="line">			f(ans[i], ans[i+<span class="number">1</span>]);</span><br><span class="line">	    <span class="comment">// 判断是否具有性质1</span></span><br><span class="line">		<span class="keyword">if</span>(!<span class="built_in">strcmp</span>(ans[<span class="number">0</span>], ans[<span class="number">1</span>])) flag1 = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(!flag1)</span><br><span class="line">		&#123;   <span class="comment">// 判断是否具有性质2</span></span><br><span class="line">			<span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; <span class="number">15</span>; i++)</span><br><span class="line">				<span class="keyword">if</span>(!<span class="built_in">strcmp</span>(ans[i], ans[i+<span class="number">1</span>])) </span><br><span class="line">				&#123;</span><br><span class="line">					flag2 = i;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">            <span class="comment">// 判断是否具有性质3.逐个比较，注意循环次数要大于等于2，因此j &lt;= i - 2</span></span><br><span class="line">			<span class="keyword">if</span>(!flag2)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt;= <span class="number">15</span>; i++)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">for</span>(j = <span class="number">0</span>; j &lt;= i - <span class="number">2</span>; j++)</span><br><span class="line">						<span class="keyword">if</span>(!<span class="built_in">strcmp</span>(ans[i], ans[j]))</span><br><span class="line">						&#123;</span><br><span class="line">							flag3 = i - j;</span><br><span class="line">							<span class="keyword">break</span>;</span><br><span class="line">						&#125;</span><br><span class="line">					<span class="keyword">if</span>(flag3) <span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(flag1)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%s is self-inventorying\n"</span>, ans[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(flag2)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%s is self-inventorying after %d steps\n"</span>, ans[<span class="number">0</span>], flag2);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(flag3)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%s enters an inventory loop of length %d\n"</span>, ans[<span class="number">0</span>], flag3);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%s can not be classified after 15 iterations\n"</span>, ans[<span class="number">0</span>]);      </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
@@ -322,17 +338,13 @@ Sample Output0.0.0.03.">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/03/poj2028/" rel="next" title="poj2028 When Can We Meet?">
-                <i class="fa fa-chevron-left"></i> poj2028 When Can We Meet?
+              <a href="/2016/08/04/poj2591/" rel="next" title="poj2591 Set Definition">
+                <i class="fa fa-chevron-left"></i> poj2591 Set Definition
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/04/poj1664/" rel="prev" title="poj1664 放苹果">
-                poj1664 放苹果 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -359,8 +371,8 @@ Sample Output0.0.0.03.">
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/03/poj2105/"
-           data-title="poj2105 IP Address" data-url="http://yoursite.com/2016/08/03/poj2105/">
+      <div class="ds-thread" data-thread-key="2016/08/04/poj1016/"
+           data-title="poj1016 Numbers That Count" data-url="http://yoursite.com/2016/08/04/poj1016/">
       </div>
     
   </div>
