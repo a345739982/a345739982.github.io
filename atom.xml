@@ -3,9 +3,9 @@
   <title><![CDATA[Codeflyer Hzy]]></title>
   <subtitle><![CDATA[扛着键盘，走在码农的路上]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://www.codefl-zy.com/"/>
+  <link href="http://www.codeflyer-zy.com/"/>
   <updated>2016-08-11T06:04:43.318Z</updated>
-  <id>http://www.codefl-zy.com/</id>
+  <id>http://www.codeflyer-zy.com/</id>
   
   <author>
     <name><![CDATA[zyoung]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[poj1001 Exponentiation]]></title>
-    <link href="http://www.codefl-zy.com/2016/08/11/poj1001/"/>
-    <id>http://www.codefl-zy.com/2016/08/11/poj1001/</id>
+    <link href="http://www.codeflyer-zy.com/2016/08/11/poj1001/"/>
+    <id>http://www.codeflyer-zy.com/2016/08/11/poj1001/</id>
     <published>2016-08-11T05:12:39.000Z</published>
     <updated>2016-08-11T06:04:43.318Z</updated>
     <content type="html"><![CDATA[<h2 id="题目大意"><strong>题目大意</strong></h2><p>对数值很大、精度很高的数进行高精度计算是一类十分常见的问题。比如，对国债进行计算就是属于这类问题。<br>现在要你解决的问题是：对一个实数R( 0.0 &lt; R &lt; 99.999 )，要求写程序精确计算 R 的 n 次方(Rn)，其中n 是整数并且 0 &lt; n &lt;= 25。</p>
@@ -31,20 +31,20 @@
     <![CDATA[<h2 id="题目大意"><strong>题目大意</strong></h2><p>对数值很大、精度很高的数进行高精度计算是一类十分常见的问题。比如，对国债进行计算就是属于这类问题。<br>现在要你解决的问题是：对一个实数R( 0.0 &lt; R &lt; 99.999 )，]]>
     </summary>
     
-      <category term="poj" scheme="http://www.codefl-zy.com/tags/poj/"/>
+      <category term="poj" scheme="http://www.codeflyer-zy.com/tags/poj/"/>
     
-      <category term="模拟题" scheme="http://www.codefl-zy.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
+      <category term="模拟题" scheme="http://www.codeflyer-zy.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[poj1318 Word Amalgamation]]></title>
-    <link href="http://www.codefl-zy.com/2016/08/09/poj1318/"/>
-    <id>http://www.codefl-zy.com/2016/08/09/poj1318/</id>
+    <link href="http://www.codeflyer-zy.com/2016/08/09/poj1318/"/>
+    <id>http://www.codeflyer-zy.com/2016/08/09/poj1318/</id>
     <published>2016-08-09T10:58:53.000Z</published>
     <updated>2016-08-09T10:59:28.685Z</updated>
     <content type="html"><![CDATA[<p>参考阳神：<a href="http://blog.163.com/beachman_cy/blog/static/249496019201562193240730/" target="_blank" rel="external">http://blog.163.com/beachman_cy/blog/static/249496019201562193240730/</a></p>
@@ -59,22 +59,22 @@
     <![CDATA[<p>参考阳神：<a href="http://blog.163.com/beachman_cy/blog/static/249496019201562193240730/" target="_blank" rel="external">http://blog.163.com/b]]>
     </summary>
     
-      <category term="poj" scheme="http://www.codefl-zy.com/tags/poj/"/>
+      <category term="poj" scheme="http://www.codeflyer-zy.com/tags/poj/"/>
     
-      <category term="字符串处理" scheme="http://www.codefl-zy.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/"/>
+      <category term="字符串处理" scheme="http://www.codeflyer-zy.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/"/>
     
-      <category term="模拟题" scheme="http://www.codefl-zy.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
+      <category term="模拟题" scheme="http://www.codeflyer-zy.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[poj1016 Numbers That Count]]></title>
-    <link href="http://www.codefl-zy.com/2016/08/04/poj1016/"/>
-    <id>http://www.codefl-zy.com/2016/08/04/poj1016/</id>
+    <link href="http://www.codeflyer-zy.com/2016/08/04/poj1016/"/>
+    <id>http://www.codeflyer-zy.com/2016/08/04/poj1016/</id>
     <published>2016-08-04T01:40:42.000Z</published>
     <updated>2016-08-04T02:08:39.035Z</updated>
     <content type="html"><![CDATA[<h2 id="题目大意"><strong>题目大意</strong></h2><p>题目有点长…参考<a href="http://blog.csdn.net/lyy289065406/article/details/6673675" target="_blank" rel="external">http://blog.csdn.net/lyy289065406/article/details/6673675</a></p>
@@ -99,20 +99,20 @@
     <![CDATA[<h2 id="题目大意"><strong>题目大意</strong></h2><p>题目有点长…参考<a href="http://blog.csdn.net/lyy289065406/article/details/6673675" target="_blank" rel="]]>
     </summary>
     
-      <category term="poj" scheme="http://www.codefl-zy.com/tags/poj/"/>
+      <category term="poj" scheme="http://www.codeflyer-zy.com/tags/poj/"/>
     
-      <category term="模拟题" scheme="http://www.codefl-zy.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
+      <category term="模拟题" scheme="http://www.codeflyer-zy.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[poj2591 Set Definition]]></title>
-    <link href="http://www.codefl-zy.com/2016/08/04/poj2591/"/>
-    <id>http://www.codefl-zy.com/2016/08/04/poj2591/</id>
+    <link href="http://www.codeflyer-zy.com/2016/08/04/poj2591/"/>
+    <id>http://www.codeflyer-zy.com/2016/08/04/poj2591/</id>
     <published>2016-08-04T01:28:18.000Z</published>
     <updated>2016-08-04T02:11:40.194Z</updated>
     <content type="html"><![CDATA[<h2 id="题目大意"><strong>题目大意</strong></h2><p>定义一个S集合，符合：</p>
@@ -135,20 +135,20 @@
 <li>其他元素都不在S中<br>现要求出第N个属于该集合的]]>
     </summary>
     
-      <category term="poj" scheme="http://www.codefl-zy.com/tags/poj/"/>
+      <category term="poj" scheme="http://www.codeflyer-zy.com/tags/poj/"/>
     
-      <category term="模拟题" scheme="http://www.codefl-zy.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
+      <category term="模拟题" scheme="http://www.codeflyer-zy.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[poj1664 放苹果]]></title>
-    <link href="http://www.codefl-zy.com/2016/08/04/poj1664/"/>
-    <id>http://www.codefl-zy.com/2016/08/04/poj1664/</id>
+    <link href="http://www.codeflyer-zy.com/2016/08/04/poj1664/"/>
+    <id>http://www.codeflyer-zy.com/2016/08/04/poj1664/</id>
     <published>2016-08-04T00:52:45.000Z</published>
     <updated>2016-08-04T00:57:50.720Z</updated>
     <content type="html"><![CDATA[<h2 id="题目大意"><strong>题目大意</strong></h2><p>把M个同样的苹果放在N个同样的盘子里，允许有的盘子空着不放，问共有多少种不同的分法？（用K表示）5，1，1和1，5，1 是同一种分法。</p>
@@ -166,20 +166,20 @@
 <h2 id="Sample_Input"><st]]>
     </summary>
     
-      <category term="poj" scheme="http://www.codefl-zy.com/tags/poj/"/>
+      <category term="poj" scheme="http://www.codeflyer-zy.com/tags/poj/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="递归" scheme="http://www.codefl-zy.com/tags/%E9%80%92%E5%BD%92/"/>
+      <category term="递归" scheme="http://www.codeflyer-zy.com/tags/%E9%80%92%E5%BD%92/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[poj2105 IP Address]]></title>
-    <link href="http://www.codefl-zy.com/2016/08/03/poj2105/"/>
-    <id>http://www.codefl-zy.com/2016/08/03/poj2105/</id>
+    <link href="http://www.codeflyer-zy.com/2016/08/03/poj2105/"/>
+    <id>http://www.codeflyer-zy.com/2016/08/03/poj2105/</id>
     <published>2016-08-03T15:15:36.000Z</published>
     <updated>2016-08-04T00:58:14.865Z</updated>
     <content type="html"><![CDATA[<h2 id="题目大意"><strong>题目大意</strong></h2><p>给出一串32位二进制，要求转换成十进制的IP地址</p>
@@ -192,20 +192,20 @@
 <h2 id="Sample_Input"><strong>Sample Input</strong></h2><p>4 // 4个<b]]>
     </summary>
     
-      <category term="poj" scheme="http://www.codefl-zy.com/tags/poj/"/>
+      <category term="poj" scheme="http://www.codeflyer-zy.com/tags/poj/"/>
     
-      <category term="模拟题" scheme="http://www.codefl-zy.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
+      <category term="模拟题" scheme="http://www.codeflyer-zy.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[poj2028 When Can We Meet?]]></title>
-    <link href="http://www.codefl-zy.com/2016/08/03/poj2028/"/>
-    <id>http://www.codefl-zy.com/2016/08/03/poj2028/</id>
+    <link href="http://www.codeflyer-zy.com/2016/08/03/poj2028/"/>
+    <id>http://www.codeflyer-zy.com/2016/08/03/poj2028/</id>
     <published>2016-08-03T14:37:03.000Z</published>
     <updated>2016-08-04T00:57:15.118Z</updated>
     <content type="html"><![CDATA[<h2 id="题目大意"><strong>题目大意</strong></h2><p>组委会的人需要参加会议，但是每个人的空闲时间不一样。现给出人数以及他们的空闲时间和最少参会人数。求出哪一天开会最佳（即人数优先，人数一样时间优先）</p>
@@ -219,20 +219,20 @@
 <h2 id="Sample_Inpu]]>
     </summary>
     
-      <category term="poj" scheme="http://www.codefl-zy.com/tags/poj/"/>
+      <category term="poj" scheme="http://www.codeflyer-zy.com/tags/poj/"/>
     
-      <category term="模拟题" scheme="http://www.codefl-zy.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
+      <category term="模拟题" scheme="http://www.codeflyer-zy.com/tags/%E6%A8%A1%E6%8B%9F%E9%A2%98/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[poj1837 Balance]]></title>
-    <link href="http://www.codefl-zy.com/2016/07/15/poj1837/"/>
-    <id>http://www.codefl-zy.com/2016/07/15/poj1837/</id>
+    <link href="http://www.codeflyer-zy.com/2016/07/15/poj1837/"/>
+    <id>http://www.codeflyer-zy.com/2016/07/15/poj1837/</id>
     <published>2016-07-15T01:20:36.000Z</published>
     <updated>2016-08-04T00:58:51.917Z</updated>
     <content type="html"><![CDATA[<p>参考：<a href="http://blog.csdn.net/lyy289065406/article/details/6648094/" target="_blank" rel="external">http://blog.csdn.net/lyy289065406/article/details/6648094/</a></p>
@@ -274,20 +274,20 @@
     <![CDATA[<p>参考：<a href="http://blog.csdn.net/lyy289065406/article/details/6648094/" target="_blank" rel="external">http://blog.csdn.net/lyy289065406/]]>
     </summary>
     
-      <category term="poj" scheme="http://www.codefl-zy.com/tags/poj/"/>
+      <category term="poj" scheme="http://www.codeflyer-zy.com/tags/poj/"/>
     
-      <category term="动态规划" scheme="http://www.codefl-zy.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="http://www.codeflyer-zy.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/categories/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[排列问题]]></title>
-    <link href="http://www.codefl-zy.com/2016/05/21/PermQuestion/"/>
-    <id>http://www.codefl-zy.com/2016/05/21/PermQuestion/</id>
+    <link href="http://www.codeflyer-zy.com/2016/05/21/PermQuestion/"/>
+    <id>http://www.codeflyer-zy.com/2016/05/21/PermQuestion/</id>
     <published>2016-05-21T13:33:18.000Z</published>
     <updated>2016-05-22T07:26:05.931Z</updated>
     <content type="html"><![CDATA[<p>很久没写博客了，打撸太多，罪过罪过。<br>刚开始学算法分析与设计，简直爆炸。刚开始的递归就把我看得云里雾里，这智商感人……<br>教材《算法分析与设计》中p13的排列问题就把我看晕了，现记录如下：<br>　　<br>问题是有一组数R，需要输出它的全排列。R的递归可定义如下：<br>当个数n为1时，Perm(R) = (r)，其中r是集合R中唯一的元素<br>当个数n大于1时，Perm(R)由(r1)Perm(R1),(r2)Perm(R2),(r3)Perm(R3),…,(rn)Perm(Rn)构成<br>其中Ri = R - {ri} 即该集合中减去对应元素<br>其实说直白点，就是递归地把这组数规模一个一个地缩小，如1,2,3,4. 先把1固定，递归地求2,3,4的全排列，又把2固定，递归地求3,4的全排列……直到只剩一个数，输出这个排列。<br>当获取递归数组时，从该组数的第一个，依次和每一位交换（包括本身），得以产生一个新递归数组（如1,2,3,4，先是1和1交换，产生新的2,3,4）<br>当1和1交换产生的所有递归完成之后，实际上已经完成了1234，1243，1324，1342，1432，1423的输出，因为1和自己交换之后，产生了2,3,4<br>在这个过程中，当１,２,３固定时，只有４剩余，所以输出１,２,３,４.然后固定１,２，交换３,４的位置。输出１,２,４,３.此时１,２固定的已经全部输出，于是返回到只有１固定，那么此时２需要与３交换位置，再进行1,3固定的递归<br>其实说这么多，还不如一张图来得实在：<br><img src="/img/Perm.png" alt="Perm"><br>Java代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Perm</span><span class="params">(<span class="keyword">int</span> list[], <span class="keyword">int</span> k, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (k == m) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= m; i++)</span><br><span class="line">				System.out.print(list[i]);</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = k; i &lt;= m; i++) &#123;</span><br><span class="line">				<span class="comment">// 从固定的数后第一个依次交换</span></span><br><span class="line">				Swap(list, k, i);</span><br><span class="line">				Perm(list, k + <span class="number">1</span>, m);</span><br><span class="line">				<span class="comment">// 这组递归完成之后需要交换回来</span></span><br><span class="line">				Swap(list, k, i);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Swap</span><span class="params">(<span class="keyword">int</span>[] list, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> t = list[i];</span><br><span class="line">		list[i] = list[j];</span><br><span class="line">		list[j] = t;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Demo d = <span class="keyword">new</span> Demo();</span><br><span class="line">		<span class="keyword">int</span>[] arr = &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">		d.Perm(arr, <span class="number">0</span>, <span class="number">3</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -297,18 +297,18 @@
     <![CDATA[<p>很久没写博客了，打撸太多，罪过罪过。<br>刚开始学算法分析与设计，简直爆炸。刚开始的递归就把我看得云里雾里，这智商感人……<br>教材《算法分析与设计》中p13的排列问题就把我看晕了，现记录如下：<br>　　<br>问题是有一组数R，需要输出它的全排列。R的递归可定义如下]]>
     </summary>
     
-      <category term="学习笔记" scheme="http://www.codefl-zy.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://www.codeflyer-zy.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="算法设计与分析" scheme="http://www.codefl-zy.com/tags/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/"/>
+      <category term="算法设计与分析" scheme="http://www.codeflyer-zy.com/tags/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/"/>
     
-      <category term="学习笔记" scheme="http://www.codefl-zy.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://www.codeflyer-zy.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[递归分治求数组最大最小元素]]></title>
-    <link href="http://www.codefl-zy.com/2016/04/07/%E9%80%92%E5%BD%92%E5%88%86%E6%B2%BB%E6%B1%82%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%85%83%E7%B4%A0/"/>
-    <id>http://www.codefl-zy.com/2016/04/07/递归分治求数组最大最小元素/</id>
+    <link href="http://www.codeflyer-zy.com/2016/04/07/%E9%80%92%E5%BD%92%E5%88%86%E6%B2%BB%E6%B1%82%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%85%83%E7%B4%A0/"/>
+    <id>http://www.codeflyer-zy.com/2016/04/07/递归分治求数组最大最小元素/</id>
     <published>2016-04-07T04:11:21.000Z</published>
     <updated>2016-04-07T04:16:13.650Z</updated>
     <content type="html"><![CDATA[<p>求数组中最大最小元素<br>时间复杂度为3n/2 - 2<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">package</span> 分治求数组最大最小元素;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Pair.java</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pair</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> min;</span><br><span class="line">	<span class="keyword">int</span> max;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Find.java</span></span><br><span class="line"><span class="keyword">package</span> 分治求数组最大最小元素;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Find</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n = <span class="number">1</span>;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> Pair <span class="title">find</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">		Pair p = <span class="keyword">new</span> Pair();</span><br><span class="line">		System.out.println(n++);</span><br><span class="line">		<span class="keyword">if</span> (high - low &lt; <span class="number">2</span>) &#123;</span><br><span class="line">			p.max = a[low] &gt; a[high] ? a[low] : a[high];</span><br><span class="line">			p.min = a[low] &gt; a[high] ? a[high] : a[low];</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">int</span> mid = (high + low) / <span class="number">2</span>;</span><br><span class="line">			Pair p1 = find(a, low, mid);</span><br><span class="line">			Pair p2 = find(a, mid + <span class="number">1</span>, high);</span><br><span class="line">			</span><br><span class="line">			p.min = p1.min &lt; p2.min ? p1.min : p2.min;</span><br><span class="line">			p.max = p1.max &gt; p2.max ? p1.max : p2.max;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> p;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Demo.java</span></span><br><span class="line"><span class="keyword">package</span> 分治求数组最大最小元素;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] a = &#123; <span class="number">6</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">12</span>, <span class="number">2</span>&#125;;</span><br><span class="line">		Find f = <span class="keyword">new</span> Find();</span><br><span class="line">		Pair p = f.find(a, <span class="number">0</span>, a.length - <span class="number">1</span>);</span><br><span class="line">		System.out.println(p.min + <span class="string">"  "</span> + p.max);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -318,18 +318,18 @@
     
     </summary>
     
-      <category term="分治" scheme="http://www.codefl-zy.com/tags/%E5%88%86%E6%B2%BB/"/>
+      <category term="分治" scheme="http://www.codeflyer-zy.com/tags/%E5%88%86%E6%B2%BB/"/>
     
-      <category term="算法" scheme="http://www.codefl-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.codeflyer-zy.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="学习笔记" scheme="http://www.codefl-zy.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://www.codeflyer-zy.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Java核心技术学习笔记之二]]></title>
-    <link href="http://www.codefl-zy.com/2016/04/06/CoreJava2/"/>
-    <id>http://www.codefl-zy.com/2016/04/06/CoreJava2/</id>
+    <link href="http://www.codeflyer-zy.com/2016/04/06/CoreJava2/"/>
+    <id>http://www.codeflyer-zy.com/2016/04/06/CoreJava2/</id>
     <published>2016-04-06T12:37:17.000Z</published>
     <updated>2016-04-06T12:37:18.927Z</updated>
     <content type="html"><![CDATA[<h1 id="接口与内部类">接口与内部类</h1><h2 id="接口">接口</h2><ul>
@@ -370,20 +370,20 @@
 <li><p>接口中的所有域被自动设置为public static final。所有方法自动属于public（可不写），但在实现接口时，必须把方法显式声明为public。否则，编]]>
     </summary>
     
-      <category term="Java" scheme="http://www.codefl-zy.com/tags/Java/"/>
+      <category term="Java" scheme="http://www.codeflyer-zy.com/tags/Java/"/>
     
-      <category term="Java核心技术" scheme="http://www.codefl-zy.com/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+      <category term="Java核心技术" scheme="http://www.codeflyer-zy.com/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="学习笔记" scheme="http://www.codefl-zy.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://www.codeflyer-zy.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="学习笔记" scheme="http://www.codefl-zy.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://www.codeflyer-zy.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[TextView之跑马灯]]></title>
-    <link href="http://www.codefl-zy.com/2016/03/07/TextView%E4%B9%8B%E8%B7%91%E9%A9%AC%E7%81%AF/"/>
-    <id>http://www.codefl-zy.com/2016/03/07/TextView之跑马灯/</id>
+    <link href="http://www.codeflyer-zy.com/2016/03/07/TextView%E4%B9%8B%E8%B7%91%E9%A9%AC%E7%81%AF/"/>
+    <id>http://www.codeflyer-zy.com/2016/03/07/TextView之跑马灯/</id>
     <published>2016-03-07T13:48:28.000Z</published>
     <updated>2016-03-07T15:05:50.032Z</updated>
     <content type="html"><![CDATA[<p>　　学习了TextView之后，感觉得来点好玩的。正好在imooc.com上学到一个关于TextView跑马灯（理解为现在大街上经常看到的那种横向滚动的LED灯便是）效果的小知识点。特记录如下：<br>　　首先上效果图：<img src="/img/marquee.gif" alt="效果图"><br>　　<br>　　在网上发现一篇总结得不错的文章：<a href="http://www.cnblogs.com/Gaojiecai/p/3142783.html" target="_blank" rel="external">http://www.cnblogs.com/Gaojiecai/p/3142783.html</a><br>　　<br>　　但需要实现多个TextView同时有跑马灯效果时，稍微复杂一点：<br>　　新建一个继承自TextView的类，这里命名为MarqueeTextViewDemo，关键是重写View中的isFocus方法（即默认获得focus）<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">boolean</span> <span class="title">isFocused</span><span class="params">()</span> </span>&#123; </span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -393,18 +393,18 @@
     <![CDATA[<p>　　学习了TextView之后，感觉得来点好玩的。正好在imooc.com上学到一个关于TextView跑马灯（理解为现在大街上经常看到的那种横向滚动的LED灯便是）效果的小知识点。特记录如下：<br>　　首先上效果图：<img src="/img/marquee.gif"]]>
     </summary>
     
-      <category term="TextView" scheme="http://www.codefl-zy.com/tags/TextView/"/>
+      <category term="TextView" scheme="http://www.codeflyer-zy.com/tags/TextView/"/>
     
-      <category term="安卓" scheme="http://www.codefl-zy.com/tags/%E5%AE%89%E5%8D%93/"/>
+      <category term="安卓" scheme="http://www.codeflyer-zy.com/tags/%E5%AE%89%E5%8D%93/"/>
     
-      <category term="学习笔记" scheme="http://www.codefl-zy.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://www.codeflyer-zy.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[安卓初探]]></title>
-    <link href="http://www.codefl-zy.com/2016/02/28/%E5%AE%89%E5%8D%93%E5%88%9D%E6%8E%A2/"/>
-    <id>http://www.codefl-zy.com/2016/02/28/安卓初探/</id>
+    <link href="http://www.codeflyer-zy.com/2016/02/28/%E5%AE%89%E5%8D%93%E5%88%9D%E6%8E%A2/"/>
+    <id>http://www.codeflyer-zy.com/2016/02/28/安卓初探/</id>
     <published>2016-02-28T14:04:08.000Z</published>
     <updated>2016-03-07T14:23:50.179Z</updated>
     <content type="html"><![CDATA[<h1 id="简单的安卓程序构成">简单的安卓程序构成</h1><table>
@@ -474,18 +474,18 @@
 </]]>
     </summary>
     
-      <category term="学习笔记" scheme="http://www.codefl-zy.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://www.codeflyer-zy.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="安卓" scheme="http://www.codefl-zy.com/tags/%E5%AE%89%E5%8D%93/"/>
+      <category term="安卓" scheme="http://www.codeflyer-zy.com/tags/%E5%AE%89%E5%8D%93/"/>
     
-      <category term="学习笔记" scheme="http://www.codefl-zy.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://www.codeflyer-zy.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Java核心技术学习笔记之一]]></title>
-    <link href="http://www.codefl-zy.com/2016/01/27/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%B8%80/"/>
-    <id>http://www.codefl-zy.com/2016/01/27/Java核心技术学习笔记之一/</id>
+    <link href="http://www.codeflyer-zy.com/2016/01/27/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%B8%80/"/>
+    <id>http://www.codeflyer-zy.com/2016/01/27/Java核心技术学习笔记之一/</id>
     <published>2016-01-27T14:05:33.000Z</published>
     <updated>2016-03-27T06:35:31.130Z</updated>
     <content type="html"><![CDATA[<h1 id="一、Java程序设计环境">一、Java程序设计环境</h1><h2 id="Java术语_p13">Java术语 p13</h2><table>
@@ -770,20 +770,20 @@
 <th st]]>
     </summary>
     
-      <category term="Java" scheme="http://www.codefl-zy.com/tags/Java/"/>
+      <category term="Java" scheme="http://www.codeflyer-zy.com/tags/Java/"/>
     
-      <category term="Java核心技术" scheme="http://www.codefl-zy.com/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+      <category term="Java核心技术" scheme="http://www.codeflyer-zy.com/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="学习笔记" scheme="http://www.codefl-zy.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://www.codeflyer-zy.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="学习笔记" scheme="http://www.codefl-zy.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://www.codeflyer-zy.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[hexo静态博客搭建资料导航]]></title>
-    <link href="http://www.codefl-zy.com/2016/01/22/buildblogbyhexo/"/>
-    <id>http://www.codefl-zy.com/2016/01/22/buildblogbyhexo/</id>
+    <link href="http://www.codeflyer-zy.com/2016/01/22/buildblogbyhexo/"/>
+    <id>http://www.codeflyer-zy.com/2016/01/22/buildblogbyhexo/</id>
     <published>2016-01-22T11:48:41.000Z</published>
     <updated>2016-01-22T16:48:05.692Z</updated>
     <content type="html"><![CDATA[<h1 id="一、前言">一、前言</h1><p>　　<br>　　咳咳，在建自己的博客过程中参考了很多资料，帮助我解决了大量的问题。考完之后也有点时间，便准备把自己建博客的整个流程中参考的一些资料整理下供大家参考。<br> 　　至于为什么自己搭博客嘛，一个是因为自己搭博客可以做到没有任何烦人的广告，另一个是可以根据自己的喜欢定制博客，相对普通的博客自由度更大。最重要的当然是<strong>bigger than bigger</strong>呀2333。<br><strong> 　　注意，所收集的教程有些已经好几年了，所以在某些小步骤上可能会不同（例如软件升级了，指令不一样了）。如果遇到了困难，请百度/google或者留言。 </strong></p>
@@ -803,18 +803,18 @@
     <![CDATA[<h1 id="一、前言">一、前言</h1><p>　　<br>　　咳咳，在建自己的博客过程中参考了很多资料，帮助我解决了大量的问题。考完之后也有点时间，便准备把自己建博客的整个流程中参考的一些资料整理下供大家参考。<br> 　　至于为什么自己搭博客嘛，一个是因为自己搭博客可以做]]>
     </summary>
     
-      <category term="教程" scheme="http://www.codefl-zy.com/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://www.codeflyer-zy.com/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="资料" scheme="http://www.codefl-zy.com/tags/%E8%B5%84%E6%96%99/"/>
+      <category term="资料" scheme="http://www.codeflyer-zy.com/tags/%E8%B5%84%E6%96%99/"/>
     
-      <category term="博客建站资料" scheme="http://www.codefl-zy.com/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E8%B5%84%E6%96%99/"/>
+      <category term="博客建站资料" scheme="http://www.codeflyer-zy.com/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E8%B5%84%E6%96%99/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Java中测试算法时间性能]]></title>
-    <link href="http://www.codefl-zy.com/2016/01/15/Java%E4%B8%AD%E6%B5%8B%E8%AF%95%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E6%80%A7%E8%83%BD/"/>
-    <id>http://www.codefl-zy.com/2016/01/15/Java中测试算法时间性能/</id>
+    <link href="http://www.codeflyer-zy.com/2016/01/15/Java%E4%B8%AD%E6%B5%8B%E8%AF%95%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E6%80%A7%E8%83%BD/"/>
+    <id>http://www.codeflyer-zy.com/2016/01/15/Java中测试算法时间性能/</id>
     <published>2016-01-15T08:55:47.000Z</published>
     <updated>2016-01-15T12:27:42.979Z</updated>
     <content type="html"><![CDATA[<p>　　很多时候，我们想测试某一个算法/一段代码的性能，那么比较直观的方法便是测试这段代码运行的时间。在Java中，可用如下方法测试：<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> num = (<span class="keyword">int</span>) (Math.random() * <span class="number">1000</span>);</span><br><span class="line">            list.add(num);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获得系统当前时间，单位ms</span></span><br><span class="line">        <span class="keyword">long</span> time1 = System.currentTimeMillis();</span><br><span class="line">        <span class="comment">// 随机移除10000个</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> index = (<span class="keyword">int</span>) (Math.random() * list.size());</span><br><span class="line">            list.remove(index);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 获得系统当前时间，单位ms</span></span><br><span class="line">        <span class="keyword">long</span> time2 = System.currentTimeMillis();</span><br><span class="line">        System.out.println(<span class="string">"耗费时间:"</span> + (time2 - time1) + <span class="string">"ms"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -827,16 +827,16 @@
     
     </summary>
     
-      <category term="Java小技巧" scheme="http://www.codefl-zy.com/tags/Java%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+      <category term="Java小技巧" scheme="http://www.codeflyer-zy.com/tags/Java%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
     
-      <category term="Java" scheme="http://www.codefl-zy.com/categories/Java/"/>
+      <category term="Java" scheme="http://www.codeflyer-zy.com/categories/Java/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[bug以及公告]]></title>
-    <link href="http://www.codefl-zy.com/2016/01/03/bug%E4%BB%A5%E5%8F%8A%E5%85%AC%E5%91%8A/"/>
-    <id>http://www.codefl-zy.com/2016/01/03/bug以及公告/</id>
+    <link href="http://www.codeflyer-zy.com/2016/01/03/bug%E4%BB%A5%E5%8F%8A%E5%85%AC%E5%91%8A/"/>
+    <id>http://www.codeflyer-zy.com/2016/01/03/bug以及公告/</id>
     <published>2016-01-03T15:17:59.000Z</published>
     <updated>2016-01-04T03:23:55.449Z</updated>
     <content type="html"><![CDATA[<p>　　发现博客的分类数和标签数都显示不正确… 现在还不知道怎么解决。有时间再弄吧。<br>　　寒假会整理下我建博客用的一些资料，有兴趣的话你也可以自己建一个。</p>
@@ -847,16 +847,16 @@
 <h3 id="2016-1-4_更">2016-1-4 更</h3><p>　　已经解决了…在知乎上面提的问]]>
     </summary>
     
-      <category term="公告" scheme="http://www.codefl-zy.com/tags/%E5%85%AC%E5%91%8A/"/>
+      <category term="公告" scheme="http://www.codeflyer-zy.com/tags/%E5%85%AC%E5%91%8A/"/>
     
-      <category term="公告" scheme="http://www.codefl-zy.com/categories/%E5%85%AC%E5%91%8A/"/>
+      <category term="公告" scheme="http://www.codeflyer-zy.com/categories/%E5%85%AC%E5%91%8A/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[2016，希望]]></title>
-    <link href="http://www.codefl-zy.com/2016/01/01/2016%EF%BC%8C%E5%B8%8C%E6%9C%9B/"/>
-    <id>http://www.codefl-zy.com/2016/01/01/2016，希望/</id>
+    <link href="http://www.codeflyer-zy.com/2016/01/01/2016%EF%BC%8C%E5%B8%8C%E6%9C%9B/"/>
+    <id>http://www.codeflyer-zy.com/2016/01/01/2016，希望/</id>
     <published>2015-12-31T16:50:22.000Z</published>
     <updated>2016-01-02T10:13:13.640Z</updated>
     <content type="html"><![CDATA[<p>　　再过几十分钟2015年就结束了。<br>　　还记得一年前的元旦没有回去，在寝室里静静等待着跨年，等待着给一些人发送祝福，等待着零点看大家的刷屏，同时也期待着谁谁谁的祝福。而今年在家，自己的房间，温暖而安静。等到2016，写日期的时候也许会不小心写成2015吧。是啊，有些习惯了一年的事，怎么会说改就能改呢。<br>　　前两天看到阳哥写了挺多的“年终总结”，不仅在2015找到了女票，专业上也颇有心得，不由得心生佩服。反观自己，却懵懵懂懂，在自己的路上跌跌撞撞，不知心之所向。心头不免生出一丝又一丝的忧虑。<br>　　这个学期总在考虑未来。或者说纠结未来。大二了还在迷茫，是不是很可笑。<br>　　其实我已经明显地感觉到，大学已经快要过了一半了吧。我走到哪了？<br>　　大三下学期找实习，然后，找工作。考研？不考了？曾今想过要考，现在来看，可能真的永远是“想过”了吧。<br>　　高三的时候莫名其妙觉得自己想学计算机，然而自己什么都不懂。前段时间我突然想起自己小学还是初中的时候竟然接触过一门计算机编程语言，叫易语言，还是中文的。非常清楚地记得那时候跟着教程做了一个可以放音乐的小程序，还兴奋地告诉妈妈。可那时候沉迷网游，不知道怎么就忘了这事儿。也许那时候的我，觉得网游更好玩吧。呵呵，图样啊。<br>　　高三总在安慰自己，如果人品爆发，还是可以考上好学校的。然而，高考分数差了我念了一年的华科八九十分。在林科大，我自认学渣，过着连自己都鄙视的生活。我容易被环境影响，那时候我和高中同学抱怨，她却说我不能怪环境，自己必须努力。我一直记着她的话，同时也自己打了自己的脸。<br>　　现在啊，我发现自己早就没资格抱怨学校，抱怨环境了。自己上课不也玩手机，不也打瞌睡吗。大一的绩点不也被学习委员甩了很多吗。突然觉得，总在抱怨的人，首先应该审视自己。<br>　　好在，我也没完全迷失。我总在探索。<br>　　大一傻乎乎地报了“梦之队”。记得那个寒冷的冬天，整个冬天都是5点多爬起来，和晓龙、校长（同学绰号）顶着刺骨寒风去读英语。不过，也就坚持了那一个冬天。哦，还报了ACM。梦想着能成为一名编程算法大神，又是图样。题目一稍难，就没了耐心。没了耐心，就更做不下题了。有时候一下午都搞不懂便觉得自己的智商是硬伤。咔，死循环。哎，放弃了吧。现在？想学Android。不再纠结，再纠结就没时间了。<br>　　每个人都有着自己的选择。<br>　　记得大一刷空间时惊异地发现小学同学晒出正在工作的照片，也记得打暑假工时看到穿着西装提着电脑颇有商务范的初中同学，也有着正在不懈努力为了保研甚至出国深造的高中同学。这些都让我清醒地知道，我必须做出自己的选择。尽管生活是瞬息万变的，就像高考目标一样，选了目标大学也不一定能实现。但这样至少有了个方向，心里总会装着一个东西，肩上总会觉得有副担子吧。想起高中听过的一句话，没有方向的速度不叫速度(物理中速度是矢量)。是吧，哪怕速度再快，没有方向也是白搭。</p>
@@ -866,18 +866,18 @@
     <![CDATA[<p>　　再过几十分钟2015年就结束了。<br>　　还记得一年前的元旦没有回去，在寝室里静静等待着跨年，等待着给一些人发送祝福，等待着零点看大家的刷屏，同时也期待着谁谁谁的祝福。而今年在家，自己的房间，温暖而安静。等到2016，写日期的时候也许会不小心写成2015吧。是啊，有些]]>
     </summary>
     
-      <category term="扯淡" scheme="http://www.codefl-zy.com/tags/%E6%89%AF%E6%B7%A1/"/>
+      <category term="扯淡" scheme="http://www.codeflyer-zy.com/tags/%E6%89%AF%E6%B7%A1/"/>
     
-      <category term="日记" scheme="http://www.codefl-zy.com/tags/%E6%97%A5%E8%AE%B0/"/>
+      <category term="日记" scheme="http://www.codeflyer-zy.com/tags/%E6%97%A5%E8%AE%B0/"/>
     
-      <category term="日记" scheme="http://www.codefl-zy.com/categories/%E6%97%A5%E8%AE%B0/"/>
+      <category term="日记" scheme="http://www.codeflyer-zy.com/categories/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[给网站添加访客记录]]></title>
-    <link href="http://www.codefl-zy.com/2015/11/20/%E7%BB%99%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0%E8%AE%BF%E5%AE%A2%E8%AE%B0%E5%BD%95/"/>
-    <id>http://www.codefl-zy.com/2015/11/20/给网站添加访客记录/</id>
+    <link href="http://www.codeflyer-zy.com/2015/11/20/%E7%BB%99%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0%E8%AE%BF%E5%AE%A2%E8%AE%B0%E5%BD%95/"/>
+    <id>http://www.codeflyer-zy.com/2015/11/20/给网站添加访客记录/</id>
     <published>2015-11-20T03:41:33.000Z</published>
     <updated>2016-01-02T14:37:03.000Z</updated>
     <content type="html"><![CDATA[<p>感谢不蒜子~~<br>贴上链接：<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">http://ibruce.info/2015/04/04/busuanzi/</a></p>
@@ -935,16 +935,16 @@
     <![CDATA[<p>感谢不蒜子~~<br>贴上链接：<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">http://ibruce.info/2015/04/04/busuanzi/<]]>
     </summary>
     
-      <category term="教程" scheme="http://www.codefl-zy.com/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://www.codeflyer-zy.com/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="博客建站资料" scheme="http://www.codefl-zy.com/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E8%B5%84%E6%96%99/"/>
+      <category term="博客建站资料" scheme="http://www.codeflyer-zy.com/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E8%B5%84%E6%96%99/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Cmd Markdown编辑阅读器简介]]></title>
-    <link href="http://www.codefl-zy.com/2015/11/03/Cmd%20Markdown%E7%BC%96%E8%BE%91%E9%98%85%E8%AF%BB%E5%99%A8%E7%AE%80%E4%BB%8B/"/>
-    <id>http://www.codefl-zy.com/2015/11/03/Cmd Markdown编辑阅读器简介/</id>
+    <link href="http://www.codeflyer-zy.com/2015/11/03/Cmd%20Markdown%E7%BC%96%E8%BE%91%E9%98%85%E8%AF%BB%E5%99%A8%E7%AE%80%E4%BB%8B/"/>
+    <id>http://www.codeflyer-zy.com/2015/11/03/Cmd Markdown编辑阅读器简介/</id>
     <published>2015-11-03T11:43:02.000Z</published>
     <updated>2016-01-03T03:20:41.653Z</updated>
     <content type="html"><![CDATA[<h1 id="欢迎使用_Cmd_Markdown_编辑阅读器">欢迎使用 Cmd Markdown 编辑阅读器</h1><hr>
@@ -1037,11 +1037,11 @@
 <p><strong>转自<a href="https://www.zybuluo.com/mdeditor?url=https://www.zyb]]>
     </summary>
     
-      <category term="Markdown" scheme="http://www.codefl-zy.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://www.codeflyer-zy.com/tags/Markdown/"/>
     
-      <category term="教程" scheme="http://www.codefl-zy.com/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://www.codeflyer-zy.com/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="博客建站资料" scheme="http://www.codefl-zy.com/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E8%B5%84%E6%96%99/"/>
+      <category term="博客建站资料" scheme="http://www.codeflyer-zy.com/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E8%B5%84%E6%96%99/"/>
     
   </entry>
   
