@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="TextView,安卓," />
+  <meta name="keywords" content="二叉树,算法," />
 
 
 
@@ -55,17 +55,19 @@
 
 
 
-<meta name="description" content="学习了TextView之后，感觉得来点好玩的。正好在imooc.com上学到一个关于TextView跑马灯（理解为现在大街上经常看到的那种横向滚动的LED灯便是）效果的小知识点。特记录如下：　　首先上效果图：　　　　在网上发现一篇总结得不错的文章：http://www.cnblogs.com/Gaojiecai/p/3142783.html　　　　但需要实现多个TextView同时有跑马灯效果时，">
+<meta name="description" content="题目有一棵二叉树，请设计一个算法，按照层次打印这棵二叉树。给定二叉树的根结点root，请返回打印结果，结果按照每一层一个数组进行储存，所有数组的顺序按照层数从上往下，且每一层的数组内元素按照从左往右排列。保证结点数小于等于500。
+基本思想设置两个“指针”，last指向当前层的最右结点，nlast指向当前遍历结点。先让非空根节点入队，然后每当队列非空时，都弹出一个结点，若该结点有孩子结点，则将孩子">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TextView之跑马灯">
-<meta property="og:url" content="http://www.codeflyer-zy.com/2016/03/07/TextView之跑马灯/index.html">
+<meta property="og:title" content="算法练习1_2 二叉树打印">
+<meta property="og:url" content="http://www.codeflyer-zy.com/2016/10/18/algorithm1-2/index.html">
 <meta property="og:site_name" content="Codeflyer Hzy">
-<meta property="og:description" content="学习了TextView之后，感觉得来点好玩的。正好在imooc.com上学到一个关于TextView跑马灯（理解为现在大街上经常看到的那种横向滚动的LED灯便是）效果的小知识点。特记录如下：　　首先上效果图：　　　　在网上发现一篇总结得不错的文章：http://www.cnblogs.com/Gaojiecai/p/3142783.html　　　　但需要实现多个TextView同时有跑马灯效果时，">
-<meta property="og:image" content="http://www.codeflyer-zy.com/img/marquee.gif">
-<meta property="og:updated_time" content="2016-03-07T15:05:50.032Z">
+<meta property="og:description" content="题目有一棵二叉树，请设计一个算法，按照层次打印这棵二叉树。给定二叉树的根结点root，请返回打印结果，结果按照每一层一个数组进行储存，所有数组的顺序按照层数从上往下，且每一层的数组内元素按照从左往右排列。保证结点数小于等于500。
+基本思想设置两个“指针”，last指向当前层的最右结点，nlast指向当前遍历结点。先让非空根节点入队，然后每当队列非空时，都弹出一个结点，若该结点有孩子结点，则将孩子">
+<meta property="og:updated_time" content="2016-10-18T08:41:27.904Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TextView之跑马灯">
-<meta name="twitter:description" content="学习了TextView之后，感觉得来点好玩的。正好在imooc.com上学到一个关于TextView跑马灯（理解为现在大街上经常看到的那种横向滚动的LED灯便是）效果的小知识点。特记录如下：　　首先上效果图：　　　　在网上发现一篇总结得不错的文章：http://www.cnblogs.com/Gaojiecai/p/3142783.html　　　　但需要实现多个TextView同时有跑马灯效果时，">
+<meta name="twitter:title" content="算法练习1_2 二叉树打印">
+<meta name="twitter:description" content="题目有一棵二叉树，请设计一个算法，按照层次打印这棵二叉树。给定二叉树的根结点root，请返回打印结果，结果按照每一层一个数组进行储存，所有数组的顺序按照层数从上往下，且每一层的数组内元素按照从左往右排列。保证结点数小于等于500。
+基本思想设置两个“指针”，last指向当前层的最右结点，nlast指向当前遍历结点。先让非空根节点入队，然后每当队列非空时，都弹出一个结点，若该结点有孩子结点，则将孩子">
 
 
 
@@ -77,7 +79,7 @@
   };
 </script>
 
-  <title> TextView之跑马灯 | Codeflyer Hzy </title>
+  <title> 算法练习1_2 二叉树打印 | Codeflyer Hzy </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -237,7 +239,7 @@
             
             
               
-                TextView之跑马灯
+                算法练习1_2 二叉树打印
               
             
           </h1>
@@ -246,8 +248,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-03-07T21:48:28+08:00" content="2016-03-07">
-              2016-03-07
+            <time itemprop="dateCreated" datetime="2016-10-18T16:12:51+08:00" content="2016-10-18">
+              2016-10-18
             </time>
           </span>
 
@@ -256,8 +258,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
                   </a>
                 </span>
 
@@ -272,8 +274,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/07/TextView之跑马灯/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/TextView之跑马灯/" itemprop="commentsCount"></span>
+                <a href="/2016/10/18/algorithm1-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/18/algorithm1-2/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -292,9 +294,9 @@
       
 
       
-        <span itemprop="articleBody"><p>　　学习了TextView之后，感觉得来点好玩的。正好在imooc.com上学到一个关于TextView跑马灯（理解为现在大街上经常看到的那种横向滚动的LED灯便是）效果的小知识点。特记录如下：<br>　　首先上效果图：<img src="/img/marquee.gif" alt="效果图"><br>　　<br>　　在网上发现一篇总结得不错的文章：<a href="http://www.cnblogs.com/Gaojiecai/p/3142783.html" target="_blank" rel="external">http://www.cnblogs.com/Gaojiecai/p/3142783.html</a><br>　　<br>　　但需要实现多个TextView同时有跑马灯效果时，稍微复杂一点：<br>　　新建一个继承自TextView的类，这里命名为MarqueeTextViewDemo，关键是重写View中的isFocus方法（即默认获得focus）<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">boolean</span> <span class="title">isFocused</span><span class="params">()</span> </span>&#123; </span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>然后在xml中创建这个类的TextView（注意包名要写完整）：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;com<span class="class">.example</span><span class="class">.marqueetextviewdemo</span><span class="class">.MarqueeTextViewDemo</span></span><br><span class="line">    android:id=<span class="string">"@+id/textview1"</span></span><br><span class="line">    android:layout_width=<span class="string">"wrap_content"</span></span><br><span class="line">    android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">    android:ellipsize=<span class="string">"marquee"</span></span><br><span class="line">    android:singleLine=<span class="string">"true"</span></span><br><span class="line">    android:text=<span class="string">"@string/hello_world"</span> /&gt;</span><br><span class="line"></span><br><span class="line">&lt;com<span class="class">.example</span><span class="class">.marqueetextviewdemo</span><span class="class">.MarqueeTextViewDemo</span></span><br><span class="line">    android:layout_width=<span class="string">"wrap_content"</span></span><br><span class="line">    android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">    android:layout_below=<span class="string">"@id/textview1"</span></span><br><span class="line">    android:layout_marginTop=<span class="string">"10dp"</span></span><br><span class="line">    android:ellipsize=<span class="string">"marquee"</span></span><br><span class="line">    android:singleLine=<span class="string">"true"</span></span><br><span class="line">    android:text=<span class="string">"@string/hello_world"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
-</span>
+        <span itemprop="articleBody"><h1 id="题目">题目</h1><p>有一棵二叉树，请设计一个算法，按照层次打印这棵二叉树。<br>给定二叉树的根结点root，请返回打印结果，结果按照每一层一个数组进行储存，所有数组的顺序按照层数从上往下，且每一层的数组内元素按照从左往右排列。保证结点数小于等于500。</p>
+<h1 id="基本思想">基本思想</h1><p>设置两个“指针”，last指向当前层的最右结点，nlast指向当前遍历结点。先让非空根节点入队，然后每当队列非空时，都弹出一个结点，若该结点有孩子结点，则将孩子结点也入队。并判断此结点是否为最右结点，若是，则进行相关操作，若不是，则继续弹出队列判断。最后用数组保存即可。</p>
+<h1 id="代码">代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.Queue;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/*</span><br><span class="line">public class TreeNode &#123;</span><br><span class="line">    int val = 0;</span><br><span class="line">    TreeNode left = null;</span><br><span class="line">    TreeNode right = null;</span><br><span class="line">    public TreeNode(int val) &#123;</span><br><span class="line">        this.val = val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreePrinter</span> </span>&#123;</span><br><span class="line">    Queue&lt;TreeNode&gt; q = <span class="keyword">new</span> LinkedList();</span><br><span class="line">	<span class="comment">// node保存当前层的所有结点</span></span><br><span class="line">    LinkedList&lt;TreeNode&gt; node = <span class="keyword">new</span> LinkedList();</span><br><span class="line">	<span class="comment">// ansList保存所有结点</span></span><br><span class="line">    LinkedList&lt;LinkedList&lt;TreeNode&gt;&gt; ansList = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    TreeNode temp, last, nlast;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[][] printTree(TreeNode root) &#123;</span><br><span class="line">		<span class="comment">// 首先判断根节点是否为空，若空直接返回null</span></span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		<span class="comment">// offer即将根节点入队</span></span><br><span class="line">        q.offer(root);</span><br><span class="line">		<span class="comment">// last指向当前层的最右结点</span></span><br><span class="line">        last = root;</span><br><span class="line">		<span class="comment">// nlast指向当前遍历结点</span></span><br><span class="line">        nlast = root;</span><br><span class="line">		<span class="comment">// 每次队列非空时，用中间变量接收一个从队列弹出的元素，然后用node接收。</span></span><br><span class="line">        <span class="keyword">while</span> (!q.isEmpty()) &#123;</span><br><span class="line">            temp = q.poll();</span><br><span class="line">            node.add(temp);</span><br><span class="line">            <span class="keyword">if</span> (temp.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                q.offer(temp.left);</span><br><span class="line">                nlast = temp.left;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (temp.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">                q.offer(temp.right);</span><br><span class="line">                nlast = temp.right;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (temp == last) &#123;</span><br><span class="line">				<span class="comment">// 此时已遍历到本层最右结点</span></span><br><span class="line">				last = nlast;</span><br><span class="line">                ansList.add(node);</span><br><span class="line">				<span class="comment">// 重置node</span></span><br><span class="line">                node = <span class="keyword">new</span> LinkedList();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">		<span class="comment">// 用数组接收所有结点，注意数组大小的设置</span></span><br><span class="line">        <span class="keyword">int</span>[][] ans = <span class="keyword">new</span> <span class="keyword">int</span>[ansList.size()][];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ansList.size(); i++) &#123;</span><br><span class="line">            ans[i] = <span class="keyword">new</span> <span class="keyword">int</span>[ansList.get(i).size()];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; ansList.get(i).size(); j++) &#123;</span><br><span class="line">                ans[i][j] = ansList.get(i).get(j).val;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
@@ -302,9 +304,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/TextView/" rel="tag">#TextView</a>
+            <a href="/tags/二叉树/" rel="tag">#二叉树</a>
           
-            <a href="/tags/安卓/" rel="tag">#安卓</a>
+            <a href="/tags/算法/" rel="tag">#算法</a>
           
         </div>
       
@@ -313,17 +315,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/28/安卓初探/" rel="next" title="安卓初探">
-                <i class="fa fa-chevron-left"></i> 安卓初探
+              <a href="/2016/08/11/poj1001/" rel="next" title="poj1001 Exponentiation">
+                <i class="fa fa-chevron-left"></i> poj1001 Exponentiation
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/06/CoreJava2/" rel="prev" title="Java核心技术学习笔记之二">
-                Java核心技术学习笔记之二 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -350,8 +348,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/07/TextView之跑马灯/"
-           data-title="TextView之跑马灯" data-url="http://www.codeflyer-zy.com/2016/03/07/TextView之跑马灯/">
+      <div class="ds-thread" data-thread-key="2016/10/18/algorithm1-2/"
+           data-title="算法练习1_2 二叉树打印" data-url="http://www.codeflyer-zy.com/2016/10/18/algorithm1-2/">
       </div>
     
   </div>
@@ -471,7 +469,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本思想"><span class="nav-number">2.</span> <span class="nav-text">基本思想</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
