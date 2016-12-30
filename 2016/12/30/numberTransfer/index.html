@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="poj,动态规划,算法," />
+  <meta name="keywords" content="思考题," />
 
 
 
@@ -55,22 +55,19 @@
 
 
 
-<meta name="description" content="参考：http://blog.csdn.net/lyy289065406/article/details/6648094/
-题目大意有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。
-Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平衡点位置（负数可表示左边）  c">
+<meta name="description" content="题目输入一串阿拉伯数字整数，输出对应的中文大写数字
+基本思想记得小学学读数的时候，从最小位从右到左，每4个数一组，如123456789，则分组为1|2345|6789，这实际上是以亿和万为分界线。有个比较棘手的问题是0的读法，因为如果有连续0，不能输出“零零零…”，要输出一个零或不输出，因为如1|0000|1234，不能输出“壹亿零万壹仟贰佰叁拾肆”。末尾有0，如1110，则最后一个零不能输出。末">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj1837 Balance">
-<meta property="og:url" content="http://www.codeflyer-zy.com/2016/07/15/poj1837/index.html">
+<meta property="og:title" content="阿拉伯数字转化大写中文汉字问题">
+<meta property="og:url" content="http://www.codeflyer-zy.com/2016/12/30/numberTransfer/index.html">
 <meta property="og:site_name" content="Zyoung">
-<meta property="og:description" content="参考：http://blog.csdn.net/lyy289065406/article/details/6648094/
-题目大意有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。
-Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平衡点位置（负数可表示左边）  c">
-<meta property="og:updated_time" content="2016-08-04T00:58:51.917Z">
+<meta property="og:description" content="题目输入一串阿拉伯数字整数，输出对应的中文大写数字
+基本思想记得小学学读数的时候，从最小位从右到左，每4个数一组，如123456789，则分组为1|2345|6789，这实际上是以亿和万为分界线。有个比较棘手的问题是0的读法，因为如果有连续0，不能输出“零零零…”，要输出一个零或不输出，因为如1|0000|1234，不能输出“壹亿零万壹仟贰佰叁拾肆”。末尾有0，如1110，则最后一个零不能输出。末">
+<meta property="og:updated_time" content="2016-12-30T06:41:57.166Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="poj1837 Balance">
-<meta name="twitter:description" content="参考：http://blog.csdn.net/lyy289065406/article/details/6648094/
-题目大意有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。
-Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平衡点位置（负数可表示左边）  c">
+<meta name="twitter:title" content="阿拉伯数字转化大写中文汉字问题">
+<meta name="twitter:description" content="题目输入一串阿拉伯数字整数，输出对应的中文大写数字
+基本思想记得小学学读数的时候，从最小位从右到左，每4个数一组，如123456789，则分组为1|2345|6789，这实际上是以亿和万为分界线。有个比较棘手的问题是0的读法，因为如果有连续0，不能输出“零零零…”，要输出一个零或不输出，因为如1|0000|1234，不能输出“壹亿零万壹仟贰佰叁拾肆”。末尾有0，如1110，则最后一个零不能输出。末">
 
 
 
@@ -82,7 +79,7 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
   };
 </script>
 
-  <title> poj1837 Balance | Zyoung </title>
+  <title> 阿拉伯数字转化大写中文汉字问题 | Zyoung </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -242,7 +239,7 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
             
             
               
-                poj1837 Balance
+                阿拉伯数字转化大写中文汉字问题
               
             
           </h1>
@@ -251,8 +248,8 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-07-15T09:20:36+08:00" content="2016-07-15">
-              2016-07-15
+            <time itemprop="dateCreated" datetime="2016-12-30T14:29:41+08:00" content="2016-12-30">
+              2016-12-30
             </time>
           </span>
 
@@ -261,8 +258,8 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/思考题/" itemprop="url" rel="index">
+                    <span itemprop="name">思考题</span>
                   </a>
                 </span>
 
@@ -277,8 +274,8 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/15/poj1837/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/15/poj1837/" itemprop="commentsCount"></span>
+                <a href="/2016/12/30/numberTransfer/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/30/numberTransfer/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -297,41 +294,9 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
       
 
       
-        <span itemprop="articleBody"><p>参考：<a href="http://blog.csdn.net/lyy289065406/article/details/6648094/" target="_blank" rel="external">http://blog.csdn.net/lyy289065406/article/details/6648094/</a></p>
-<h2 id="题目大意"><strong>题目大意</strong></h2><p>有一个天平，其上有一些挂钩，并配有指定数量的质量不一的砝码。在给定挂钩数量、挂钩位置和砝码数量、质量后，求有多少种能使天平平衡的方法。</p>
-<h2 id="Sample_Input"><strong>Sample Input</strong></h2><p>2 4    // 2个挂钩c，4个砝码g<br>-2 3 // 2个挂钩距离天平平衡点位置（负数可表示左边）  c_length[21]<br>3 4 5 8 // 4个砝码的质量  g_weight[21]</p>
-<h2 id="Sample_Output"><strong>Sample Output</strong></h2><p>2 // 2种方法</p>
-<h2 id="思路"><strong>思路</strong></h2><p>定义一个二维数组dp[i][j]，i为砝码的数量，而j为“平衡度”（即两边力矩矢量和），数组值表示在这个砝码数量和平衡度下的挂法数，当平衡度为0时天平平衡，但这样会出现平衡度为负数，导致数组下标出现负数，因此注意到挂钩范围是-15~15，砝码数最大20，质量最大25，因此平衡度极限值是±15<em>20</em>25=±7500，所以措施是让j为7500时表示天平平衡。<br>那么可知dp[i][j]的推导可由前一状态dp[i-1][j]得到。<br>假设dp[i-1][j] = n, 那么dp[i]<a href="即前i-1个不动，挂上第i个挂钩">j + c_length[c] * g_weight[g]</a>也为n，但要注意如果前i-1个移动了，则（可能）不为n。<br>考虑到这个情况，可知<br><strong>dp[i][j + c_length[c] * g_weight[g]] = ∑dp[i-1][j]</strong><br>(i-1是固定的，但j可由不同的砝码和位置组成，所以求和)</p>
-<h2 id="Code"><strong>Code</strong></h2><pre><code class="C"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span>
-<span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;memory.h&gt;</span></span>
-<span class="keyword">int</span> dp[<span class="number">21</span>][<span class="number">15001</span>]; <span class="comment">// dp[i][j]  i代表已挂挂钩数量，j代表平衡度</span>
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>
-</span>{
-    <span class="keyword">int</span> i, j, k;
-    <span class="keyword">int</span> c; <span class="comment">// 挂钩数</span>
-    <span class="keyword">int</span> g; <span class="comment">// 砝码数</span>
-    <span class="keyword">int</span> c_length[<span class="number">21</span>]; <span class="comment">// 挂钩距离原点的位置</span>
-    <span class="keyword">int</span> g_weight[<span class="number">21</span>]; <span class="comment">// 每个砝码的重量</span>
-    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;c,&amp;g);
-    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= c; i++)
-    {
-        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;c_length[i]);
-    }
-    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= g; i++)
-    {
-        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;g_weight[i]);
-    }
-    <span class="built_in">memset</span>(dp, <span class="number">0</span>, <span class="keyword">sizeof</span>(dp));
-    dp[<span class="number">0</span>][<span class="number">7500</span>] = <span class="number">1</span>; <span class="comment">// 什么都不挂也是一种方法</span>
-    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= g; i++)
-        <span class="keyword">for</span>(j = <span class="number">0</span>; j &lt;= <span class="number">15000</span>; j++)
-            <span class="keyword">for</span>(k = <span class="number">1</span>; k &lt;= c; k++)
-                dp[i][j + c_length[k] * g_weight[i]] += dp[i-<span class="number">1</span>][j];  
-    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, dp[g][<span class="number">7500</span>]);
-    <span class="keyword">return</span> <span class="number">0</span>;
-}
-</code></pre>
-</span>
+        <span itemprop="articleBody"><h1 id="题目">题目</h1><p>输入一串阿拉伯数字整数，输出对应的中文大写数字</p>
+<h1 id="基本思想">基本思想</h1><p>记得小学学读数的时候，从最小位从右到左，每4个数一组，如123456789，则分组为1|2345|6789，这实际上是以亿和万为分界线。<br>有个比较棘手的问题是0的读法，因为如果有连续0，不能输出“零零零…”，要输出一个零或不输出，因为如1|0000|1234，不能输出“壹亿零万壹仟贰佰叁拾肆”。<br>末尾有0，如1110，则最后一个零不能输出。<br>末尾全是0，则一个零都不能输出。<br>因此我的解法也从该分界方法处入手。</p>
+<h1 id="代码">代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test9</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 对应大写中文数字</span></span><br><span class="line">        String[] arr1 = &#123;<span class="string">"零"</span>, <span class="string">"壹"</span>, <span class="string">"贰"</span>, <span class="string">"叁"</span>, <span class="string">"肆"</span>, <span class="string">"伍"</span>, <span class="string">"陆"</span>, <span class="string">"柒"</span>, <span class="string">"捌"</span>, <span class="string">"玖"</span>&#125;;</span><br><span class="line">        <span class="comment">// 逆序对应每一位的单位，如12345,2对应拾，3对应佰。</span></span><br><span class="line">        String[] arr2 = &#123;<span class="string">""</span>, <span class="string">""</span>, <span class="string">"拾"</span>, <span class="string">"佰"</span>, <span class="string">"仟"</span>, <span class="string">"万"</span>, <span class="string">"拾"</span>, <span class="string">"佰"</span>, <span class="string">"仟"</span>, <span class="string">"亿"</span>, <span class="string">"拾"</span>, <span class="string">"佰"</span>, <span class="string">"仟"</span>&#125;;</span><br><span class="line">        String num = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        num = sc.nextLine();</span><br><span class="line">        <span class="keyword">int</span> k = num.length();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; num.length(); i++) &#123;</span><br><span class="line">            <span class="comment">// index是当前位的实际数字</span></span><br><span class="line">            <span class="keyword">int</span> index = num.charAt(i) - <span class="number">48</span>;</span><br><span class="line">            <span class="keyword">if</span> (index == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="comment">// count作用是计算连续0的个数，以亿位和万位分界，每到一个分界点就清零</span></span><br><span class="line">                count++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                count = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 如果没有连续的0，直接输出大写数字和单位</span></span><br><span class="line">            <span class="comment">// 如果有，则先判断：&amp;&amp;左边判断当前位是否为亿位或万位，</span></span><br><span class="line">            <span class="comment">// 右边判断该段是否全为0（如1|0000|1234，如果不加这个条件，会输出壹亿零万壹仟贰佰叁拾肆）</span></span><br><span class="line">            <span class="comment">// 符合条件则输出该位单位，且count置0</span></span><br><span class="line">            <span class="comment">// 每读一位k都要减一</span></span><br><span class="line">            <span class="keyword">if</span> (count == <span class="number">0</span>) &#123;</span><br><span class="line">                System.out.print(arr1[index] + arr2[k--]);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> ((arr2[k] == <span class="string">"亿"</span> || arr2[k] == <span class="string">"万"</span>) &amp;&amp; count != <span class="number">4</span>) &#123;</span><br><span class="line">                    System.out.print(arr2[k]);</span><br><span class="line">                    count = <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 如果当前只有一个连续0，那么需要判断后续是否全为0</span></span><br><span class="line">                <span class="comment">// 如果不进行判断，则对于10100，如果读到第四位0，此时count为1，那么会输出壹万零壹佰零元</span></span><br><span class="line">                <span class="keyword">if</span> (count == <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">boolean</span> isSeqZero = <span class="keyword">true</span>;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; num.length(); j++) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (num.charAt(j) - <span class="number">48</span> != <span class="number">0</span>) &#123;</span><br><span class="line">                            isSeqZero = <span class="keyword">false</span>;</span><br><span class="line">                            <span class="keyword">break</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (!isSeqZero) &#123;</span><br><span class="line">                        System.out.print(<span class="string">"零"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                k--;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"元"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
@@ -339,11 +304,7 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
       
         <div class="post-tags">
           
-            <a href="/tags/poj/" rel="tag">#poj</a>
-          
-            <a href="/tags/动态规划/" rel="tag">#动态规划</a>
-          
-            <a href="/tags/算法/" rel="tag">#算法</a>
+            <a href="/tags/思考题/" rel="tag">#思考题</a>
           
         </div>
       
@@ -352,17 +313,13 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/21/PermQuestion/" rel="next" title="排列问题">
-                <i class="fa fa-chevron-left"></i> 排列问题
+              <a href="/2016/10/18/algorithm1-2/" rel="next" title="算法练习1_2 二叉树打印">
+                <i class="fa fa-chevron-left"></i> 算法练习1_2 二叉树打印
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/03/poj2028/" rel="prev" title="poj2028 When Can We Meet?">
-                poj2028 When Can We Meet? <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -389,8 +346,8 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/15/poj1837/"
-           data-title="poj1837 Balance" data-url="http://www.codeflyer-zy.com/2016/07/15/poj1837/">
+      <div class="ds-thread" data-thread-key="2016/12/30/numberTransfer/"
+           data-title="阿拉伯数字转化大写中文汉字问题" data-url="http://www.codeflyer-zy.com/2016/12/30/numberTransfer/">
       </div>
     
   </div>
@@ -510,7 +467,7 @@ Sample Input2 4    // 2个挂钩c，4个砝码g-2 3 // 2个挂钩距离天平平
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目大意"><span class="nav-number">1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Input"><span class="nav-number">2.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Output"><span class="nav-number">3.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">4.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">5.</span> <span class="nav-text">Code</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本思想"><span class="nav-number">2.</span> <span class="nav-text">基本思想</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
